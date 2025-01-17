@@ -206,7 +206,7 @@ alias cd="z"
 alias t="tmux ls"
 alias tc="tmux attach -t config"
 alias td="tmux attach -t developer"
-alias tw="tmux attach -t web"
+alias tr="tmux attach -t react"
 
 # ---- Yazi setup ----
 
