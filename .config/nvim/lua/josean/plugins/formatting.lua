@@ -27,6 +27,12 @@ return {
 				async = false,
 				timeout_ms = 1000,
 			},
+			formatters = {
+				prettier = {
+					command = "prettier",
+					args = { "--stdin-filepath", "$FILENAME", "--tab-width", "4" },
+				},
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
