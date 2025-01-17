@@ -47,6 +47,7 @@ opt.startofline = true
 
 opt.scrolloff = 5
 
+-- Highlight on Yank
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
