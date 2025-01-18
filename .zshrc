@@ -205,6 +205,7 @@ alias cd="z"
 # ---- Tmux alias ----
 alias t="tmux ls"
 alias tc="tmux attach -t config"
+alias tj="tmux attach -t java"
 alias tp="tmux attach -t python"
 alias tr="tmux attach -t react"
 alias to="tmux attach -t obsidian"
