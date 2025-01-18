@@ -9,9 +9,9 @@ return {
 			vim.g.floaterm_autoclose = 1 -- Automatically close floaterm when process exits
 
 			-- Keybindings
-			vim.keymap.set("n", "<leader><leader>ft", ":FloatermToggle<CR>", { desc = "Toggle Floaterm" })
-			vim.keymap.set("n", "<leader><leader>fn", ":FloatermNew<CR>", { desc = "New Floaterm" })
-			vim.keymap.set("n", "<leader><leader>fk", ":FloatermKill<CR>", { desc = "Kill Floaterm" })
+			vim.keymap.set("n", "<leader>fo", ":FloatermToggle<CR>", { desc = "Open Floaterm" })
+			vim.keymap.set("n", "<leader>fn", ":FloatermNew<CR>", { desc = "New Floaterm" })
+			vim.keymap.set("n", "<leader>fk", ":FloatermKill<CR>", { desc = "Kill Floaterm" })
 		end,
 	},
 }

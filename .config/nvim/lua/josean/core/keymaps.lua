@@ -41,6 +41,3 @@ map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer"
 
 -- neoclip
 map.set("n", "<leader>nc", "<cmd>Telescope neoclip<CR>", { desc = "Neoclip" })
-
--- oil.nvim
-map.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
