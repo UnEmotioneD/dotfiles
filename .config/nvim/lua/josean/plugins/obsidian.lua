@@ -9,9 +9,10 @@ return {
 	opts = {
 		workspaces = {
 			{
-				name = "react",
+				name = "React",
 				path = "~/Documents//vaults/React",
 			},
 		},
+		ui = { enable = false },
 	},
 }
