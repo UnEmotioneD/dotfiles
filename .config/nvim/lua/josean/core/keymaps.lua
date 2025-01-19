@@ -53,6 +53,8 @@ map.set("n", "<leader>ge", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit
 map.set("n", "<leader>gg", "<cmd>ChatGPTRun grammar_correction<CR>", { desc = "Correct grammer" })
 map.set("n", "<leader>gf", "<cmd>ChatGPTRun fix_bugs<CR>", { desc = "Fix bugs" })
 
+-- markdown preview
+map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdown" })
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 
