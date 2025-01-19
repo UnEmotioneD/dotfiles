@@ -204,11 +204,11 @@ alias cd="z"
 
 # ---- Tmux alias ----
 alias t="tmux ls"
-alias tc="tmux attach -t config"
-alias tj="tmux attach -t java"
-alias tp="tmux attach -t python"
-alias tr="tmux attach -t react"
-alias to="tmux attach -t obsidian"
+alias tc="tmux a -t config"
+alias tj="tmux a -t java"
+alias tp="tmux a -t python"
+alias tr="tmux a -t react"
+alias to="tmux a -t obsidian"
 
 # ---- Yazi setup ----
 
@@ -224,3 +224,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+#---- neovim alias ----
+alias v="nvim"
+
+#---- lazygit alias ----
+alias l="lazygit"
