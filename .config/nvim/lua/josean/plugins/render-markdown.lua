@@ -4,4 +4,13 @@ return {
 	---@module 'render-markdown'
 	---@type render.md.UserConfig
 	opts = {},
+	keys = {
+		{
+			"<leader>rm",
+			function()
+				require("render-markdown").toggle()
+			end,
+			desc = "Toggle render-markdown plugin",
+		},
+	},
 }
