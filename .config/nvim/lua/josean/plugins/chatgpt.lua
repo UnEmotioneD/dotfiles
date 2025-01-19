@@ -21,10 +21,5 @@ return {
 		"folke/trouble.nvim",
 		"nvim-telescope/telescope.nvim",
 	},
-	keys = {
-		{ "<leader>go", "<cmd>ChatGPT<CR>", desc = "Open normal ChatGPT" },
-		{ "<leader>ge", "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction" },
-		{ "<leader>gg", "<cmd>ChatGPTRun grammar_correction<CR>", desc = "Correct grammer" },
-		{ "<leader>gf", "<cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix bugs" },
-	},
+	keys = {},
 }
