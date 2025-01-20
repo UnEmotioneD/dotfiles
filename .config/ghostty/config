@@ -30,7 +30,7 @@ copy-on-select = "clipboard"
 
 quit-after-last-window-closed = true
 
-initial-window = false
+initial-window = true
 
 shell-integration = "zsh"
 shell-integration-features = "no-cursor,sudo,no-title"
@@ -42,4 +42,7 @@ macos-option-as-alt = "left"
 macos-window-shadow = true
 
 desktop-notifications = false
+
+auto-update = "download"
+auto-update-channel = "stable"
 
