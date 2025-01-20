@@ -29,18 +29,24 @@ brew install stow
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```zsh
-$ git clone https://github.com/UnEmotioneD/dotfiles.git
-$ cd dotfiles
+git clone https://github.com/UnEmotioneD/dotfiles.git
+cd dotfiles
 ```
 
 then use GNU stow to create symlinks
 
 ```zsh
-$ stow .
+stow .
 ```
 
 or move any conflicting files to dotfiles directory with `--adopt` flag
 
 ```zsh
-$ stow --adopt .
+stow --adopt .
+```
+
+to unlink every symlinks
+
+```zsh
+stow -D
 ```
