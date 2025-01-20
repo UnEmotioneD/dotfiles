@@ -1,0 +1,45 @@
+font-size = "16"
+font-thicken = true
+font-family = "MesloLGS Nerd Font Mono"
+font-family-bold = "auto"
+font-family-italic = "auto"
+font-family-bold-italic = "auto"
+
+cursor-style-blink = false
+
+config-file = theme
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = "1"
+
+background-opacity = "0.96"
+background-blur-radius = "20"
+
+link-url = true
+
+window-padding-x = "10"
+window-padding-y = "10"
+window-padding-balance = true
+window-vsync = true
+window-theme = "dark"
+window-colorspace = "display-p3"
+
+clipboard-read = "allow"
+clipboard-write = "allow"
+copy-on-select = "clipboard"
+
+quit-after-last-window-closed = true
+
+initial-window = false
+
+shell-integration = "zsh"
+shell-integration-features = "no-cursor,sudo,no-title"
+
+custom-shader-animation = "always"
+
+macos-titlebar-style = "hidden"
+macos-option-as-alt = "left"
+macos-window-shadow = true
+
+desktop-notifications = false
+
