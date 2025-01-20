@@ -1,5 +1,4 @@
 return {
-	-- other plugins...
 	{
 		"NvChad/nvim-colorizer.lua",
 		config = function()
