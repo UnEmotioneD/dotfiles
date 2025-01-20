@@ -10,7 +10,11 @@ return {
 		workspaces = {
 			{
 				name = "React",
-				path = "~/Documents/vaults/React",
+				path = "~/Documents/vaults/React/",
+			},
+			{
+				name = "Java",
+				path = "~/Documents/vaults/Java/",
 			},
 		},
 		-- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of

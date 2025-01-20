@@ -44,6 +44,9 @@ map.set("n", "<leader>fo", ":FloatermToggle<CR>", { desc = "Toggle Floaterm" })
 map.set("n", "<leader>fn", ":FloatermNew<CR>", { desc = "New Floaterm" })
 map.set("n", "<leader>fk", ":FloatermKill<CR>", { desc = "Kill Floaterm" })
 
+-- lazy
+map.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
+
 -- neoclip
 map.set("n", "<leader>nc", "<cmd>Telescope neoclip<CR>", { desc = "Neoclip" })
 
