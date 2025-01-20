@@ -62,6 +62,13 @@ map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdow
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 
+-- treesitter
+map.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+map.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+map.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+map.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+map.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+
 -- trouble
 map.set("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Open trouble workspace diagnostics" })
 map.set(
