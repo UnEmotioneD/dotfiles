@@ -18,7 +18,7 @@ background-blur-radius = 20
 link-url = true
 
 window-padding-x = 10
-window-padding-y = 10, 5
+window-padding-y = 10
 window-padding-balance = true
 window-vsync = true
 window-theme = dark
@@ -38,7 +38,7 @@ quit-after-last-window-closed = true
 initial-window = true
 
 shell-integration = zsh
-shell-integration-features = no-cursor,sudo,no-title
+shell-integration-features = no-cursor, sudo, no-title
 
 custom-shader-animation = always
 
