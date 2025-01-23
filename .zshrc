@@ -209,6 +209,7 @@ alias tj="tmux a -t java"
 alias tp="tmux a -t python"
 alias tr="tmux a -t react"
 alias to="tmux a -t obsidian"
+alias tl="tmux a -t leetcode"
 
 # ---- Yazi setup ----
 
