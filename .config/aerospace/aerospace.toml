@@ -207,7 +207,7 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 # Use the commadn below in terminal with aerospace turned on
-# aerospace list-apps
+# $ aerospace list-apps
 
 # === workspace U ===
 
@@ -216,7 +216,7 @@ if.app-id = 'com.apple.finder'
 run = ["layout floating", "move-node-to-workspace U"]
 
 [[on-window-detected]]
-if.app-id = 'com.torusknot.SourceTreeNotMAS'
+if.app-id = 'com.github.GitHubClient'
 run = "move-node-to-workspace U"
 
 # === workspace I ===
