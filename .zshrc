@@ -225,6 +225,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+#---- clear alias ----
+alias c="clear"
+
 #---- neovim alias ----
 alias v="nvim"
 
