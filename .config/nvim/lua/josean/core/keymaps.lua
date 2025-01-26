@@ -16,6 +16,9 @@ map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 -- delete single character without copying into register
 map.set("n", "x", '"_x')
 
+-- delete all marks
+map.set("n", "<leader>dm", "<cmd>delm!<CR>", { desc = "Delete all marks" })
+
 -- increment/decrement numbers
 map.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 map.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
