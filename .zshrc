@@ -229,6 +229,9 @@ function y() {
 #---- clear alias ----
 alias c="clear"
 
+#---- clear exit ----
+alias e="exit"
+
 #---- neovim alias ----
 alias v="nvim"
 
