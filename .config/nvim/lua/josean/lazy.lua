@@ -19,5 +19,4 @@ require("lazy").setup({ { import = "josean.plugins" }, { import = "josean.plugin
 	change_detection = {
 		notify = false,
 	},
-	vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>", { desc = "Open Lazy" }),
 })
