@@ -27,31 +27,31 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				"lua_ls",
+				"emmet_ls",
 				"ts_ls",
 				"html",
 				"cssls",
+				-- "prismals",
+				-- "graphql",
 				-- "tailwindcss",
 				-- "svelte",
-				"lua_ls",
-				-- "graphql",
-				"emmet_ls",
-				"prismals",
 				"pyright",
-				"rust_analyzer",
-				"clangd",
+				-- "rust_analyzer",
+				-- "clangd",
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"pylint", -- python linter
 				"eslint_d", -- js linter
-				"codelldb",
-				"clang-format",
+				"prettier", -- prettier formatter
+				"black", -- python formatter
+				"isort", -- python formatter
+				"pylint", -- python linter
+				-- "codelldb",
+				-- "clang-format",
 			},
 		})
 	end,
