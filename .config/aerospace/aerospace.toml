@@ -143,7 +143,7 @@ alt-u = 'workspace U' # Finder
 # alt-v = 'workspace V'
 # alt-w = 'workspace W'
 # alt-x = 'workspace X'
-alt-y = 'workspace 1' # For macbook display
+alt-y = 'workspace y' # For macbook display
 # alt-z = 'workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -176,7 +176,7 @@ alt-shift-u = 'move-node-to-workspace U'
 # alt-shift-v = 'move-node-to-workspace V'
 # alt-shift-w = 'move-node-to-workspace W'
 # alt-shift-x = 'move-node-to-workspace X'
-alt-shift-y = 'move-node-to-workspace 1'
+alt-shift-y = 'move-node-to-workspace y'
 # alt-shift-z = 'move-node-to-workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -206,7 +206,7 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-# Use the commadn below in terminal with aerospace turned on
+# Use the command below in terminal with aerospace turned on
 # $ aerospace list-apps
 
 # === workspace U ===
