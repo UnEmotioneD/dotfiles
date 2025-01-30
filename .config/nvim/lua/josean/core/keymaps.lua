@@ -68,6 +68,9 @@ map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdow
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 
+-- oil
+map.set("n", "<leader>-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
+
 -- treesitter
 map.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 map.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
