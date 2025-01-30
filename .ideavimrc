@@ -42,6 +42,8 @@ set relativenumber
 
 set ignorecase
 set smartcase
+set hlsearch
+nmap <leader>nh :nohl<cr>
 
 set visualbell
 set noerrorbells
