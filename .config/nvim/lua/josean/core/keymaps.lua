@@ -42,6 +42,10 @@ map.set("n", "<leader>qq", "<cmd>q<CR>", { desc = "Quite current buffer" })
 map.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quite all buffer" })
 map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer" })
 
+-- navigating search
+map.set("n", "n", "nzz")
+map.set("n", "N", "Nzz")
+
 -- floaterm
 map.set("n", "<leader>fo", ":FloatermToggle<CR>", { desc = "Toggle Floaterm" })
 map.set("n", "<leader>fn", ":FloatermNew<CR>", { desc = "New Floaterm" })
