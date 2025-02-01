@@ -202,20 +202,6 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-# ---- Tmux alias ----
-alias t="tmux ls"
-alias tc="tmux a -t config"
-alias tj="tmux a -t java"
-alias tp="tmux a -t python"
-alias tr="tmux a -t react"
-alias to="tmux a -t obsidian"
-alias tl="tmux a -t leetcode"
-alias tz="tmux a -t zmk"
-
-# ---- Yazi setup ----
-
-export EDITOR="nvim"
-
 # Move to directory when exiting yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -232,8 +218,29 @@ alias c="clear"
 #---- clear exit ----
 alias e="exit"
 
+#---- vim alias ----
+alias v="vim"
+
 #---- neovim alias ----
-alias v="nvim"
+alias n="nvim"
 
 #---- lazygit alias ----
 alias l="lazygit"
+
+# ---- Tmux alias ----
+alias t="tmux ls"
+alias tc="tmux a -t config"
+alias tj="tmux a -t java"
+alias tp="tmux a -t python"
+alias tr="tmux a -t react"
+alias to="tmux a -t obsidian"
+alias tl="tmux a -t leetcode"
+alias tz="tmux a -t zmk"
+
+# ---- Yazi setup ----
+export EDITOR="nvim"
+
+# sessionizer
+PATH="$PATH":"$HOME/.local/scripts/"
+
+bindkey -s ^f "tmux-sessionizer\n"
