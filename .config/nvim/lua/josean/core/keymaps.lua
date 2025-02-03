@@ -46,11 +46,6 @@ map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer"
 map.set("n", "n", "nzz")
 map.set("n", "N", "Nzz")
 
--- floaterm
-map.set("n", "<leader>fo", ":FloatermToggle<CR>", { desc = "Toggle Floaterm" })
-map.set("n", "<leader>fn", ":FloatermNew<CR>", { desc = "New Floaterm" })
-map.set("n", "<leader>fk", ":FloatermKill<CR>", { desc = "Kill Floaterm" })
-
 -- lazy git
 map.set("n", "<leader>git", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
 
