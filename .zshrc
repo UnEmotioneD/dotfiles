@@ -116,11 +116,8 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
 [[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
 
-# Neofetch
-# neofetch
-
 # NerdFetch
-# nerdfetch
+nerdfetch
 
 # quiet off
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
