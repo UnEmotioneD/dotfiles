@@ -45,6 +45,9 @@ set smartcase
 set hlsearch
 nmap <leader>nh :nohl<CR>
 
+nmap n nzz
+nmap N Nzz
+
 set visualbell
 set noerrorbells
 
