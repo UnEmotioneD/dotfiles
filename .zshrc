@@ -113,6 +113,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
+[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+
 # Neofetch
 # neofetch
 
@@ -218,20 +221,13 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-#---- clear alias ----
-alias c="clear"
+# ---- Yazi setup ----
+export EDITOR="nvim"
 
-#---- clear exit ----
-alias e="exit"
+# sessionizer
+PATH="$PATH":"$HOME/.local/scripts/"
 
-#---- vim alias ----
-alias v="vim"
-
-#---- neovim alias ----
-alias n="nvim"
-
-#---- lazygit alias ----
-alias l="lazygit"
+bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Tmux alias ----
 alias t="tmux ls"
@@ -243,13 +239,9 @@ alias to="tmux a -t obsidian"
 alias tl="tmux a -t leetcode"
 alias tz="tmux a -t zmk"
 
-# ---- Yazi setup ----
-export EDITOR="nvim"
-
-# sessionizer
-PATH="$PATH":"$HOME/.local/scripts/"
-
-bindkey -s ^f "tmux-sessionizer\n"
-
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
-[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+#---- my alias ----
+alias c="clear"
+alias e="exit"
+alias v="vim"
+alias n="nvim"
+alias l="lazygit"
