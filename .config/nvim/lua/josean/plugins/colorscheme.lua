@@ -1,4 +1,4 @@
-return {
+local coolnight = {
 	{
 		"folke/tokyonight.nvim",
 		priority = 1000, -- make sure to load this before all the other start plugins
@@ -36,8 +36,20 @@ return {
 					colors.fg_sidebar = fg_dark
 				end,
 			})
-			-- load the colorscheme here
+			-- load the color scheme here
 			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
+}
+
+return {
+	"folke/tokyonight.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require("tokyonight").setup({
+			style = "storm", -- storm(default), moon, night, day
+		})
+		vim.cmd([[colorscheme tokyonight]])
+	end,
 }
