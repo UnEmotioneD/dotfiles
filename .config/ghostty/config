@@ -7,13 +7,12 @@ font-family-bold-italic = auto
 
 cursor-style-blink = false
 
-config-file = coolnight
-theme = tokyonight-storm
+config-file = tokyo-night-storm
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 1
 
-background-opacity = 0.85
+background-opacity = 0.90
 background-blur-radius = 20
 
 link-url = true

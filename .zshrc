@@ -117,7 +117,7 @@ source $ZSH/oh-my-zsh.sh
 # neofetch
 
 # NerdFetch
-nerdfetch
+# nerdfetch
 
 # quiet off
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -163,12 +163,12 @@ _fzf_compgen_dir() {
 source ~/fzf-git.sh/fzf-git.sh
 
 # --- setup fzf theme ---
-fg="#CBE0F0"
-bg="#011628"
-bg_highlight="#143652"
-purple="#B388FF"
-blue="#06BCE4"
-cyan="#2CF9ED"
+fg="#a9b1d6"
+bg="#1a1b26"
+bg_highlight="#28344a"
+purple="#bb9af7"
+blue="#7aa2f7"
+cyan="#7dcfff"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
 
@@ -250,3 +250,6 @@ export EDITOR="nvim"
 PATH="$PATH":"$HOME/.local/scripts/"
 
 bindkey -s ^f "tmux-sessionizer\n"
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
+[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
