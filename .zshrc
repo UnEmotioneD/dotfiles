@@ -116,6 +116,9 @@ source $ZSH/oh-my-zsh.sh
 # Neofetch
 # neofetch
 
+# NerdFetch
+nerdfetch
+
 # quiet off
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
