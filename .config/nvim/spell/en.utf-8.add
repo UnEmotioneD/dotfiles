@@ -50,3 +50,6 @@ conf
 tpm
 utf
 esc
+inorder
+docstring
+pylint
