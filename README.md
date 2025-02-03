@@ -48,5 +48,5 @@ stow --adopt .
 to unlink every symlinks
 
 ```zsh
-stow -D
+stow -D .
 ```
