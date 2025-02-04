@@ -7,6 +7,10 @@ local map = vim.keymap -- for conciseness
 -- General Keymaps --
 ---------------------
 
+-- Unbind keymaps to avoid collision with tmux keybinds
+map.set("", "<C-n>", "<Nop>", { noremap = true, silent = true })
+map.set("", "<C-p>", "<Nop>", { noremap = true, silent = true })
+
 -- clear search highlights
 map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
