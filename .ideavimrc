@@ -1,83 +1,52 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+" General Settings
+set number                " Show line numbers
+set relativenumber        " Show relative line numbers
+set scrolloff=5           " Keep 5 lines visible when scrolling
+set visualbell            " Use visual bell instead of beeping
+set noerrorbells          " Disable error bells
+set clipboard=unnamedplus " Use system clipboard by default
+set clipboard^=ideaputset " Support IDE clipboard integration
+set ideajoin              " Enable IntelliJ IDEA's join lines feature
 
+" Search Settings
+set incsearch   " Enable incremental search
+set ignorecase  " Ignore case in search
+set smartcase   " Override ignorecase if search contains uppercase
+set hlsearch    " Highlight search results
+nmap <leader>nh :nohl<CR> " Clear search highlights
 
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
-
-" Do incremental searching.
-set incsearch
-
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
-" Highlight copied text
-Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
-Plug 'tpope/vim-commentary'
-
-
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
-
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
-
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-
-" Tab navigation
-nnoremap H <C-PageUp>
-nnoremap L <C-PageDown>
-
-set number
-set relativenumber
-
-set ignorecase
-set smartcase
-set hlsearch
-nmap <leader>nh :nohl<CR>
-
+" Center cursor when navigating through search
 nmap n nzz
 nmap N Nzz
 
-set visualbell
-set noerrorbells
+" Override the clipboard when pasting in visual mode
+xnoremap p pgvy
 
+" Plugin Configuration
+
+" Highlight yanked text
+Plug 'machakann/vim-highlightedyank'
+
+" Commenting plugin
+Plug 'tpope/vim-commentary'
+
+" Easymotion for quick navigation
 Plug 'easymotion/vim-easymotion'
 let mapleader = " "
 
-set surround
-
+" Quickscope for quick character jumps
 set quickscope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-" to configure the first occurrence character color. Please use a hex color.
-let g:qs_primary_color = '#ff0000'
-" to configure the second occurrence character color. Again, please use a hex color.
-let g:qs_secondary_color = '#ff00ff'
-" if you don't want to highlight in diff editors.
-let g:qs_disable_for_diffs = 1
+let g:qs_accepted_chars = split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', '\zs')
+let g:qs_primary_color = '#ff0000'    " First occurrence highlight color
+let g:qs_secondary_color = '#ff00ff'  " Second occurrence highlight color
+let g:qs_disable_for_diffs = 1        " Disable in diff mode
 
-" Harpoon
-nmap <leader>ha :action AddToHarpoon<cr>
-nmap <leader>he :action ShowHarpoon<cr>
-nmap <leader>h1 :action GotoHarpoon1<cr>
-nmap <leader>h2 :action GotoHarpoon2<cr>
-nmap <leader>h3 :action GotoHarpoon3<cr>
-nmap <leader>h4 :action GotoHarpoon4<cr>
-nmap <leader>h5 :action GotoHarpoon5<cr>
-
-set clipboard=unnamedplus
-set clipboard^=ideaputset
-set ideajoin
-
-" p in visual mode won't override reg
-xnoremap p pgvy
+" Harpoon for quick file navigation
+nmap <leader>ha :action AddToHarpoon<CR>
+nmap <leader>he :action ShowHarpoon<CR>
+nmap <leader>h1 :action GotoHarpoon1<CR>
+nmap <leader>h2 :action GotoHarpoon2<CR>
+nmap <leader>h3 :action GotoHarpoon3<CR>
+nmap <leader>h4 :action GotoHarpoon4<CR>
+nmap <leader>h5 :action GotoHarpoon5<CR>
