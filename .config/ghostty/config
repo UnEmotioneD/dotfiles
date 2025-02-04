@@ -1,9 +1,10 @@
 font-size = 16
 font-thicken = true
-font-family = MesloLGS Nerd Font Mono
+font-family = JetBrains Mono
 font-family-bold = auto
 font-family-italic = auto
 font-family-bold-italic = auto
+font-feature = -liga
 
 cursor-style-blink = false
 
