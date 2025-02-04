@@ -43,15 +43,13 @@ map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer"
 map.set("n", "H", ":tabprev<CR>")
 map.set("n", "L", ":tabnext<CR>")
 
--- navigating search
+-- center window when navigating through search
 map.set("n", "n", "nzz")
 map.set("n", "N", "Nzz")
 
--- lazy git
-map.set("n", "<leader>git", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
-
--- neoclip
-map.set("n", "<leader>nc", "<cmd>Telescope neoclip<CR>", { desc = "Neoclip" })
+-- auto-session
+map.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+map.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
 
 -- chatgpt
 map.set("n", "<leader>go", "<cmd>ChatGPT<CR>", { desc = "Open normal ChatGPT" })
@@ -59,8 +57,14 @@ map.set("n", "<leader>ge", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit
 map.set("n", "<leader>gg", "<cmd>ChatGPTRun grammar_correction<CR>", { desc = "Correct grammer" })
 map.set("n", "<leader>gf", "<cmd>ChatGPTRun fix_bugs<CR>", { desc = "Fix bugs" })
 
+-- lazy git
+map.set("n", "<leader>git", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
+
 -- markdown preview
 map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdown" })
+
+-- neoclip
+map.set("n", "<leader>nc", "<cmd>Telescope neoclip<CR>", { desc = "Neoclip" })
 
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
