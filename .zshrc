@@ -113,14 +113,8 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
-[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
-
 # quiet off
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
-# NerdFetch
-nerdfetch
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -221,11 +215,6 @@ function y() {
 # ---- Yazi setup ----
 export EDITOR="nvim"
 
-# sessionizer
-PATH="$PATH":"$HOME/.local/scripts/"
-
-bindkey -s ^f "tmux-sessionizer\n"
-
 # ---- Tmux alias ----
 alias tc="tmux a -t config"
 alias tj="tmux a -t java"
@@ -235,6 +224,14 @@ alias tr="tmux a -t react"
 alias to="tmux a -t obsidian"
 alias tl="tmux a -t leetcode"
 alias tz="tmux a -t zmk"
+
+# sessionizer
+PATH="$PATH":"$HOME/.local/scripts/"
+
+bindkey -s ^f "tmux-sessionizer\n"
+
+# NerdFetch
+nerdfetch
 
 #---- my alias ----
 alias c="clear"
