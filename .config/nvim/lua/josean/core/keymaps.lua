@@ -39,10 +39,6 @@ map.set("n", "<leader>qq", "<cmd>q<CR>", { desc = "Quite current buffer" })
 map.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quite all buffer" })
 map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer" })
 
--- navigating tabs
-map.set("n", "H", ":tabprev<CR>")
-map.set("n", "L", ":tabnext<CR>")
-
 -- center window when navigating through search
 map.set("n", "n", "nzz")
 map.set("n", "N", "Nzz")
