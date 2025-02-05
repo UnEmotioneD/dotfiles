@@ -217,7 +217,6 @@ export EDITOR="nvim"
 
 # ---- Tmux alias ----
 alias tc="tmux a -t config"
-alias tj="tmux a -t java"
 alias tp="tmux a -t python"
 alias tw="tmux a -t webdev"
 alias tr="tmux a -t react"
