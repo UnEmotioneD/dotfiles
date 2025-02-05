@@ -70,7 +70,7 @@ map.set("n", "<leader>nc", "<cmd>Telescope neoclip<CR>", { desc = "Neoclip" })
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 
 -- oil
-map.set("n", "<leader>-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
+map.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 
 -- treesitter
 map.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })

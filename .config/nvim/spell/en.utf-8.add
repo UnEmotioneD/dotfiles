@@ -78,3 +78,6 @@ ui
 nerdfetch
 jetbrains
 shader
+cmdline
+vscode
+cmp
