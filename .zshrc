@@ -116,6 +116,11 @@ source $ZSH/oh-my-zsh.sh
 # quiet off
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+export EDITOR="nvim"
+
+# NerdFetch
+nerdfetch
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -202,6 +207,7 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
+# ---- Yazi ----
 # Move to directory when exiting yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -212,8 +218,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# ---- Yazi setup ----
-export EDITOR="nvim"
+# sessionizer
+PATH="$PATH":"$HOME/.local/scripts/"
+
+bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Tmux alias ----
 alias tc="tmux a -t config"
@@ -223,15 +231,6 @@ alias tr="tmux a -t react"
 alias to="tmux a -t obsidian"
 alias tz="tmux a -t zmk"
 
-# sessionizer
-PATH="$PATH":"$HOME/.local/scripts/"
-
-bindkey -s ^f "tmux-sessionizer\n"
-
-# NerdFetch
-nerdfetch
-
-#---- my alias ----
 alias c="clear"
 alias e="exit"
 alias v="vim"
