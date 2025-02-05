@@ -222,7 +222,6 @@ alias tp="tmux a -t python"
 alias tw="tmux a -t webdev"
 alias tr="tmux a -t react"
 alias to="tmux a -t obsidian"
-alias tl="tmux a -t leetcode"
 alias tz="tmux a -t zmk"
 
 # sessionizer
