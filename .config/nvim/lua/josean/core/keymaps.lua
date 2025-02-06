@@ -17,9 +17,6 @@ map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 -- delete single character without copying into register
 map.set("n", "x", '"_x')
 
--- delete all marks
-map.set("n", "<leader>dm", "<cmd>delm!<CR>", { desc = "Delete all marks" })
-
 -- increment/decrement numbers
 map.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 map.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
@@ -36,6 +33,10 @@ map.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go 
 map.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 map.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+-- auto-session
+map.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+map.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
+
 -- write/quite
 map.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "Write current file" })
 map.set("n", "<leader>wa", "<cmd>wa<CR>", { desc = "Write all file" })
@@ -43,13 +44,12 @@ map.set("n", "<leader>qq", "<cmd>q<CR>", { desc = "Quite current buffer" })
 map.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Quite all buffer" })
 map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer" })
 
+-- delete all marks
+map.set("n", "<leader>dm", "<cmd>delm!<CR>", { desc = "Delete all marks" })
+
 -- center window when navigating through search
 map.set("n", "n", "nzz")
 map.set("n", "N", "Nzz")
-
--- auto-session
-map.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
-map.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
 
 -- chatgpt
 map.set("n", "<leader>go", "<cmd>ChatGPT<CR>", { desc = "Open normal ChatGPT" })
