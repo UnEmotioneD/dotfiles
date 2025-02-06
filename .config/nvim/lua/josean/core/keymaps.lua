@@ -60,6 +60,11 @@ map.set("n", "<leader>gf", "<cmd>ChatGPTRun fix_bugs<CR>", { desc = "Fix bugs" }
 -- lazy git
 map.set("n", "<leader>git", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
 
+-- live server
+map.set("n", "<leader>lo", "<cmd>LiveServerStart<cr>", { desc = "Live Server Open" })
+map.set("n", "<leader>lc", "<cmd>LiveServerStop<cr>", { desc = "Live Server Stop" })
+map.set("n", "<leader>lt", "<cmd>LiveServerToggle<cr>", { desc = "Live Server Toggle" })
+
 -- markdown preview
 map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdown" })
 
