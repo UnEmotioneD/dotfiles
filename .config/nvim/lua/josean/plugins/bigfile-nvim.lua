@@ -1,6 +1,4 @@
--- Improve performance of editing big files
 return {
-	-- https://github.com/LunarVim/bigfile.nvim
 	"LunarVim/bigfile.nvim",
 	event = "BufReadPre",
 	opts = {

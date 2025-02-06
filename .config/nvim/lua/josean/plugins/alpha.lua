@@ -32,16 +32,15 @@ return {
 			dashboard.button("SPC ff", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
 			dashboard.button("SPC fs", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
 			dashboard.button("SPC wr", "󰁯  > Restore Session", "<cmd>SessionRestore<CR>"),
+			dashboard.button("l", "  > Open Lazy", "<cmd>Lazy<CR>"),
 			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
 		}
 
-		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#7aa2f7", bold = true }) -- Change color and make it bold
+		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#7aa2f7", bold = true })
 		dashboard.section.header.opts.hl = "AlphaHeader"
 
-		-- Send config to alpha
 		alpha.setup(dashboard.opts)
 
-		-- Disable folding on alpha buffer
 		vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
 	end,
 }

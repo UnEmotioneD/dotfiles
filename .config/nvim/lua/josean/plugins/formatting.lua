@@ -12,7 +12,7 @@ return {
 				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
 				css = { "prettier" },
-				-- Prettier formatts HTML into XHTML
+				-- Prettier formats HTML into XHTML
 				-- html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
