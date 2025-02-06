@@ -212,6 +212,10 @@ alt-shift-l = ['join-with right', 'mode main']
 # === workspace U ===
 
 [[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = "move-node-to-workspace U"
+
+[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ["layout floating", "move-node-to-workspace U"]
 
