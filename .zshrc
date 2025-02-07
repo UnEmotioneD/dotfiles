@@ -243,8 +243,7 @@ alias l="lazygit"
 alias brewup='brew update && brew upgrade && brew cleanup && clear && nerdfetch'
 
 # --- Neovim config selector ---
-alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
-alias nvim-kick="NVIM_APPNAME=KickStart nvim"
+alias kick="NVIM_APPNAME=KickStart nvim"
 
 function nvims() {
   items=("default" "KickStart")
