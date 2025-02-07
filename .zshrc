@@ -137,14 +137,14 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-# ---- FZF -----
+# --- FZF ---
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
 source <(fzf --zsh)
 
-# -- Use fd instead of fzf --
+# --- Use fd instead of fzf ---
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -174,7 +174,7 @@ cyan="#7dcfff"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
 
-# ----- Bat (better cat) -----
+# --- Bat (better cat) ---
 
 export BAT_THEME=tokyonight_night
 
@@ -198,19 +198,19 @@ _fzf_comprun() {
   esac
 }
 
-# ---- Eza (better ls) -----
+# --- Eza (better ls) ---
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # thefuck alias
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
-# ---- Zoxide (better cd) ----
+# --- Zoxide (better cd) ---
 eval "$(zoxide init zsh)"
 
 alias cd="z"
 
-# ---- Yazi ----
+# --- Yazi ---
 # Move to directory when exiting yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -221,12 +221,12 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# sessionizer
+# --- sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 
 bindkey -s ^f "tmux-sessionizer\n"
 
-# ---- Tmux alias ----
+# --- Tmux alias ---
 alias tc="tmux a -t config"
 alias tp="tmux a -t python"
 alias tw="tmux a -t webdev"
@@ -234,18 +234,20 @@ alias tr="tmux a -t react"
 alias to="tmux a -t obsidian"
 alias tz="tmux a -t zmk"
 
+# --- my alias ---
 alias c="clear"
 alias e="exit"
 alias v="vim"
 alias n="nvim"
 alias l="lazygit"
-alias brewup='brew update && brew upgrade && brew cleanup'
+alias brewup='brew update && brew upgrade && brew cleanup && clear'
 
 # --- Neovim config selector ---
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-kick="NVIM_APPNAME=KickStart nvim"
 
 function nvims() {
-  items=("default" "LazyVim")
+  items=("default" "KickStart")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
