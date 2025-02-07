@@ -246,12 +246,12 @@ alias brewup='brew update && brew upgrade && brew cleanup && clear && nerdfetch'
 alias kick="NVIM_APPNAME=KickStart nvim"
 
 function nvims() {
-  items=("default" "KickStart")
+  items=("Josean" "KickStart")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
     return 0
-  elif [[ $config == "default" ]]; then
+  elif [[ $config == "Josean" ]]; then
     config=""
   fi
   NVIM_APPNAME=$config nvim $@
