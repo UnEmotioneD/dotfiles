@@ -36,9 +36,6 @@ return {
 			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
 		}
 
-		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#7aa2f7", bold = true })
-		dashboard.section.header.opts.hl = "AlphaHeader"
-
 		alpha.setup(dashboard.opts)
 
 		vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
