@@ -118,6 +118,9 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 export EDITOR="nvim"
 
+# enable zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # NerdFetch
 nerdfetch
 
