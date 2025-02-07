@@ -240,7 +240,7 @@ alias e="exit"
 alias v="vim"
 alias n="nvim"
 alias l="lazygit"
-alias brewup='brew update && brew upgrade && brew cleanup && clear'
+alias brewup='brew update && brew upgrade && brew cleanup && clear && nerdfetch'
 
 # --- Neovim config selector ---
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
