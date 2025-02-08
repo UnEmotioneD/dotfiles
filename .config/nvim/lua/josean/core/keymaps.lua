@@ -13,6 +13,10 @@ map.set("", "<C-p>", "<Nop>", { noremap = true, silent = true })
 -- clear search highlights
 map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
+-- center window when navigating through search
+map.set("n", "n", "nzz")
+map.set("n", "N", "Nzz")
+
 -- delete single character without copying into register
 map.set("n", "x", '"_x')
 
@@ -38,9 +42,9 @@ map.set("n", "<leader>wq", "<cmd>wqa<CR>", { desc = "Write and quite all buffer"
 -- delete all marks
 map.set("n", "<leader>dm", "<cmd>delm!<CR>", { desc = "Delete all marks" })
 
--- center window when navigating through search
-map.set("n", "n", "nzz")
-map.set("n", "N", "Nzz")
+---------------------
+-- Plugin Keymaps --
+---------------------
 
 -- auto-session
 map.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
