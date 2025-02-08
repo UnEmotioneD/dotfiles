@@ -240,6 +240,10 @@ if.app-id = 'com.apple.dt.Xcode'
 run = "move-node-to-workspace O"
 
 [[on-window-detected]]
+if.app-id = 'com.apple.Terminal'
+run = "move-node-to-workspace O"
+
+[[on-window-detected]]
 if.app-id = 'org.alacritty'
 run = "move-node-to-workspace O"
 
