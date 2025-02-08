@@ -1,4 +1,3 @@
--- set leader key to space
 vim.g.mapleader = " "
 
 local map = vim.keymap -- for conciseness
@@ -17,25 +16,17 @@ map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 -- delete single character without copying into register
 map.set("n", "x", '"_x')
 
--- increment/decrement numbers
-map.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-map.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
-
 -- window management
-map.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-map.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
-map.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
-map.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+map.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+map.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+map.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
+map.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
-map.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-map.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-map.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-map.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
-map.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-
--- auto-session
-map.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
-map.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
+map.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+map.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+map.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+map.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+map.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 -- write/quite
 map.set("n", "<leader>ww", "<cmd>w<CR>", { desc = "Write current file" })
@@ -50,6 +41,10 @@ map.set("n", "<leader>dm", "<cmd>delm!<CR>", { desc = "Delete all marks" })
 -- center window when navigating through search
 map.set("n", "n", "nzz")
 map.set("n", "N", "Nzz")
+
+-- auto-session
+map.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+map.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
 
 -- chatgpt
 map.set("n", "<leader>go", "<cmd>ChatGPT<CR>", { desc = "Open normal ChatGPT" })
@@ -68,8 +63,11 @@ map.set("n", "<leader>lt", "<cmd>LiveServerToggle<cr>", { desc = "Live Server To
 -- markdown preview
 map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdown" })
 
--- neoclip
-map.set("n", "<leader>nc", "<cmd>Telescope neoclip<CR>", { desc = "Neoclip" })
+-- nvim-tree
+map.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+map.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
+map.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
+map.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
 
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
