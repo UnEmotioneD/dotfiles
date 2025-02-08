@@ -26,7 +26,6 @@ window-theme = dark
 window-colorspace = display-p3
 
 window-save-state = never
-window-step-resize = true
 
 clipboard-read = allow
 clipboard-write = allow
@@ -51,4 +50,3 @@ desktop-notifications = false
 
 auto-update = download
 auto-update-channel = stable
-
