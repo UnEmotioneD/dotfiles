@@ -242,6 +242,8 @@ alias n="nvim"
 alias l="lazygit"
 alias brewup='brew update && brew upgrade && brew cleanup && clear && nerdfetch'
 
+alias python='python3'
+
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
 
