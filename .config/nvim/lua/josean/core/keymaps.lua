@@ -73,6 +73,11 @@ map.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle f
 map.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
 map.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
 
+-- noice
+map.set("n", "<leader>nd", function()
+	require("noice").cmd("dismiss")
+end, { desc = "Dissmiss all messages" })
+
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 
