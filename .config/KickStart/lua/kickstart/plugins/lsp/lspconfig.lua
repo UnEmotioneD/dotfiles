@@ -222,6 +222,9 @@ return {
           require('lspconfig')[server_name].setup(server)
         end,
       },
+      -- to silence warnings
+      ensure_installed = {},
+      automatic_installation = {},
     }
   end,
 }
