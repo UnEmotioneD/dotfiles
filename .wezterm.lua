@@ -14,8 +14,15 @@ config.harfbuzz_features = { "calt=1", "liga=1" }
 config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.85
+config.window_padding = {
+	left = 15,
+	right = 15,
+	top = 15,
+	bottom = 15,
+}
+
+config.macos_window_background_blur = 20
 
 config.color_scheme = "Tokyo Night Storm"
 

@@ -5,8 +5,8 @@ import = [ "~/.config/alacritty/tokyo-night-storm.toml" ]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 10
+padding.x = 15
+padding.y = 15
 
 decorations = "Buttonless"
 
