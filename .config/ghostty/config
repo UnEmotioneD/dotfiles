@@ -44,7 +44,7 @@ custom-shader-animation = always
 
 macos-titlebar-style = hidden
 macos-option-as-alt = left
-macos-window-shadow = true
+macos-window-shadow = false
 
 desktop-notifications = false
 
