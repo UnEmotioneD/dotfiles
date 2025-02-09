@@ -8,7 +8,6 @@ return {
 	},
 	config = function()
 		require("noice").setup({
-			command_palette = false,
 			long_message_to_split = true, -- long messages will be sent to a split
 			inc_rename = false, -- enables an input dialog for inc-rename.nvim
 			lsp_doc_border = false, -- add a border to hover docs and signature help
@@ -29,8 +28,12 @@ return {
 			routes = {
 				{
 					filter = {
-						event = "msg_show",
-						kind = "",
+						event = { "msg_show", "lsp" },
+						kind = "progress",
+						cond = function(message)
+							local client = vim.tbl_get(message.opts, "progress", "client")
+							return client == "lua_ls"
+						end,
 						find = "written",
 					},
 					opts = { skip = true },
