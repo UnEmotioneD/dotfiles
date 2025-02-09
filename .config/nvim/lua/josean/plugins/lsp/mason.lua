@@ -36,6 +36,9 @@ return {
 				-- "clangd",
 				-- "rust_analyzer",
 			},
+
+			-- to silence warnings
+			automatic_installation = {},
 		})
 
 		mason_tool_installer.setup({
