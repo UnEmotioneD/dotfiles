@@ -32,13 +32,9 @@ return {
 				"ts_ls",
 				"html",
 				"cssls",
-				-- "prismals",
-				-- "graphql",
-				-- "tailwindcss",
-				-- "svelte",
 				"pyright",
-				-- "rust_analyzer",
 				-- "clangd",
+				-- "rust_analyzer",
 			},
 		})
 
@@ -50,8 +46,8 @@ return {
 				"black", -- python formatter
 				"isort", -- python formatter
 				"pylint", -- python linter
-				-- "codelldb",
 				-- "clang-format",
+				-- "codelldb",
 			},
 		})
 	end,
