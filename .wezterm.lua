@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 config = {
 	automatically_reload_config = true,
-	font = wezterm.font("Fira Code", { weight = "Bold" }),
+	font = wezterm.font("MesloLGS Nerd Font Mono", { weight = "Bold" }),
 	font_size = 16,
 	-- enable ligature
 	harfbuzz_features = { "calt=1", "liga=1" },
@@ -19,6 +19,8 @@ config = {
 		top = 15,
 		bottom = 15,
 	},
+
+	max_fps = 240,
 
 	color_scheme = "Tokyo Night Storm",
 }

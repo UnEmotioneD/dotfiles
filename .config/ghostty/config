@@ -1,6 +1,6 @@
 font-size = 16
 font-thicken = true
-font-family = FiraCode
+font-family = JetBrains Mono
 font-family-bold = auto
 font-family-italic = auto
 font-family-bold-italic = auto
@@ -18,7 +18,7 @@ background-blur-radius = 20
 
 link-url = true
 
-window-padding-x = 15 
+window-padding-x = 15
 window-padding-y = 15
 window-padding-balance = true
 window-vsync = true
