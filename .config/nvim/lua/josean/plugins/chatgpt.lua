@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("chatgpt").setup({
 			-- api_key_cmd = "pass show api/tokens/openai",
-			api_key_cmd = "echo $",
+			api_key_cmd = "echo $", -- to silence warning when not in use
 			openai_params = {
 				model = "gpt-4o",
 				frequency_penalty = 0,

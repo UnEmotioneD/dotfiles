@@ -11,7 +11,7 @@ map.set("", "<C-n>", "<Nop>", { noremap = true, silent = true })
 map.set("", "<C-p>", "<Nop>", { noremap = true, silent = true })
 
 -- clear search highlights
-map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+map.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights", silent = true })
 
 -- center window when navigating through search
 map.set("n", "n", "nzz")
@@ -91,7 +91,7 @@ map.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file ex
 -- noice
 map.set("n", "<leader>nd", function()
 	require("noice").cmd("dismiss")
-end, { desc = "Dissmiss all messages" })
+end, { desc = "Dissmiss all messages", silent = true })
 
 -- obsidian
 map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
