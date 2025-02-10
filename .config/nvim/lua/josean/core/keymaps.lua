@@ -10,20 +10,23 @@ local map = vim.keymap -- for conciseness
 map.set("", "<C-n>", "<Nop>", { noremap = true, silent = true })
 map.set("", "<C-p>", "<Nop>", { noremap = true, silent = true })
 
--- center window when navigating through search
+-- Center window when navigating through search
 map.set("n", "n", "nzz")
 map.set("n", "N", "Nzz")
 
--- delete single character without copying into register
+-- Delete single character without copying into register
 map.set("n", "x", '"_x')
 
--- window management
+-- Yank to end of the line
+map.set("n", "Y", "y$")
+
+-- Window management
 map.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 map.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 map.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 map.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
--- tab navigation
+-- Tab navigation
 map.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 map.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
 map.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
@@ -65,18 +68,18 @@ map.set({ "n", "v" }, "<leader>fo", function()
 	require("conform").format()
 end, { desc = "Format file or range (in visual mode)" })
 
--- lazy git
+-- Lazygit
 map.set("n", "<leader>git", "<cmd>LazyGit<CR>", { desc = "Open lazygit" })
 
--- live server
+-- Live server
 map.set("n", "<leader>lo", "<cmd>LiveServerStart<CR>", { desc = "Live server open" })
 map.set("n", "<leader>lc", "<cmd>LiveServerStop<CR>", { desc = "Live server stop" })
 map.set("n", "<leader>lt", "<cmd>LiveServerToggle<CR>", { desc = "Live server toggle" })
 
--- markdown preview
+-- Markdown preview
 map.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Preview markdown" })
 
--- markdown render
+-- Markdown render
 map.set("n", "<leader>mr", function()
 	require("render-markdown").toggle()
 end, { desc = "Render Markdown" })
@@ -87,10 +90,10 @@ map.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle f
 map.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
 map.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
 
--- obsidian
-map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
+-- Obsidian
+map.set("n", "<leader>mo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 
--- oil
+-- Oil
 map.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 
 -- todo-comments
@@ -102,14 +105,14 @@ map.set("n", "<leader>[t", function()
 	require("todo-comments").jump_prev()
 end, { desc = "previous todo comment" })
 
--- treesitter
+-- Treesitter
 map.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
 map.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Fuzzy find recent files" })
 map.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Find string in cwd" })
 map.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Find string under cursor in cwd" })
 map.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find todos" })
 
--- trouble
+-- Trouble
 map.set("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Open trouble workspace diagnostics" })
 map.set(
 	"n",
