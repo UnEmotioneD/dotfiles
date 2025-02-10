@@ -63,11 +63,7 @@ end, { desc = "Flash" })
 
 -- Formatting
 map.set({ "n", "v" }, "<leader>mp", function()
-	require("conform").format({
-		lsp_fallback = true,
-		async = false,
-		timeout_ms = 1000,
-	})
+	require("conform").format()
 end, { desc = "Format file or range (in visual mode)" })
 
 -- lazy git
@@ -103,6 +99,15 @@ map.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian" 
 -- oil
 map.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 
+-- todo-comments
+map.set("n", "<leader>]t", function()
+	require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+map.set("n", "<leader>[t", function()
+	require("todo-comments").jump_prev()
+end, { desc = "previous todo comment" })
+
 -- treesitter
 map.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 map.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
@@ -121,3 +126,6 @@ map.set(
 map.set("n", "<leader>xq", "<cmd>Trouble quickfix toggle<CR>", { desc = "Open trouble quickfix list" })
 map.set("n", "<leader>xl", "<cmd>Trouble loclist toggle<CR>", { desc = "Open trouble location list" })
 map.set("n", "<leader>xt", "<cmd>Trouble todo toggle<CR>", { desc = "Open todos in trouble" })
+
+-- vim-maximizer
+map.set("n", "<leader>sm", "<cmd>MaximizerToggle<CR>", { desc = "Maximize/minimize a split" })
