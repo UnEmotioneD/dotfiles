@@ -3,8 +3,7 @@ return {
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {},
-  -- Optional dependencies
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  dependencies = { 'nvim-tree/nvim-web-devicons' }, -- Optional
   lazy = false,
   config = function()
     require('oil').setup {
