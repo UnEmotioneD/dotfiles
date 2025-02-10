@@ -177,16 +177,16 @@ if has('gui_running')
     " Hide the toolbar.
     set guioptions-=T
 
-    " Hide the the left-side scroll bar.
+    " Hide the left-side scroll bar.
     set guioptions-=L
 
-    " Hide the the right-side scroll bar.
+    " Hide the right-side scroll bar.
     set guioptions-=r
 
-    " Hide the the menu bar.
+    " Hide the menu bar.
     set guioptions-=m
 
-    " Hide the the bottom scroll bar.
+    " Hide the bottom scroll bar.
     set guioptions-=b
 
     " Map the F4 key to toggle the menu, toolbar, and scroll bar.
