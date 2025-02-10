@@ -11,7 +11,7 @@ map.set("", "<C-n>", "<Nop>", { noremap = true, silent = true })
 map.set("", "<C-p>", "<Nop>", { noremap = true, silent = true })
 
 -- clear search highlights
-map.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights", silent = true })
+map.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
 
 -- center window when navigating through search
 map.set("n", "n", "nzz")
