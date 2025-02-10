@@ -37,7 +37,7 @@ return {
 				-- "rust_analyzer",
 			},
 
-			-- to silence warnings
+			-- To silence "Missing required fields" warnings
 			automatic_installation = {},
 		})
 
