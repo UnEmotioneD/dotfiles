@@ -62,7 +62,7 @@ map.set("n", "<leader>fl", function()
 end, { desc = "Flash" })
 
 -- Formatting
-map.set({ "n", "v" }, "<leader>mp", function()
+map.set({ "n", "v" }, "<leader>fo", function()
 	require("conform").format()
 end, { desc = "Format file or range (in visual mode)" })
 
@@ -75,12 +75,12 @@ map.set("n", "<leader>lc", "<cmd>LiveServerStop<cr>", { desc = "Live Server Stop
 map.set("n", "<leader>lt", "<cmd>LiveServerToggle<cr>", { desc = "Live Server Toggle" })
 
 -- markdown preview
-map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdown" })
+map.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Preview markdown" })
 
 -- markdown render
-map.set("n", "<leader>rm", function()
+map.set("n", "<leader>mr", function()
 	require("render-markdown").toggle()
-end, { desc = "Toggle markdown render" })
+end, { desc = "Render Markdown" })
 
 -- nvim-tree
 map.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
