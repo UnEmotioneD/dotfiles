@@ -240,7 +240,7 @@ alias e="exit"
 alias v="vim"
 alias n="nvim"
 alias l="lazygit"
-alias brewup='brew update && brew upgrade && brew cleanup && clear && nerdfetch'
+alias brewup='brew update && brew upgrade &&brew upgrade --cask && brew cleanup && clear && nerdfetch'
 
 alias python='python3'
 
