@@ -57,7 +57,7 @@ return {
 				{ name = "render-markdown" },
 			}),
 
-			-- '/' cmdline setup
+			-- '/' snippets for cmdline search or directory
 			cmp.setup.cmdline("/", {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = {
@@ -65,7 +65,7 @@ return {
 				},
 			}),
 
-			-- ':' cmdline setup
+			-- ':' snippets for cmdline
 			cmp.setup.cmdline(":", {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
