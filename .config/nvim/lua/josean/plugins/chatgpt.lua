@@ -3,7 +3,8 @@ return {
 	event = "VeryLazy",
 	config = function()
 		require("chatgpt").setup({
-			api_key_cmd = "pass show api/tokens/openai",
+			-- api_key_cmd = "pass show api/tokens/openai",
+			api_key_cmd = "echo $",
 			openai_params = {
 				model = "gpt-4o",
 				frequency_penalty = 0,
