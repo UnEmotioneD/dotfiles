@@ -51,13 +51,12 @@ opt.scrolloff = 5
 
 -- Highlight on Yank
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("HighlightYank", {}),
 	pattern = "*",
 	callback = function()
 		vim.highlight.on_yank({
-			higroup = "IncSearch", -- Highlight group, e.g., IncSearch
+			higroup = "IncSearch",
 			timeout = 200, -- Duration in milliseconds
 		})
 	end,
