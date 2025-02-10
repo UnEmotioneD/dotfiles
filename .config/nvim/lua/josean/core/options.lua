@@ -1,4 +1,4 @@
-vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd 'let g:netrw_liststyle = 3'
 
 local opt = vim.opt -- for conciseness
 
@@ -24,14 +24,14 @@ opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+opt.background = 'dark' -- colorschemes that can be light or dark will be made dark
+opt.signcolumn = 'yes' -- show sign column so that text doesn't shift
 
 -- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+opt.backspace = 'indent,eol,start' -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+opt.clipboard:append 'unnamedplus' -- use system clipboard as default register
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
@@ -39,8 +39,8 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- spelling
 opt.spell = true
-opt.spelllang = "en"
-opt.spellsuggest = "best"
+opt.spelllang = 'en'
+opt.spellsuggest = 'best'
 
 -- turn off swapfile
 opt.swapfile = false
@@ -50,14 +50,14 @@ opt.startofline = true
 opt.scrolloff = 5
 
 -- Highlight on Yank
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("HighlightYank", {}),
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = 200, -- Duration in milliseconds
-		})
-	end,
+vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+vim.api.nvim_create_autocmd('TextYankPost', {
+    group = vim.api.nvim_create_augroup('HighlightYank', {}),
+    pattern = '*',
+    callback = function()
+        vim.highlight.on_yank {
+            higroup = 'IncSearch',
+            timeout = 200, -- Duration in milliseconds
+        }
+    end,
 })
