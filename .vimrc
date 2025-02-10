@@ -92,11 +92,6 @@ let mapleader = " "
 
 nnoremap <leader>nh :nohl<CR>
 
-" Pressing the letter o will open a new line below the current one.
-" Exit insert mode after creating a new line above or below the current line.
-nnoremap o o<esc>
-nnoremap O O<esc>
-
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
 nnoremap N Nzz
