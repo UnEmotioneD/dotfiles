@@ -56,6 +56,20 @@ map.set("n", "<leader>ge", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit
 map.set("n", "<leader>gg", "<cmd>ChatGPTRun grammar_correction<CR>", { desc = "Correct grammer" })
 map.set("n", "<leader>gf", "<cmd>ChatGPTRun fix_bugs<CR>", { desc = "Fix bugs" })
 
+-- Flash
+map.set("n", "<leader>fl", function()
+	require("flash").jump()
+end, { desc = "Flash" })
+
+-- Formatting
+map.set({ "n", "v" }, "<leader>mp", function()
+	require("conform").format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 1000,
+	})
+end, { desc = "Format file or range (in visual mode)" })
+
 -- lazy git
 map.set("n", "<leader>git", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
 
@@ -66,6 +80,11 @@ map.set("n", "<leader>lt", "<cmd>LiveServerToggle<cr>", { desc = "Live Server To
 
 -- markdown preview
 map.set("n", "<leader>pm", "<cmd>MarkdownPreview<CR>", { desc = "Preview Markdown" })
+
+-- markdown render
+map.set("n", "<leader>rm", function()
+	require("render-markdown").toggle()
+end, { desc = "Toggle markdown render" })
 
 -- nvim-tree
 map.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
