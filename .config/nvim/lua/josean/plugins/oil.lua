@@ -96,7 +96,8 @@ return {
 				end,
 				-- This function defines what will never be shown, even when `show_hidden` is set
 				is_always_hidden = function(name, bufnr)
-					return false
+					local dsStore = name:match(".DS_Store")
+					return dsStore
 				end,
 				-- Sort file names with numbers in a more intuitive order for humans.
 				-- Can be "fast", true, or false. "fast" will turn it off for large directories.
