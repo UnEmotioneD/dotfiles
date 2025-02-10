@@ -121,9 +121,6 @@ export EDITOR="nvim"
 # enable zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# NerdFetch
-nerdfetch
-
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -240,9 +237,7 @@ alias e="exit"
 alias v="vim"
 alias n="nvim"
 alias l="lazygit"
-alias brewup='brew update && brew upgrade &&brew upgrade --cask && brew cleanup && clear && nerdfetch'
-
-alias python='python3'
+alias brewup='brew update && brew upgrade &&brew upgrade --cask && brew cleanup && clear'
 
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
