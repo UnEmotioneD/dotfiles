@@ -17,11 +17,12 @@ config = {
 		left = 15,
 		right = 15,
 		top = 15,
-		bottom = 15,
+		bottom = 10,
 	},
 
 	max_fps = 240,
 
+	---@type string | "Tokyo Night Storm" | "Catppuccin Mocha"
 	color_scheme = "Tokyo Night Storm",
 }
 
