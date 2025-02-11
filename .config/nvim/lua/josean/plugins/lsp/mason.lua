@@ -5,15 +5,12 @@ return {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
     },
     config = function()
-        -- import mason
         local mason = require 'mason'
 
-        -- import mason-lspconfig
         local mason_lspconfig = require 'mason-lspconfig'
 
         local mason_tool_installer = require 'mason-tool-installer'
 
-        -- enable mason and configure icons
         mason.setup {
             ui = {
                 icons = {
@@ -25,7 +22,6 @@ return {
         }
 
         mason_lspconfig.setup {
-            -- list of servers for mason to install
             ensure_installed = {
                 'lua_ls',
                 'emmet_ls',
@@ -38,17 +34,17 @@ return {
             },
 
             -- To silence "Missing required fields" warnings
-            automatic_installation = {},
+            automatic_installation = true,
         }
 
         mason_tool_installer.setup {
             ensure_installed = {
-                'stylua', -- lua formatter
+                'stylua',
                 'eslint_d', -- js linter
-                'prettier', -- prettier formatter
-                'black', -- python formatter
-                'isort', -- python formatter
-                'pylint', -- python linter
+                'prettier',
+                'black',
+                'isort',
+                'pylint',
                 -- "clang-format",
                 -- "codelldb",
             },
