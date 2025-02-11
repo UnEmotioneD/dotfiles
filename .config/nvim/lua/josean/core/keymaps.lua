@@ -71,6 +71,11 @@ end, { desc = 'Format file or range (in visual mode)' })
 -- Lazygit
 map.set('n', '<leader>git', '<cmd>LazyGit<CR>', { desc = 'Open lazygit' })
 
+-- Lint
+map.set('n', '<leader>l', function()
+    require('lint').try_lint()
+end, { desc = 'Trigger linting for current file' })
+
 -- Live server
 map.set('n', '<leader>lo', '<cmd>LiveServerStart<CR>', { desc = 'Live server open' })
 map.set('n', '<leader>lc', '<cmd>LiveServerStop<CR>', { desc = 'Live server stop' })
