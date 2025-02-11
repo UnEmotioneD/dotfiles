@@ -6,9 +6,7 @@ return {
     },
     config = function()
         local mason = require 'mason'
-
         local mason_lspconfig = require 'mason-lspconfig'
-
         local mason_tool_installer = require 'mason-tool-installer'
 
         mason.setup {
@@ -32,7 +30,6 @@ return {
                 -- "clangd",
                 -- "rust_analyzer",
             },
-
             -- To silence "Missing required fields" warnings
             automatic_installation = true,
         }
