@@ -1,12 +1,12 @@
 return {
     'jackMort/ChatGPT.nvim',
-    event = 'VeryLazy',
     dependencies = {
         'MunifTanjim/nui.nvim',
         'nvim-lua/plenary.nvim',
         'folke/trouble.nvim',
         'nvim-telescope/telescope.nvim',
     },
+    event = 'VeryLazy',
     opts = {
         api_key_cmd = 'pass show api/tokens/openai',
         openai_params = {
@@ -19,4 +19,5 @@ return {
             n = 1,
         },
     },
+    enabled = false,
 }
