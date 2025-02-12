@@ -44,6 +44,8 @@ return {
         'query',
         'vimdoc',
         'c',
+        'python',
+        'rust',
       },
 
       -- automatically install missing parsers when entering buffer

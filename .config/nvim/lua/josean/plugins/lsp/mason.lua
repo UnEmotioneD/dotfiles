@@ -31,20 +31,31 @@ return {
         'emmet_ls',
         'prismals',
         'pyright',
+        'clangd',
       },
       automatic_installation = true,
     }
 
     mason_tool_installer.setup {
       ensure_installed = {
-        'prettier',
-        'stylua',
-        'isort', -- Python import organizer
-        'black', -- Python formatter
-        'pylint',
-        'eslint_d', -- JS linter
-        'clang-format',
-        'cpplint', -- c, cpp linter
+        -- Lua
+        'stylua', -- Lua formatter
+
+        -- C/C++
+        'clang-format', -- Formatter
+        'cpplint', -- Linter
+
+        -- Python
+        'isort', -- Import organizer
+        'black', -- Formatter
+        'pylint', -- Linter
+        'mypy',
+        'ruff', -- Linter & formatter (written in rust)
+        'debugpy',
+
+        -- JavaScript
+        'prettier', -- Formatter
+        'eslint_d', -- Linter
       },
     }
   end,
