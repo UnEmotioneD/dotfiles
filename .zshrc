@@ -141,7 +141,7 @@ alias e="exit"
 alias v="vim"
 alias n="nvim"
 alias l="lazygit"
-alias brewup='brew update && brew upgrade &&brew upgrade --cask && brew cleanup && clear'
+alias brewup='brew update && brew upgrade &&brew upgrade --cask'
 
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
