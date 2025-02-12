@@ -3,7 +3,7 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {
         formatters_by_ft = {
-            -- html = { "prettier" }, -- Prettier formats HTML into XHTML
+            -- html = { 'prettier' }, -- Prettier formats HTML into XHTML
             css = { 'prettier' },
             javascript = { 'prettier' },
             typescript = { 'prettier' },
