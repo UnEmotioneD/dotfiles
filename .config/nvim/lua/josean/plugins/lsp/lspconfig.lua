@@ -140,20 +140,20 @@ return {
           },
         }
       end,
-      ['pyright'] = function()
-        lspconfig['pyright'].setup {
-          capabilities = capabilities,
-          filetypes = {
-            'python',
-          },
-        }
-      end,
       ['clangd'] = function()
         lspconfig['clangd'].setup {
           capabilities = capabilities,
           filetypes = {
             'c',
             'cpp',
+          },
+        }
+      end,
+      ['pyright'] = function()
+        lspconfig['pyright'].setup {
+          capabilities = capabilities,
+          filetypes = {
+            'python',
           },
         }
       end,

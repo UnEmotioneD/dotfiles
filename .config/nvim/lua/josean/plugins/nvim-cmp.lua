@@ -80,6 +80,15 @@ return {
         }),
       }),
 
+      -- For Cargo.toml enable crates.nvim completion
+      cmp.setup.filetype('toml', {
+        sources = cmp.config.sources {
+          { name = 'crates' },
+          -- Optionally add buffer completion
+          { name = 'buffer' },
+        },
+      }),
+
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
         format = lspkind.cmp_format {

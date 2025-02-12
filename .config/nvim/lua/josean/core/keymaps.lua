@@ -54,6 +54,11 @@ map.set('n', '<leader>nh', '<Cmd>nohl<CR>', { desc = 'Clear highlighted search' 
 map.set('n', '<leader>wr', '<Cmd>SessionRestore<CR>', { desc = 'Restore session for cwd' }) -- restore last workspace session for current directory
 map.set('n', '<leader>ws', '<Cmd>SessionSave<CR>', { desc = 'Save session for auto session root dir' }) -- save workspace session for current working directory
 
+-- crates.nvim
+map.set('n', '<leader>rcu', function()
+  require('crates').upgrade_all_crates()
+end, { desc = 'Update crates' })
+
 -- chatGPT
 map.set('n', '<leader>go', '<Cmd>ChatGPT<CR>', { desc = 'Open normal ChatGPT' })
 map.set('n', '<leader>ge', '<Cmd>ChatGPTEditWithInstruction<CR>', { desc = 'Edit with instruction' })
