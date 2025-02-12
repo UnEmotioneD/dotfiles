@@ -140,6 +140,14 @@ return {
           },
         }
       end,
+      ['pyright'] = function()
+        lspconfig['pyright'].setup {
+          capabilities = capabilities,
+          filetypes = {
+            'python',
+          },
+        }
+      end,
     }
   end,
 }
