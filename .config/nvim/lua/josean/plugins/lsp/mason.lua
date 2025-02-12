@@ -27,8 +27,8 @@ return {
                 'html',
                 'cssls',
                 'pyright',
-                -- "clangd",
-                -- "rust_analyzer",
+                -- 'clangd',
+                -- 'rust_analyzer',
             },
             -- To silence "Missing required fields" warnings
             automatic_installation = true,
@@ -39,11 +39,12 @@ return {
                 'stylua',
                 'eslint_d', -- js linter
                 'prettier',
-                'black',
-                'isort',
-                'pylint',
-                -- "clang-format",
-                -- "codelldb",
+                'black', -- python formatter
+                'isort', -- python import organizer
+                'pylint', -- python linter
+                -- 'clang-format',
+                -- 'codelldb', -- rust debugger
+                -- 'rustfmt', -- rust formatter
             },
         }
     end,
