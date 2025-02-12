@@ -38,7 +38,7 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 -- spelling
-opt.spell = false
+opt.spell = true
 opt.spelllang = 'en'
 opt.spellsuggest = 'best'
 

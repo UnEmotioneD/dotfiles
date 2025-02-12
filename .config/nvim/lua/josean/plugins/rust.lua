@@ -1,11 +1,9 @@
--- plugins for Rust
 return {
-
-    -- Provides supports including LSP
+    -- Supports LSP for Rust
     {
         'mrcjkb/rustaceanvim',
         version = '^5', -- Recommended
-        lazy = false, -- This plugin is already lazy
+        lazy = false, -- Lazy by default
         ft = 'rust',
         config = function()
             local mason_registry = require 'mason-registry'
@@ -34,7 +32,7 @@ return {
         end,
     },
 
-    -- Improvements for Cargo.toml management
+    -- Cargo.toml management
     {
         'saecki/crates.nvim',
         ft = { 'toml' },
@@ -50,5 +48,15 @@ return {
                 sources = { { name = 'crates' } },
             }
         end,
+    },
+
+    -- Prevent `mason-lspconfig` from setting up `rust_analyzer`
+    {
+        'williamboman/mason-lspconfig.nvim',
+        opts = {
+            handlers = {
+                ['rust_analyzer'] = function() end, -- Disable mason-lspconfig's rust_analyzer setup
+            },
+        },
     },
 }

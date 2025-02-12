@@ -43,10 +43,5 @@ return {
                 -- 'clang-format',
             },
         }
-
-        -- Prevent `mason-lspconfig` from setting up `rust_analyzer`
-        mason_lspconfig.setup_handlers {
-            ['rust_analyzer'] = function() end, -- This prevents mason-lspconfig from managing rust_analyzer
-        }
     end,
 }
