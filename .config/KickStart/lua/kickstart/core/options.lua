@@ -1,20 +1,17 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Enable mouse mode, can be useful for resizing splits for example!
+-- Enable mouse mode, can be useful for resizing splits
 vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
--- Schedule the setting after `UiEnter` because it can increase startup-time.
--- See `:help 'clipboard'`
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
