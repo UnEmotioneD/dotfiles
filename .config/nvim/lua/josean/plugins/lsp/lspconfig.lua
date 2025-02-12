@@ -148,6 +148,15 @@ return {
           },
         }
       end,
+      ['clangd'] = function()
+        lspconfig['clangd'].setup {
+          capabilities = capabilities,
+          filetypes = {
+            'c',
+            'cpp',
+          },
+        }
+      end,
     }
   end,
 }
