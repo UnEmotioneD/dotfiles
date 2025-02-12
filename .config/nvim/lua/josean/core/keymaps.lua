@@ -66,7 +66,7 @@ map.set('n', '<leader>fl', function()
 end, { desc = 'Flash' })
 
 -- Formatting
-map.set({ 'n', 'v' }, '<leader>fo', function()
+map.set({ 'n', 'v' }, '<leader>fm', function()
   require('conform').format()
 end, { desc = 'Format file or range (in visual mode)' })
 
