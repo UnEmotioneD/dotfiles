@@ -5,14 +5,10 @@ vim.keymap.set('n', '<leader>a', function()
   -- or vim.lsp.buf.codeAction() if you don't want grouping.
 end, { silent = true, buffer = bufnr })
 
-vim.keymap.set(
-  'n',
-  'K', -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
-  function()
-    vim.cmd.RustLsp { 'hover', 'actions' }
-  end,
-  { silent = true, buffer = bufnr }
-)
+-- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+vim.keymap.set('n', 'K', function()
+  vim.cmd.RustLsp { 'hover', 'actions' }
+end, { silent = true, buffer = bufnr })
 
 -- rustaceanvim
 vim.keymap.set('n', '<leader>dt', "<Cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = 'Debugger testables' })

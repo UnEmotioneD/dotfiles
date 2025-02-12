@@ -21,11 +21,15 @@ return {
 
     mason_lspconfig.setup {
       ensure_installed = {
-        'lua_ls',
-        'emmet_ls',
         'ts_ls',
         'html',
         'cssls',
+        'tailwindcss',
+        'svelte',
+        'lua_ls',
+        'graphql',
+        'emmet_ls',
+        'prismals',
         'pyright',
         -- 'clangd',
       },
@@ -34,13 +38,14 @@ return {
 
     mason_tool_installer.setup {
       ensure_installed = {
-        'stylua',
-        'eslint_d', -- JS linter
         'prettier',
-        'black', -- Python formatter
+        'stylua',
         'isort', -- Python import organizer
+        'black', -- Python formatter
         'pylint', -- Python linter
+        'eslint_d', -- JS linter
         -- 'clang-format',
+        'codelldb',
       },
     }
   end,

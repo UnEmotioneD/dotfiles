@@ -17,8 +17,7 @@ map.set('n', 'N', 'Nzz')
 -- Delete single character without copying into register
 map.set('n', 'x', '"_x')
 
--- Yank to end of the line
-map.set('n', 'Y', 'y$')
+map.set('n', 'Y', 'y$', { desc = 'Yank to end of the line' })
 
 -- Window management
 map.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' })
