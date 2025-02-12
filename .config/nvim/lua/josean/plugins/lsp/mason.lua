@@ -31,7 +31,6 @@ return {
         'emmet_ls',
         'prismals',
         'pyright',
-        -- 'clangd',
       },
       automatic_installation = true,
     }
@@ -42,10 +41,10 @@ return {
         'stylua',
         'isort', -- Python import organizer
         'black', -- Python formatter
-        'pylint', -- Python linter
+        'pylint',
         'eslint_d', -- JS linter
-        -- 'clang-format',
-        'codelldb',
+        'clang-format',
+        'cpplint', -- c, cpp linter
       },
     }
   end,

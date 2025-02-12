@@ -49,14 +49,4 @@ return {
       }
     end,
   },
-
-  -- Prevent `mason-lspconfig` from setting up `rust_analyzer`
-  {
-    'williamboman/mason-lspconfig.nvim',
-    opts = {
-      handlers = {
-        ['rust_analyzer'] = function() end, -- Disable mason-lspconfig's rust_analyzer setup
-      },
-    },
-  },
 }
