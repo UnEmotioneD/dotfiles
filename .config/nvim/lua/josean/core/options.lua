@@ -7,8 +7,11 @@ opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 2 -- prettier default == 2
-opt.shiftwidth = 2
+local indent = 2
+
+opt.tabstop = indent -- prettier default == 2
+opt.shiftwidth = indent
+opt.softtabstop = indent -- Tab, backspace behaves as much as indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
@@ -52,12 +55,12 @@ opt.scrolloff = 5
 -- Highlight on Yank
 vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('HighlightYank', {}),
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank {
-            higroup = 'IncSearch',
-            timeout = 200, -- Duration in milliseconds
-        }
-    end,
+  group = vim.api.nvim_create_augroup('HighlightYank', {}),
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank {
+      higroup = 'IncSearch',
+      timeout = 200, -- Duration in milliseconds
+    }
+  end,
 })

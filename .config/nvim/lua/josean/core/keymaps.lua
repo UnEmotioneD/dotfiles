@@ -63,12 +63,12 @@ map.set('n', '<leader>gf', '<Cmd>ChatGPTRun fix_bugs<CR>', { desc = 'Fix bugs' }
 
 -- Flash
 map.set('n', '<leader>fl', function()
-    require('flash').jump()
+  require('flash').jump()
 end, { desc = 'Flash' })
 
 -- Formatting
 map.set({ 'n', 'v' }, '<leader>fo', function()
-    require('conform').format()
+  require('conform').format()
 end, { desc = 'Format file or range (in visual mode)' })
 
 -- Lazygit
@@ -76,7 +76,7 @@ map.set('n', '<leader>git', '<Cmd>LazyGit<CR>', { desc = 'Open lazygit' })
 
 -- Lint
 map.set('n', '<leader>l', function()
-    require('lint').try_lint()
+  require('lint').try_lint()
 end, { desc = 'Trigger linting for current file' })
 
 -- Live server
@@ -89,7 +89,7 @@ map.set('n', '<leader>mp', '<Cmd>MarkdownPreview<CR>', { desc = '[M]arkdown [P]e
 
 -- Markdown render
 map.set('n', '<leader>mr', function()
-    require('render-markdown').toggle()
+  require('render-markdown').toggle()
 end, { desc = '[M]arkdown [R]ender' })
 
 -- nvim-tree
@@ -105,10 +105,10 @@ map.set('n', '<Leader>dk', "<cmd>lua require'dap'.step_out()<CR>", { desc = 'Deb
 map.set('n', '<Leader>dc', "<cmd>lua require'dap'.continue()<CR>", { desc = 'Debugger continue' })
 map.set('n', '<Leader>db', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Debugger toggle breakpoint' })
 map.set(
-    'n',
-    '<Leader>dd',
-    "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-    { desc = 'Debugger set conditional breakpoint' }
+  'n',
+  '<Leader>dd',
+  "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+  { desc = 'Debugger set conditional breakpoint' }
 )
 map.set('n', '<Leader>de', "<cmd>lua require'dap'.terminate()<CR>", { desc = 'Debugger reset' })
 map.set('n', '<Leader>dr', "<cmd>lua require'dap'.run_last()<CR>", { desc = 'Debugger run last' })
@@ -121,11 +121,11 @@ map.set('n', '-', '<Cmd>Oil<CR>', { desc = 'Open parent directory' })
 
 -- todo-comments
 map.set('n', '<leader>]t', function()
-    require('todo-comments').jump_next()
+  require('todo-comments').jump_next()
 end, { desc = 'Next todo comment' })
 
 map.set('n', '<leader>[t', function()
-    require('todo-comments').jump_prev()
+  require('todo-comments').jump_prev()
 end, { desc = 'previous todo comment' })
 
 -- Treesitter
