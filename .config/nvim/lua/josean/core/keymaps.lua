@@ -98,6 +98,21 @@ map.set('n', '<leader>ef', '<Cmd>NvimTreeFindFileToggle<CR>', { desc = 'Toggle f
 map.set('n', '<leader>ec', '<Cmd>NvimTreeCollapse<CR>', { desc = 'Collapse file explorer' })
 map.set('n', '<leader>er', '<Cmd>NvimTreeRefresh<CR>', { desc = 'Refresh file explorer' })
 
+-- nvim-dap
+map.set('n', '<Leader>dl', "<cmd>lua require'dap'.step_into()<CR>", { desc = 'Debugger step into' })
+map.set('n', '<Leader>dj', "<cmd>lua require'dap'.step_over()<CR>", { desc = 'Debugger step over' })
+map.set('n', '<Leader>dk', "<cmd>lua require'dap'.step_out()<CR>", { desc = 'Debugger step out' })
+map.set('n', '<Leader>dc', "<cmd>lua require'dap'.continue()<CR>", { desc = 'Debugger continue' })
+map.set('n', '<Leader>db', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Debugger toggle breakpoint' })
+map.set(
+    'n',
+    '<Leader>dd',
+    "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+    { desc = 'Debugger set conditional breakpoint' }
+)
+map.set('n', '<Leader>de', "<cmd>lua require'dap'.terminate()<CR>", { desc = 'Debugger reset' })
+map.set('n', '<Leader>dr', "<cmd>lua require'dap'.run_last()<CR>", { desc = 'Debugger run last' })
+
 -- Obsidian
 map.set('n', '<leader>mo', '<Cmd>ObsidianOpen<CR>', { desc = 'Open in [O]bsidian' })
 

@@ -28,24 +28,25 @@ return {
                 'cssls',
                 'pyright',
                 -- 'clangd',
-                -- 'rust_analyzer',
             },
-            -- To silence "Missing required fields" warnings
             automatic_installation = true,
         }
 
         mason_tool_installer.setup {
             ensure_installed = {
                 'stylua',
-                'eslint_d', -- js linter
+                'eslint_d', -- JS linter
                 'prettier',
-                'black', -- python formatter
-                'isort', -- python import organizer
-                'pylint', -- python linter
+                'black', -- Python formatter
+                'isort', -- Python import organizer
+                'pylint', -- Python linter
                 -- 'clang-format',
-                -- 'codelldb', -- rust debugger
-                -- 'rustfmt', -- rust formatter
             },
+        }
+
+        -- Prevent `mason-lspconfig` from setting up `rust_analyzer`
+        mason_lspconfig.setup_handlers {
+            ['rust_analyzer'] = function() end, -- This prevents mason-lspconfig from managing rust_analyzer
         }
     end,
 }
