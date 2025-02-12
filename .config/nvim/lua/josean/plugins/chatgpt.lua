@@ -19,5 +19,4 @@ return {
       n = 1,
     },
   },
-  enabled = false,
 }

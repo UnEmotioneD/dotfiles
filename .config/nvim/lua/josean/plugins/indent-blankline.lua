@@ -5,5 +5,4 @@ return {
   opts = {
     indent = { char = '┊' },
   },
-  enabled = false,
 }
