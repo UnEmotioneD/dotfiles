@@ -15,13 +15,13 @@ return {
             lua = { 'stylua' },
             python = { 'isort', 'black' },
         },
-        formatters = {
-            prettier = {
-                prepend_args = function()
-                    return { '--tab-width', '4' }
-                end,
-            },
-        },
+        -- formatters = {
+        --     prettier = {
+        --         prepend_args = function()
+        --             return { '--tab-width', '4' }
+        --         end,
+        --     },
+        -- },
         format_on_save = {
             lsp_fallback = true,
             async = false,
