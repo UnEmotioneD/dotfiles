@@ -1,6 +1,6 @@
 vim.g.mapleader = ' '
 
-local map = vim.keymap -- for conciseness
+local map = vim.keymap
 
 ---------------------
 -- General Keymaps --
@@ -17,15 +17,13 @@ map.set('n', 'N', 'Nzz')
 -- Delete single character without copying into register
 map.set('n', 'x', '"_x')
 
-map.set('n', 'Y', 'y$', { desc = 'Yank to end of the line' })
-
 -- Window management
 map.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' })
 map.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' })
 map.set('n', '<leader>se', '<C-w>=', { desc = 'Make splits equal size' })
 map.set('n', '<leader>sx', '<Cmd>close<CR>', { desc = 'Close current split' })
 
--- vim-maximizer
+-- Maximizer
 map.set('n', '<leader>sm', '<Cmd>MaximizerToggle<CR>', { desc = 'Maximize/minimize a split' })
 
 -- Tab navigation
@@ -46,40 +44,42 @@ map.set('n', '<leader>dm', '<Cmd>delm!<CR>', { desc = 'Delete all marks' })
 
 map.set('n', '<leader>nh', '<Cmd>nohl<CR>', { desc = 'Clear highlighted search' })
 
+map.set('n', 'Y', 'y$', { desc = 'Yank to end of the line' })
+
 ---------------------
 -- Plugin Keymaps --
 ---------------------
 
--- auto-session
+-- Auto-session
 map.set('n', '<leader>wr', '<Cmd>SessionRestore<CR>', { desc = 'Restore session for cwd' }) -- restore last workspace session for current directory
 map.set('n', '<leader>ws', '<Cmd>SessionSave<CR>', { desc = 'Save session for auto session root dir' }) -- save workspace session for current working directory
 
--- crates.nvim
+-- Crates
 map.set('n', '<leader>rcu', function()
   require('crates').upgrade_all_crates()
 end, { desc = 'Update crates' })
 
--- chatGPT
-map.set('n', '<leader>go', '<Cmd>ChatGPT<CR>', { desc = 'Open normal ChatGPT' })
-map.set('n', '<leader>ge', '<Cmd>ChatGPTEditWithInstruction<CR>', { desc = 'Edit with instruction' })
-map.set('n', '<leader>gg', '<Cmd>ChatGPTRun grammar_correction<CR>', { desc = 'Correct grammer' })
-map.set('n', '<leader>gf', '<Cmd>ChatGPTRun fix_bugs<CR>', { desc = 'Fix bugs' })
+-- ChatGPT
+map.set('n', '<leader>go', '<Cmd>ChatGPT<CR>', { desc = '[o]pen normal ChatGPT' })
+map.set('n', '<leader>ge', '<Cmd>ChatGPTEditWithInstruction<CR>', { desc = '[e]dit with instruction' })
+map.set('n', '<leader>gg', '<Cmd>ChatGPTRun grammar_correction<CR>', { desc = 'Correct [g]rammer' })
+map.set('n', '<leader>gf', '<Cmd>ChatGPTRun fix_bugs<CR>', { desc = '[f]ix bugs' })
 
 -- Flash
 map.set('n', '<leader>fl', function()
   require('flash').jump()
 end, { desc = 'Flash' })
 
--- Formatting
+-- Conform
 map.set({ 'n', 'v' }, '<leader>fm', function()
   require('conform').format()
 end, { desc = 'Format file or range (in visual mode)' })
 
 -- Lazygit
-map.set('n', '<leader>git', '<Cmd>LazyGit<CR>', { desc = 'Open lazygit' })
+map.set('n', '<leader>lg', '<Cmd>LazyGit<CR>', { desc = 'Open lazygit' })
 
 -- Lint
-map.set('n', '<leader>l', function()
+map.set('n', '<leader>ll', function()
   require('lint').try_lint()
 end, { desc = 'Trigger linting for current file' })
 
@@ -96,26 +96,11 @@ map.set('n', '<leader>mr', function()
   require('render-markdown').toggle()
 end, { desc = '[M]arkdown [R]ender' })
 
--- nvim-tree
-map.set('n', '<leader>ee', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle file explorer' })
-map.set('n', '<leader>ef', '<Cmd>NvimTreeFindFileToggle<CR>', { desc = 'Toggle file explorer on current file' })
-map.set('n', '<leader>ec', '<Cmd>NvimTreeCollapse<CR>', { desc = 'Collapse file explorer' })
-map.set('n', '<leader>er', '<Cmd>NvimTreeRefresh<CR>', { desc = 'Refresh file explorer' })
-
--- nvim-dap
-map.set('n', '<Leader>dl', "<cmd>lua require'dap'.step_into()<CR>", { desc = 'Debugger step into' })
-map.set('n', '<Leader>dj', "<cmd>lua require'dap'.step_over()<CR>", { desc = 'Debugger step over' })
-map.set('n', '<Leader>dk', "<cmd>lua require'dap'.step_out()<CR>", { desc = 'Debugger step out' })
-map.set('n', '<Leader>dc', "<cmd>lua require'dap'.continue()<CR>", { desc = 'Debugger continue' })
-map.set('n', '<Leader>db', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Debugger toggle breakpoint' })
-map.set(
-  'n',
-  '<Leader>dd',
-  "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-  { desc = 'Debugger set conditional breakpoint' }
-)
-map.set('n', '<Leader>de', "<cmd>lua require'dap'.terminate()<CR>", { desc = 'Debugger reset' })
-map.set('n', '<Leader>dr', "<cmd>lua require'dap'.run_last()<CR>", { desc = 'Debugger run last' })
+-- Tree
+map.set('n', '<leader>ee', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle [e]xplorer' })
+map.set('n', '<leader>ef', '<Cmd>NvimTreeFindFileToggle<CR>', { desc = 'explorer on current [f]ile' })
+map.set('n', '<leader>ec', '<Cmd>NvimTreeCollapse<CR>', { desc = '[c]ollapse explore' })
+map.set('n', '<leader>er', '<Cmd>NvimTreeRefresh<CR>', { desc = '[r]efresh explore' })
 
 -- Obsidian
 map.set('n', '<leader>mo', '<Cmd>ObsidianOpen<CR>', { desc = 'Open in [O]bsidian' })
@@ -123,7 +108,7 @@ map.set('n', '<leader>mo', '<Cmd>ObsidianOpen<CR>', { desc = 'Open in [O]bsidian
 -- Oil
 map.set('n', '-', '<Cmd>Oil<CR>', { desc = 'Open parent directory' })
 
--- todo-comments
+-- Todo
 map.set('n', '<leader>]t', function()
   require('todo-comments').jump_next()
 end, { desc = 'Next todo comment' })
@@ -132,7 +117,7 @@ map.set('n', '<leader>[t', function()
   require('todo-comments').jump_prev()
 end, { desc = 'previous todo comment' })
 
--- Treesitter
+-- Telescope
 map.set('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', { desc = 'Fuzzy find files in cwd' })
 map.set('n', '<leader>fr', '<Cmd>Telescope oldfiles<CR>', { desc = 'Fuzzy find recent files' })
 map.set('n', '<leader>fs', '<Cmd>Telescope live_grep<CR>', { desc = 'Find string in cwd' })

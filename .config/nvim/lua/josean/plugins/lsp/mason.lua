@@ -56,6 +56,9 @@ return {
         -- JavaScript
         'prettier', -- Formatter
         'eslint_d', -- Linter
+
+        -- Rust
+        'codelldb',
       },
     }
   end,
