@@ -31,11 +31,11 @@ return {
       autocmds = {
         -- When `true`, enables the plugin when you start Neovim.
         -- If the main window is  a side tree (e.g. NvimTree) or a dashboard, the command is delayed until it finds a valid window.
-        -- The command is cleaned once it has successfuly ran once.
+        -- The command is cleaned once it has successfully ran once.
         ---@type boolean
         enableOnVimEnter = false,
         -- When `true`, enables the plugin when you enter a new Tab.
-        -- note: it does not trigger if you come back to an existing tab, to prevent unwanted interfer with user's decisions.
+        -- note: it does not trigger if you come back to an existing tab, to prevent unwanted interfere with user's decisions.
         ---@type boolean
         enableOnTabEnter = false,
         -- When `true`, reloads the plugin configuration after a colorscheme change.

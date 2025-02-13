@@ -29,6 +29,7 @@ return {
         'clangd',
         'pyright',
         'taplo', -- .toml file LSP
+        'typos_lsp', -- spell checker
       },
       automatic_installation = true,
     })
