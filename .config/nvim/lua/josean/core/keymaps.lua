@@ -44,6 +44,8 @@ m.set('', '<C-p>', '<Nop>', { noremap = true, silent = true })
 m.set('n', 'n', 'nzz')
 m.set('n', 'N', 'Nzz')
 
+m.set('n', '<leader>cs', ':setlocal spell! spell?<CR>', { desc = 'Toggle spell check' })
+
 ---------------------
 -- Plugin Keymaps --
 ---------------------
