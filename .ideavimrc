@@ -42,10 +42,10 @@ let g:qs_secondary_color = '#ff00ff' " Second occurrence highlight color
 let g:qs_disable_for_diffs = 1       " Disable in diff mode
 
 " Harpoon
-nmap <leader>ha :action AddToHarpoon<CR>
-nmap <leader>he :action ShowHarpoon<CR>
-nmap <leader>h1 :action GotoHarpoon1<CR>
-nmap <leader>h2 :action GotoHarpoon2<CR>
-nmap <leader>h3 :action GotoHarpoon3<CR>
-nmap <leader>h4 :action GotoHarpoon4<CR>
-nmap <leader>h5 :action GotoHarpoon5<CR>
+nmap <leader><leader>h :action AddToHarpoon<CR>
+nmap <leader><leader>e :action ShowHarpoon<CR>
+nmap <leader><leader>1 :action GotoHarpoon1<CR>
+nmap <leader><leader>2 :action GotoHarpoon2<CR>
+nmap <leader><leader>3 :action GotoHarpoon3<CR>
+nmap <leader><leader>4 :action GotoHarpoon4<CR>
+nmap <leader><leader>5 :action GotoHarpoon5<CR>
