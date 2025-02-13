@@ -28,8 +28,9 @@ return {
     },
     -- format_on_save = false,
 
+    -- BUG: Cannot format .zshrc, .ideavimrc
     vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-      pattern = { '.zshrc', '.zshenv', '.bashrc', '.bash_profile', 'sketchybarrc' },
+      pattern = { '.zshenv', 'sketchybarrc' },
       command = 'set filetype=sh',
     }),
   },
