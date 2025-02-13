@@ -28,6 +28,7 @@ return {
         'emmet_ls',
         'clangd',
         'pyright',
+        'taplo', -- .toml file LSP
       },
       automatic_installation = true,
     })
@@ -44,6 +45,7 @@ return {
         'pylint',
         'debugpy',
         'codelldb',
+        'shfmt', -- sh formatter
       },
     })
   end,

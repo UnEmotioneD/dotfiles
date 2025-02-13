@@ -1,5 +1,5 @@
 [general]
-import = [ "~/.config/alacritty/tokyo-night-storm.toml" ]
+import = ["~/.config/alacritty/tokyo-night-storm.toml"]
 
 [env]
 TERM = "xterm-256color"

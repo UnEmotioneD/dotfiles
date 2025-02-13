@@ -18,6 +18,8 @@ return {
       lua = { 'stylua' },
       python = { 'isort', 'black' },
       c = { 'clang-format' },
+      toml = { 'taplo' },
+      sh = { 'shfmt' },
     },
     format_on_save = {
       lsp_fallback = true,
@@ -25,5 +27,10 @@ return {
       timeout_ms = 3000,
     },
     -- format_on_save = false,
+
+    vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+      pattern = { '.zshrc', '.zshenv', '.bashrc', '.bash_profile', 'sketchybarrc' },
+      command = 'set filetype=sh',
+    }),
   },
 }
