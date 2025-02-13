@@ -1,4 +1,4 @@
-vim.cmd 'let g:netrw_liststyle = 3'
+vim.cmd('let g:netrw_liststyle = 3')
 
 local opt = vim.opt -- for conciseness
 
@@ -34,7 +34,7 @@ opt.signcolumn = 'yes' -- show sign column so that text doesn't shift
 opt.backspace = 'indent,eol,start' -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append 'unnamedplus' -- use system clipboard as default register
+opt.clipboard:append('unnamedplus') -- use system clipboard as default register
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
@@ -58,9 +58,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('HighlightYank', {}),
   pattern = '*',
   callback = function()
-    vim.highlight.on_yank {
+    vim.highlight.on_yank({
       higroup = 'IncSearch',
       timeout = 200, -- Duration in milliseconds
-    }
+    })
   end,
 })

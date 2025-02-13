@@ -2,9 +2,9 @@ return {
   'shortcuts/no-neck-pain.nvim',
   version = '*',
   config = function()
-    local NoNeckPain = require 'no-neck-pain'
+    local NoNeckPain = require('no-neck-pain')
 
-    require('no-neck-pain').setup {
+    require('no-neck-pain').setup({
       -- Prints useful logs about triggered events, and reasons actions are executed.
       ---@type boolean
       debug = false,
@@ -177,7 +177,7 @@ return {
           reopen = true,
         },
       },
-    }
+    })
 
     --- NoNeckPain's buffer `vim.wo` options.
     ---@see window options `:h vim.wo`

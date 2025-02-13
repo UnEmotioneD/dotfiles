@@ -25,7 +25,7 @@ return {
       {
         '<leader><leader>e',
         function()
-          local harpoon = require 'harpoon'
+          local harpoon = require('harpoon')
           harpoon.ui:toggle_quick_menu(harpoon:list())
         end,
         desc = 'Harpoon [e]dit',

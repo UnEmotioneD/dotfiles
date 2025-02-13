@@ -2,7 +2,7 @@ return {
   'mfussenegger/nvim-lint',
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
-    local lint = require 'lint'
+    local lint = require('lint')
 
     lint.linters_by_ft = {
       javascript = { 'eslint_d' },
@@ -22,7 +22,7 @@ return {
       -- try to ignore "No ESLint configuration found" error
       -- if diagnostic.message:find("Error: No ESLint configuration found") then -- old version
       -- update: 20240814, following is working
-      if diagnostic.message:find 'Error: Could not find config file' then
+      if diagnostic.message:find('Error: Could not find config file') then
         return nil
       end
       return diagnostic

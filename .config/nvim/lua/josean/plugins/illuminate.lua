@@ -2,7 +2,7 @@ return {
   'RRethy/vim-illuminate',
   config = function()
     -- default configuration
-    require('illuminate').configure {
+    require('illuminate').configure({
       -- providers: provider used to get references in the buffer, ordered by priority
       providers = {
         'lsp',
@@ -65,6 +65,6 @@ return {
       case_insensitive_regex = false,
       -- disable_keymaps: disable default keymaps
       disable_keymaps = false,
-    }
+    })
   end,
 }

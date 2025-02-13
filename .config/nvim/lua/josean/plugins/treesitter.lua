@@ -6,9 +6,9 @@ return {
     'windwp/nvim-ts-autotag',
   },
   config = function()
-    local treesitter = require 'nvim-treesitter.configs'
+    local treesitter = require('nvim-treesitter.configs')
 
-    treesitter.setup { -- enable syntax highlighting
+    treesitter.setup({ -- enable syntax highlighting
       highlight = {
         enable = true,
       },
@@ -53,6 +53,6 @@ return {
           node_decremental = '<bs>',
         },
       },
-    }
+    })
   end,
 }

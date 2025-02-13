@@ -2,8 +2,8 @@ return {
   'goolord/alpha-nvim',
   event = 'VimEnter',
   config = function()
-    local alpha = require 'alpha'
-    local dashboard = require 'alpha.themes.dashboard'
+    local alpha = require('alpha')
+    local dashboard = require('alpha.themes.dashboard')
 
     -- https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=LAZYVIM
     dashboard.section.header.val = {
@@ -36,6 +36,6 @@ return {
 
     alpha.setup(dashboard.opts)
 
-    vim.cmd [[autocmd FileType alpha setlocal nofoldenable]]
+    vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
   end,
 }

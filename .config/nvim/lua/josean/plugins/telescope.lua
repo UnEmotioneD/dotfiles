@@ -8,10 +8,10 @@ return {
     'folke/todo-comments.nvim',
   },
   config = function()
-    local telescope = require 'telescope'
-    local actions = require 'telescope.actions'
+    local telescope = require('telescope')
+    local actions = require('telescope.actions')
 
-    telescope.setup {
+    telescope.setup({
       defaults = {
         path_display = { 'smart' },
         mappings = {
@@ -22,8 +22,8 @@ return {
           },
         },
       },
-    }
+    })
 
-    telescope.load_extension 'fzf'
+    telescope.load_extension('fzf')
   end,
 }

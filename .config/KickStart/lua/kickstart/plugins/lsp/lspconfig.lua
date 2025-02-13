@@ -118,10 +118,10 @@ return {
             group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
             callback = function(event2)
               vim.lsp.buf.clear_references()
-              vim.api.nvim_clear_autocmds {
+              vim.api.nvim_clear_autocmds({
                 group = 'kickstart-lsp-highlight',
                 buffer = event2.buf,
-              }
+              })
             end,
           })
         end
@@ -132,9 +132,9 @@ return {
         -- This may be unwanted, since they displace some of your code
         if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
           map('<leader>th', function()
-            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled {
+            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({
               bufnr = event.buf,
-            })
+            }))
           end, '[T]oggle Inlay [H]ints')
         end
       end,
@@ -147,7 +147,7 @@ return {
       for type, icon in pairs(signs) do
         diagnostic_signs[vim.diagnostic.severity[type]] = icon
       end
-      vim.diagnostic.config { signs = { text = diagnostic_signs } }
+      vim.diagnostic.config({ signs = { text = diagnostic_signs } })
     end
 
     -- LSP servers and clients are able to communicate to each other what features they support.
@@ -165,7 +165,7 @@ return {
     --  - filetypes (table): Override the default list of associated filetypes for the server
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
-    --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+    --      For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       -- clangd = {},
       -- gopls = {},
@@ -174,7 +174,7 @@ return {
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
-      --    https://github.com/pmizio/typescript-tools.nvim
+      --   https://github.com/pmizio/typescript-tools.nvim
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       -- ts_ls = {},
 
@@ -188,40 +188,40 @@ return {
               callSnippet = 'Replace',
             },
             -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-            -- diagnostics = { disable = { 'missing-fields' } },
+            --   diagnostics = { disable = { 'missing-fields' } },
           },
         },
       },
     }
 
     -- Ensure the servers and tools above are installed
-    --
+
     -- To check the current status of installed tools and/or manually install
-    -- other tools, you can run
-    --    :Mason
-    --
+    --   other tools, you can run
+    --     :Mason
+
     -- You can press `g?` for help in this menu.
-    --
+
     -- `mason` had to be setup earlier: to configure its options see the
-    -- `dependencies` table for `nvim-lspconfig` above.
-    --
+    --   `dependencies` table for `nvim-lspconfig` above.
+
     -- You can add other tools here that you want Mason to install
-    -- for you, so that they are available from within Neovim.
+    --   for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
     })
-    require('mason-tool-installer').setup {
+    require('mason-tool-installer').setup({
       ensure_installed = ensure_installed,
-    }
+    })
 
-    require('mason-lspconfig').setup {
+    require('mason-lspconfig').setup({
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
           -- This handles overriding only values explicitly passed
-          -- by the server configuration above. Useful when disabling
-          -- certain features of an LSP (for example, turning off formatting for ts_ls)
+          --   by the server configuration above. Useful when disabling
+          --   certain features of an LSP (for example, turning off formatting for ts_ls)
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
           require('lspconfig')[server_name].setup(server)
         end,
@@ -230,6 +230,6 @@ return {
       -- To silence "Missing required fields" warnings
       ensure_installed = {},
       automatic_installation = {},
-    }
+    })
   end,
 }

@@ -6,7 +6,7 @@ return {
     'rcarriga/nvim-dap-ui',
     dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' },
     config = function()
-      local dap, dapui = require 'dap', require 'dapui'
+      local dap, dapui = require('dap'), require('dapui')
 
       dapui.setup()
 
@@ -33,7 +33,7 @@ return {
       map.set('n', '<leader>dO', dap.step_out, { desc = '[D]ebugger: Step [O]ut' })
       map.set('n', '<leader>db', dap.toggle_breakpoint, { desc = '[D]ebugger: Toggle [b]reakpoint' })
       map.set('n', '<leader>dB', function()
-        dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
+        dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
       end, { desc = '[D]ebugger: Conditional [B]reakpoint' })
     end,
   },

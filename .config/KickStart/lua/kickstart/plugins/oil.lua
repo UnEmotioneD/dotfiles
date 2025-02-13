@@ -8,7 +8,7 @@ return {
     view_options = {
       show_hidden = true,
       is_always_hidden = function(name, bufnr)
-        local dsStore = name:match '.DS_Store'
+        local dsStore = name:match('.DS_Store')
         return dsStore
       end,
     },

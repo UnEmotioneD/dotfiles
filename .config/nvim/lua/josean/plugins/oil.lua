@@ -90,12 +90,12 @@ return {
       show_hidden = true,
       -- This function defines what is considered a "hidden" file
       is_hidden_file = function(name, bufnr)
-        local m = name:match '^%.'
+        local m = name:match('^%.')
         return m ~= nil
       end,
       -- This function defines what will never be shown, even when `show_hidden` is set
       is_always_hidden = function(name, bufnr)
-        local dsStore = name:match '.DS_Store'
+        local dsStore = name:match('.DS_Store')
         return dsStore
       end,
       -- Sort file names with numbers in a more intuitive order for humans.

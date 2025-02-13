@@ -18,11 +18,11 @@ return {
       map('n', '<leader>hr', gs.reset_hunk, '[r]eset hunk')
 
       map('v', '<leader>hs', function()
-        gs.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
+        gs.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
       end, '[s]tage selected hunk')
 
       map('v', '<leader>hr', function()
-        gs.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
+        gs.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
       end, '[r]eset selected hunk')
 
       map('n', '<leader>hS', gs.stage_buffer, '[S]tage buffer')
@@ -32,14 +32,14 @@ return {
       map('n', '<leader>hp', gs.preview_hunk, '[p]review hunk')
 
       map('n', '<leader>hb', function()
-        gs.blame_line { full = true }
+        gs.blame_line({ full = true })
       end, '[b]lame line (detailed)')
 
       map('n', '<leader>hB', gs.toggle_current_line_blame, 'Toggle line [B]lame')
 
       map('n', '<leader>hd', gs.diffthis, '[d]iff this file')
       map('n', '<leader>hD', function()
-        gs.diffthis '~'
+        gs.diffthis('~')
       end, '[D]iff against last commit')
 
       map('n', '<leader>ht', gs.toggle_deleted, '[t]oggle deleted hunks')
