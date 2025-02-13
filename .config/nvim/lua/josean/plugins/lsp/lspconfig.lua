@@ -120,7 +120,6 @@ return {
             diagnosticSeverity = 'Error', -- Change this to "Warning" if needed
           },
         })
-
         -- Enable debug logs (only if debugging)
         vim.lsp.set_log_level('debug')
       end,
