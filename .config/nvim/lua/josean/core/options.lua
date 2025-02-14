@@ -41,7 +41,7 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 -- spelling
-opt.spell = true
+opt.spell = false
 opt.spelllang = { 'en', 'cjk' } -- Do not mark Chinese, Japanese and Korean as error
 opt.spellsuggest = 'best'
 
