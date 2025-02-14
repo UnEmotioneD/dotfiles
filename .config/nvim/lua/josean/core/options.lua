@@ -48,6 +48,7 @@ opt.spellsuggest = 'best'
 -- turn off swapfile
 opt.swapfile = false
 
+-- 'gg' goes to start of first line
 opt.startofline = true
 
 opt.scrolloff = 5

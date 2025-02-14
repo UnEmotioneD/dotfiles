@@ -11,6 +11,14 @@ m.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
 -- Delete single character without copying into register
 m.set('n', 'x', '"_x')
 
+-- Move wrapped line like normal line
+m.set('n', 'j', 'gj')
+m.set('n', 'k', 'gk')
+
+-- Move selected up or down keeping the indent
+m.set('v', 'J', ":m '>+1<Cr>gv=gv")
+m.set('v', 'K', ":m '<-2<Cr>gv=gv")
+
 m.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
 m.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number' })
 
