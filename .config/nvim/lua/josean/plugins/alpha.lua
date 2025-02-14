@@ -26,11 +26,11 @@ return {
     }
 
     dashboard.section.buttons.val = {
-      dashboard.button('c', '  > Nvim Config', '<Cmd>cd ~/.config/nvim<CR>'),
+      dashboard.button('e', '  > New File', '<cmd>ene<CR>'), -- After creating new file <Cmd>w {file-name}<Cr> to name it
       dashboard.button('SPC ee', '  > File explorer', '<Cmd>NvimTreeToggle<CR>'),
       dashboard.button('SPC ff', '󰱼  > Find File', '<Cmd>Telescope find_files<CR>'),
       dashboard.button('SPC fs', '  > Live Grep', '<Cmd>Telescope live_grep<CR>'),
-      dashboard.button('SPC wr', '󰁯  > Restore Session', '<Cmd>SessionRestore<CR>'),
+      dashboard.button('SPC wr', '󰁯  > Restore Session', '<Cmd>SessionRestore<CR>'), -- Restore session for CWD
       dashboard.button('q', '  > Quit NVIM', '<Cmd>qa<CR>'),
     }
 
