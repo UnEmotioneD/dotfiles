@@ -145,14 +145,21 @@ alias brewup='brew update && brew upgrade &&brew upgrade --cask'
 
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
+alias chad="NVIM_APPNAME=NvChad nvim"
+alias lazy="NVIM_APPNAME=Lazy nvim"
+
+alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
+alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
+alias rmchad='rm -rf ~/.local/share/NvChad/ && rm -rf ~/.local/state/NvChad/'
+alias rmlazy='rm -rf ~/.local/share/Lazy/ && rm -rf ~/.local/state/Lazy/'
 
 function nvims() {
-  items=("Josean" "KickStart")
+  items=("Default" "Lazy" "KickStart" "NvChad")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
     return 0
-  elif [[ $config == "Josean" ]]; then
+  elif [[ $config == "Default" ]]; then
     config=""
   fi
   NVIM_APPNAME=$config nvim $@
