@@ -36,7 +36,7 @@ m.set('n', '<leader>tf', '<Cmd>tabnew %<CR>', { desc = '[t]ab [f]ile(current buf
 -- write / quit
 m.set('n', '<leader>ww', '<Cmd>w<CR>', { desc = 'Write changse in current buffer' })
 m.set('n', '<leader>wa', '<Cmd>wa<CR>', { desc = 'Write every changes' })
-m.set('n', '<leader>qq', '<Cmd>q<CR>', { desc = 'Quit current window' })
+m.set('n', '<leader>qq', '<Cmd>Alpha<CR>', { desc = 'Quit current window' })
 m.set('n', '<leader>qa', '<Cmd>qa<CR>', { desc = 'Quit Nvim' })
 m.set('n', '<leader>wq', '<Cmd>wqa<CR>', { desc = 'Write and quit Nvim' })
 
