@@ -139,9 +139,9 @@ alias tz="tmux a -t zmk"
 alias c="clear"
 alias e="exit"
 alias v="vim"
-alias n="nvim"
 alias l="lazygit"
-alias brewup='brew update && brew upgrade &&brew upgrade --cask'
+alias n="NVIM_APPNAME=nvim nvim"
+alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
