@@ -127,23 +127,14 @@ PATH="$PATH":"$HOME/.local/scripts/"
 
 bindkey -s ^f "tmux-sessionizer\n"
 
-# --- Tmux alias ---
-alias tc="tmux a -t config"
-alias tp="tmux a -t python"
-alias tw="tmux a -t webdev"
-alias tr="tmux a -t react"
-alias to="tmux a -t obsidian"
-alias tz="tmux a -t zmk"
-
 # --- my alias ---
 alias c="clear"
 alias e="exit"
-alias v="vim"
-alias l="lazygit"
-alias n="NVIM_APPNAME=nvim nvim"
+
 alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
 # --- Neovim config selector ---
+alias n="NVIM_APPNAME=nvim nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
