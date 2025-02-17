@@ -11,7 +11,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -135,9 +135,11 @@ alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
 # --- Neovim config selector ---
 alias n="NVIM_APPNAME=nvim nvim"
+alias prime="NVIM_APPNAME=prime nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
+alias rmprime='rm -rf ~/.local/share/prime/ && rm -rf ~/.local/state/prime/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
 
 function nvims() {
@@ -153,3 +155,5 @@ function nvims() {
 }
 
 bindkey -s ^a "nvims\n"
+
+source ~/.zshenv
