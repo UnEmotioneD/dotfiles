@@ -130,20 +130,21 @@ bindkey -s ^f "tmux-sessionizer\n"
 # --- my alias ---
 alias c="clear"
 alias e="exit"
+alias lg="lazygit"
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
 # --- Neovim config selector ---
 alias n="NVIM_APPNAME=nvim nvim"
-alias prime="NVIM_APPNAME=prime nvim"
+alias prime="NVIM_APPNAME=ThePrimeagen nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
-alias rmprime='rm -rf ~/.local/share/prime/ && rm -rf ~/.local/state/prime/'
+alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
 
 function nvims() {
-  items=("Default" "KickStart")
+  items=("Default" "ThePrimeagen" "KickStart")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"

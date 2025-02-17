@@ -11,12 +11,6 @@ esac
 # JDK
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home
 
-# Rust
-. "$HOME/.cargo/env"
-
-# Golang
-export PATH="/opt/homebrew/bin:$PATH"
-
 # Luarock
 export PATH="/opt/homebrew/opt/lua@5.1/bin:$PATH"
 
