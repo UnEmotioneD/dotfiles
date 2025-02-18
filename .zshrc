@@ -136,12 +136,12 @@ alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
 # --- Neovim config selector ---
 alias n="NVIM_APPNAME=nvim nvim"
-alias prime="NVIM_APPNAME=ThePrimeagen nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
+alias prime="NVIM_APPNAME=ThePrimeagen nvim"
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
-alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
+alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
 
 function nvims() {
   items=("Default" "ThePrimeagen" "KickStart")
