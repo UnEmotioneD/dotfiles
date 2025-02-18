@@ -6,52 +6,62 @@ local m = vim.keymap
 -- General Keymaps --
 ---------------------
 
-m.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
+m.set('n', '<Esc>', '<Cmd>nohl<CR>')
 
--- Delete single character without copying into register
+-- Center cursor when navigating through search results
+m.set('n', 'n', 'nzz')
+m.set('n', 'N', 'Nzz')
+
+-- Center cursor when scrolling half a page each
+m.set('n', '<C-d>', '<C-d>zz')
+m.set('n', '<C-u>', '<C-u>zz')
+-- Delete char without yanking
 m.set('n', 'x', '"_x')
-
--- Move selected up or down keeping the indent
-m.set('v', 'J', ":m '>+1<Cr>gv=gv")
-m.set('v', 'K', ":m '<-2<Cr>gv=gv")
+-- Cursor stays in place when joining lines
+m.set('n', 'J', 'mzJ`z')
+-- Yank to and of the line
+m.set('n', 'Y', 'y$')
+-- Move selected lines up or down, retaining indent and selection
+m.set('v', 'J', "<Cmd>m '>+1<CR>gv=gv", { silent = true })
+m.set('v', 'K', "<Cmd>m '<-2<CR>gv=gv", { silent = true })
+-- Paste over selection without overriding the default register
+m.set('v', 'p', 'pgvy')
 
 m.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
 m.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number' })
 
+-- Window splitting
 m.set('n', '<leader>sv', '<C-w>v', { desc = '[s]plit [v]ertically' })
 m.set('n', '<leader>sh', '<C-w>s', { desc = '[s]plit [h]orizontally' })
 m.set('n', '<leader>se', '<C-w>=', { desc = '[s]plit into [e]qual size' })
-m.set('n', '<leader>sx', '<Cmd>close<CR>', { desc = '[s]plit [x]close' })
+m.set('n', '<leader>sx', '<Cmd>close<CR>', { desc = '[s]plit [x] close' })
 
-m.set('n', '<leader>to', '<Cmd>tabnew<CR>', { desc = '[t]ab [o]pen' })
-m.set('n', '<leader>tx', '<Cmd>tabclose<CR>', { desc = '[t]ab [x]close' })
-m.set('n', '<leader>tn', '<Cmd>tabn<CR>', { desc = '[t]ab [n]ext' })
-m.set('n', '<leader>tp', '<Cmd>tabp<CR>', { desc = '[t]ab [p]revious' })
-m.set('n', '<leader>tf', '<Cmd>tabnew %<CR>', { desc = '[t]ab [f]ile(current buffer in new tab)' })
+-- Tabs
+m.set('n', '<leader>to', '<Cmd>tabnew<CR>', { desc = '[t]ab [o]pen new tab' })
+m.set('n', '<leader>tf', '<Cmd>tabnew %<CR>', { desc = '[t]ab [f]ile (open current buffer in new tab)' })
+m.set('n', '<leader>tx', '<Cmd>tabclose<CR>', { desc = '[t]ab [x] close current tab' })
+m.set('n', '<leader>tn', '<Cmd>tabn<CR>', { desc = '[t]ab [n]ext tab' })
+m.set('n', '<leader>tp', '<Cmd>tabp<CR>', { desc = '[t]ab [p]revious tab' })
 
--- write / quit
-m.set('n', '<leader>ww', '<Cmd>w<CR>', { desc = 'Write changse in current buffer' })
-m.set('n', '<leader>wa', '<Cmd>wa<CR>', { desc = 'Write every changes' })
+-- Write and quit
+m.set('n', '<leader>ww', '<Cmd>w<CR>', { desc = 'Write current buffer' })
+m.set('n', '<leader>wa', '<Cmd>wa<CR>', { desc = 'Write all buffers' })
+m.set('n', '<leader>wq', '<Cmd>wqa<CR>', { desc = 'Write and quit Nvim' })
 m.set('n', '<leader>qq', '<Cmd>Alpha<CR>', { desc = 'Quit current window' })
 m.set('n', '<leader>qa', '<Cmd>qa<CR>', { desc = 'Quit Nvim' })
-m.set('n', '<leader>wq', '<Cmd>wqa<CR>', { desc = 'Write and quit Nvim' })
 
-m.set('n', '<leader>dm', '<Cmd>delmarks!<CR>', { desc = 'Delete all marks' })
+m.set('n', '<leader>dm', '<Cmd>delm!<CR>', { desc = 'Delete all marks' })
 
-m.set('n', 'Y', 'y$', { desc = 'Yank to end of the line' })
+-- Toggle spell check on/off for the current buffer
+m.set('n', '<leader>cs', '<Cmd>setlocal spell! spell?<CR>', { desc = 'Toggle spell check' })
 
--- Unbind keymaps to avoid collision with tmux keybinds
+-- Disable conflicting keybinds with tmux
 m.set('', '<C-n>', '<Nop>', { noremap = true, silent = true })
 m.set('', '<C-p>', '<Nop>', { noremap = true, silent = true })
-
--- Center window when navigating through search
-m.set('n', 'n', 'nzz')
-m.set('n', 'N', 'Nzz')
-
-m.set('n', '<leader>cs', ':setlocal spell! spell?<CR>', { desc = 'Toggle spell check' })
-
--- Do not override reg
-m.set('v', 'p', 'pgvy', { silent = true })
+-- Disable Ex Mode
+m.set('n', 'Q', '<Nop>', { noremap = true, silent = true })
+-- Open tmux sessionizer in a new tmux window
+m.set('n', '<C-f>', '<Cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open tmux sessionizer' })
 
 ---------------------
 -- Plugin Keymaps --
