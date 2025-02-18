@@ -116,4 +116,4 @@ local coolnight = {
   end,
 }
 
-return coolnight
+return lualine

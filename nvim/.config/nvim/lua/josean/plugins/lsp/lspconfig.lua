@@ -114,14 +114,14 @@ return {
       ['typos_lsp'] = function()
         lspconfig.typos_lsp.setup({
           cmd_env = { RUST_LOG = 'error' }, -- Adjust logging level (optional)
-
           init_options = {
             config = vim.fn.expand('~/.config/nvim/typos/typos.toml'), -- Ensure the correct path
-            diagnosticSeverity = 'Error', -- Change this to "Warning" if needed
+            ---@type string | 'Error' | 'Warning' | 'Hint' | 'Info'
+            diagnosticSeverity = 'Info',
           },
         })
         -- Enable debug logs (only if debugging)
-        vim.lsp.set_log_level('debug')
+        -- vim.lsp.set_log_level('debug')
       end,
     })
   end,

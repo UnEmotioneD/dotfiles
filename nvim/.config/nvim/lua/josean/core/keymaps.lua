@@ -6,54 +6,50 @@ local m = vim.keymap
 -- General Keymaps --
 ---------------------
 
-m.set('n', '<Esc>', '<Cmd>nohl<CR>')
+m.set('n', '<Esc>', ':nohl<CR>')
 
--- Center cursor when navigating through search results
+-- Center cursor when navigating search
 m.set('n', 'n', 'nzz')
 m.set('n', 'N', 'Nzz')
 
--- Center cursor when scrolling half a page each
+-- Center cursor when scrolling
 m.set('n', '<C-d>', '<C-d>zz')
 m.set('n', '<C-u>', '<C-u>zz')
 -- Delete char without yanking
 m.set('n', 'x', '"_x')
 -- Cursor stays in place when joining lines
 m.set('n', 'J', 'mzJ`z')
--- Yank to and of the line
+-- Yank to end of the line
 m.set('n', 'Y', 'y$')
--- Move selected lines up or down, retaining indent and selection
-m.set('v', 'J', "<Cmd>m '>+1<CR>gv=gv", { silent = true })
-m.set('v', 'K', "<Cmd>m '<-2<CR>gv=gv", { silent = true })
--- Paste over selection without overriding the default register
+-- Move selection up or down
+m.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
+m.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
+-- Paste over selection without overriding reg
 m.set('v', 'p', 'pgvy')
 
-m.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
-m.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number' })
+m.set('n', '<Leader>+', '<C-a>', { desc = 'Increase number by 1' })
+m.set('n', '<Leader>-', '<C-x>', { desc = 'Decrease number by 1' })
 
--- Window splitting
-m.set('n', '<leader>sv', '<C-w>v', { desc = '[s]plit [v]ertically' })
-m.set('n', '<leader>sh', '<C-w>s', { desc = '[s]plit [h]orizontally' })
-m.set('n', '<leader>se', '<C-w>=', { desc = '[s]plit into [e]qual size' })
-m.set('n', '<leader>sx', '<Cmd>close<CR>', { desc = '[s]plit [x] close' })
+m.set('n', '<Leader>sv', '<C-w>v', { desc = '[s]plit [v]ertically' })
+m.set('n', '<Leader>sh', '<C-w>s', { desc = '[s]plit [h]orizontally' })
+m.set('n', '<Leader>se', '<C-w>=', { desc = '[s]plits into [e]qual size' })
+m.set('n', '<Leader>sx', ':close<CR>', { desc = '[s]plit [x] close' })
 
--- Tabs
-m.set('n', '<leader>to', '<Cmd>tabnew<CR>', { desc = '[t]ab [o]pen new tab' })
-m.set('n', '<leader>tf', '<Cmd>tabnew %<CR>', { desc = '[t]ab [f]ile (open current buffer in new tab)' })
-m.set('n', '<leader>tx', '<Cmd>tabclose<CR>', { desc = '[t]ab [x] close current tab' })
-m.set('n', '<leader>tn', '<Cmd>tabn<CR>', { desc = '[t]ab [n]ext tab' })
-m.set('n', '<leader>tp', '<Cmd>tabp<CR>', { desc = '[t]ab [p]revious tab' })
+m.set('n', '<Leader>to', ':tabnew<CR>', { desc = '[t]ab [o]pen new tab' })
+m.set('n', '<Leader>tf', ':tabnew %<CR>', { desc = '[t]ab [f]ile (open current buffer in new tab)' })
+m.set('n', '<Leader>tx', ':tabclose<CR>', { desc = '[t]ab [x] close current tab' })
+m.set('n', '<Leader>tn', ':tabn<CR>', { desc = '[t]ab [n]ext tab' })
+m.set('n', '<Leader>tp', ':tabp<CR>', { desc = '[t]ab [p]revious tab' })
 
--- Write and quit
-m.set('n', '<leader>ww', '<Cmd>w<CR>', { desc = 'Write current buffer' })
-m.set('n', '<leader>wa', '<Cmd>wa<CR>', { desc = 'Write all buffers' })
-m.set('n', '<leader>wq', '<Cmd>wqa<CR>', { desc = 'Write and quit Nvim' })
-m.set('n', '<leader>qq', '<Cmd>Alpha<CR>', { desc = 'Quit current window' })
-m.set('n', '<leader>qa', '<Cmd>qa<CR>', { desc = 'Quit Nvim' })
+m.set('n', '<Leader>ww', ':w<CR>', { desc = 'Write current buffer' })
+m.set('n', '<Leader>wa', ':wa<CR>', { desc = 'Write all buffers' })
+m.set('n', '<Leader>wq', ':wqa<CR>', { desc = 'Write and quit Nvim' })
+m.set('n', '<Leader>qq', ':Alpha<CR>', { desc = 'Quit current window' })
+m.set('n', '<Leader>qa', ':qa<CR>', { desc = 'Quit Nvim' })
 
-m.set('n', '<leader>dm', '<Cmd>delm!<CR>', { desc = 'Delete all marks' })
+m.set('n', '<Leader>dm', ':delm!<CR>', { desc = 'Delete Marks' })
 
--- Toggle spell check on/off for the current buffer
-m.set('n', '<leader>cs', '<Cmd>setlocal spell! spell?<CR>', { desc = 'Toggle spell check' })
+m.set('n', '<Leader>cs', ':setlocal spell! spell?<CR>', { desc = 'Check Spell' })
 
 -- Disable conflicting keybinds with tmux
 m.set('', '<C-n>', '<Nop>', { noremap = true, silent = true })
@@ -61,67 +57,67 @@ m.set('', '<C-p>', '<Nop>', { noremap = true, silent = true })
 -- Disable Ex Mode
 m.set('n', 'Q', '<Nop>', { noremap = true, silent = true })
 -- Open tmux sessionizer in a new tmux window
-m.set('n', '<C-f>', '<Cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open tmux sessionizer' })
+m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open tmux sessionizer' })
 
 ---------------------
 -- Plugin Keymaps --
 ---------------------
 
 -- Auto-session
-m.set('n', '<leader>wr', '<Cmd>SessionRestore<CR>', { desc = 'Restore session for cwd' })
-m.set('n', '<leader>ws', '<Cmd>SessionSave<CR>', { desc = 'Save session for auto session root dir' })
+m.set('n', '<Leader>wr', ':SessionRestore<CR>', { desc = 'Restore session for cwd' })
+m.set('n', '<Leader>ws', ':SessionSave<CR>', { desc = 'Save session for auto session root dir' })
 
 -- ChatGPT
-m.set('n', '<leader>go', '<Cmd>ChatGPT<CR>', { desc = '[g]pt [o]pen' })
-m.set('n', '<leader>ge', '<Cmd>ChatGPTEditWithInstruction<CR>', { desc = '[g]pt [e]dit with instruction' })
-m.set('n', '<leader>gg', '<Cmd>ChatGPTRun grammar_correction<CR>', { desc = '[g]pt Correct [g]rammer' })
-m.set('n', '<leader>gf', '<Cmd>ChatGPTRun fix_bugs<CR>', { desc = '[g]pt [f]ix bugs' })
+m.set('n', '<Leader>go', ':ChatGPT<CR>', { desc = '[g]pt [o]pen' })
+m.set('n', '<Leader>ge', ':ChatGPTEditWithInstruction<CR>', { desc = '[g]pt [e]dit with instruction' })
+m.set('n', '<Leader>gg', ':ChatGPTRun grammar_correction<CR>', { desc = '[g]pt Correct [g]rammer' })
+m.set('n', '<Leader>gf', ':ChatGPTRun fix_bugs<CR>', { desc = '[g]pt [f]ix bugs' })
 
 -- Flash
-m.set('n', '<leader><leader>f', function()
+m.set('n', '<Leader><Leader>f', function()
   require('flash').jump()
 end, { desc = '[f]lash' })
 
 -- Conform
-m.set({ 'n', 'v' }, '<leader>p', function()
+m.set({ 'n', 'v' }, '<Leader>p', function()
   require('conform').format()
-end, { desc = 'Format (in range)' })
+end, { desc = 'Format(in range)' })
 
 -- Lazygit
-m.set('n', '<leader>hg', '<Cmd>LazyGit<CR>', { desc = 'Lazy[g]it' })
+m.set('n', '<Leader>hg', ':LazyGit<CR>', { desc = 'Lazy[g]it' })
 
 -- Lint
-m.set('n', '<leader>ll', function()
+m.set('n', '<Leader>ll', function()
   require('lint').try_lint()
 end, { desc = 'Trigger linting for current file' })
 
 -- Live server
-m.set('n', '<leader>lo', '<Cmd>LiveServerStart<CR>', { desc = '[l]ive server [o]pen' })
-m.set('n', '<leader>lc', '<Cmd>LiveServerStop<CR>', { desc = '[l]ive server [s]top' })
-m.set('n', '<leader>lt', '<Cmd>LiveServerToggle<CR>', { desc = '[l]ive server [t]oggle' })
+m.set('n', '<Leader>lo', ':LiveServerStart<CR>', { desc = '[l]ive server [o]pen' })
+m.set('n', '<Leader>lc', ':LiveServerStop<CR>', { desc = '[l]ive server [s]top' })
+m.set('n', '<Leader>lt', ':LiveServerToggle<CR>', { desc = '[l]ive server [t]oggle' })
 
 -- Tree
-m.set('n', '<leader>ee', '<Cmd>NvimTreeToggle<CR>', { desc = '[e]xplorer toggle' })
-m.set('n', '<leader>ef', '<Cmd>NvimTreeFindFileToggle<CR>', { desc = '[e]xplorer on current [f]ile' })
-m.set('n', '<leader>ec', '<Cmd>NvimTreeCollapse<CR>', { desc = '[e]explorer [c]ollapse' })
-m.set('n', '<leader>er', '<Cmd>NvimTreeRefresh<CR>', { desc = '[e]xplorer [r]efresh' })
+m.set('n', '<Leader>ee', ':NvimTreeToggle<CR>', { desc = '[e]xplorer toggle' })
+m.set('n', '<Leader>ef', ':NvimTreeFindFileToggle<CR>', { desc = '[e]xplorer on current [f]ile' })
+m.set('n', '<Leader>ec', ':NvimTreeCollapse<CR>', { desc = '[e]explorer [c]ollapse' })
+m.set('n', '<Leader>er', ':NvimTreeRefresh<CR>', { desc = '[e]xplorer [r]efresh' })
 
 -- Oil
-m.set('n', '-', '<Cmd>Oil<CR>', { desc = 'Open parent directory' })
+m.set('n', '-', ':Oil<CR>', { desc = 'Open parent directory' })
 
 -- Telescope
-m.set('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', { desc = '[f]ind [f]iles' })
-m.set('n', '<leader>fr', '<Cmd>Telescope oldfiles<CR>', { desc = '[f]ind [r]ecent' })
-m.set('n', '<leader>fs', '<Cmd>Telescope live_grep<CR>', { desc = '[f]ind [s]tring in cwd' })
-m.set('n', '<leader>fc', '<Cmd>Telescope grep_string<CR>', { desc = '[f]ind string under [c]ursor in cwd' })
-m.set('n', '<leader>ft', '<Cmd>TodoTelescope<CR>', { desc = '[f]ind [t]odos' })
+m.set('n', '<Leader>ff', ':Telescope find_files<CR>', { desc = '[f]ind [f]iles' })
+m.set('n', '<Leader>fr', ':Telescope oldfiles<CR>', { desc = '[f]ind [r]ecent' })
+m.set('n', '<Leader>fs', ':Telescope live_grep<CR>', { desc = '[f]ind [s]tring in cwd' })
+m.set('n', '<Leader>fc', ':Telescope grep_string<CR>', { desc = '[f]ind string under [c]ursor in cwd' })
+m.set('n', '<Leader>ft', ':TodoTelescope<CR>', { desc = '[f]ind [t]odos' })
 
 -- Trouble
-m.set('n', '<leader>xw', '<Cmd>Trouble diagnostics toggle<CR>', { desc = 'Open trouble [w]orkspace diagnostics' })
-m.set('n', '<leader>xd', '<Cmd>Trouble diagnostics toggle filter.buf=0<CR>', { desc = 'Open trouble [d]ocument diagnostics' })
-m.set('n', '<leader>xq', '<Cmd>Trouble quickfix toggle<CR>', { desc = 'Open trouble [q]uickfix list' })
-m.set('n', '<leader>xl', '<Cmd>Trouble loclist toggle<CR>', { desc = 'Open trouble [l]ocation list' })
-m.set('n', '<leader>xt', '<Cmd>Trouble todo toggle<CR>', { desc = 'Open [t]odos in trouble' })
+m.set('n', '<Leader>xw', ':Trouble diagnostics toggle<CR>', { desc = 'Open trouble [w]orkspace diagnostics' })
+m.set('n', '<Leader>xd', ':Trouble diagnostics toggle filter.buf=0<CR>', { desc = 'Open trouble [d]ocument diagnostics' })
+m.set('n', '<Leader>xq', ':Trouble quickfix toggle<CR>', { desc = 'Open trouble [q]uickfix list' })
+m.set('n', '<Leader>xl', ':Trouble loclist toggle<CR>', { desc = 'Open trouble [l]ocation list' })
+m.set('n', '<Leader>xt', ':Trouble todo toggle<CR>', { desc = 'Open [t]odos in trouble' })
 
 -- Vim-maximizer
-m.set('n', '<leader>sm', '<Cmd>MaximizerToggle<CR>', { desc = '[s]plit to [m]ax/min' })
+m.set('n', '<Leader>sm', ':MaximizerToggle<CR>', { desc = '[s]plit to [m]ax/min' })

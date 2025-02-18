@@ -52,4 +52,4 @@ local coolnight = {
   },
 }
 
-return coolnight
+return tokyonight
