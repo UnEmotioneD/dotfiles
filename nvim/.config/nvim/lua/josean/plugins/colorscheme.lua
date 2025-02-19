@@ -52,4 +52,18 @@ local coolnight = {
   },
 }
 
-return tokyonight
+local catppuccin = {
+  'catppuccin/nvim',
+  name = 'catppuccin',
+  priority = 1000,
+  config = function()
+    require('catppuccin').setup({
+      ---@type string  | 'auto' | 'latte' | 'frappe' | 'macchiato' | 'mohca'
+      flavour = 'macchiato',
+      transparent_background = false,
+    })
+    vim.cmd.colorscheme('catppuccin')
+  end,
+}
+
+return catppuccin
