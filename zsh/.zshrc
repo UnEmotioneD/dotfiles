@@ -131,6 +131,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 alias c="clear"
 alias e="exit"
 alias lg="lazygit"
+alias python="python3"
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
