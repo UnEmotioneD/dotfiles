@@ -135,7 +135,7 @@ alias lg="lazygit"
 alias brewup='brew update && brew upgrade && brew upgrade --cask'
 
 # --- Neovim config selector ---
-alias n="NVIM_APPNAME=nvim nvim"
+alias nvim="NVIM_APPNAME=nvim nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 alias prime="NVIM_APPNAME=ThePrimeagen nvim"
 alias jvim="NVIM_APPNAME=JavaNvim nvim"

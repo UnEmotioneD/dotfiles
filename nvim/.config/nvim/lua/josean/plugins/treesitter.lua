@@ -38,7 +38,6 @@ return {
         'vimdoc',
         'c',
         'python',
-        -- 'rust',
       },
       modules = {},
       ignore_install = {},
