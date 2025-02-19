@@ -12,7 +12,7 @@ return {
     local header = {}
 
     if os_name == 'Darwin' then
-      -- macOS dashboard header (customize as you wish)
+      -- macOS
       header = {
         '                                                                                               ',
         '                                                                                               ',
@@ -31,7 +31,6 @@ return {
       }
     elseif os_name == 'Linux' then
       header = {
-        '                                                  ',
         '                                                               ',
         '                                                               ',
         '                                                               ',
@@ -48,7 +47,6 @@ return {
         '╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═════╝    ╚═╝    ╚══╝╚══╝ ',
       }
     else
-      -- Default header for other OSes
       header = {
         '                                                  ',
         '███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗',
@@ -57,6 +55,7 @@ return {
         '██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║',
         '██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║',
         '╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝',
+        '                                                  ',
       }
     end
 
@@ -76,5 +75,3 @@ return {
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
   end,
 }
---[[
--- ]]
