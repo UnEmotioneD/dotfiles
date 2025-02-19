@@ -17,7 +17,6 @@ return {
       liquid = { 'prettier' },
       lua = { 'stylua' },
       python = { 'isort', 'black' },
-      c = { 'clang-format' },
       toml = { 'taplo' },
       sh = { 'shfmt' },
     },

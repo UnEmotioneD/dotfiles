@@ -75,3 +75,8 @@ vim.api.nvim_create_autocmd('BufEnter', {
     vim.opt_local.formatoptions:remove('o')
   end,
 })
+
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
