@@ -96,6 +96,9 @@ m.set('n', '<Leader>lo', ':LiveServerStart<CR>', { desc = '[l]ive server [o]pen'
 m.set('n', '<Leader>lc', ':LiveServerStop<CR>', { desc = '[l]ive server [s]top' })
 m.set('n', '<Leader>lt', ':LiveServerToggle<CR>', { desc = '[l]ive server [t]oggle' })
 
+-- Silicon
+m.set('v', '<Leader>ss', ':Silicon<CR>', { desc = '[S]ilicon [S]creenshot' })
+
 -- Tree
 m.set('n', '<Leader>ee', ':NvimTreeToggle<CR>', { desc = '[e]xplorer toggle' })
 m.set('n', '<Leader>ef', ':NvimTreeFindFileToggle<CR>', { desc = '[e]xplorer on current [f]ile' })
