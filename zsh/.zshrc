@@ -160,4 +160,3 @@ function nvims() {
 bindkey -s ^a "nvims\n"
 
 source ~/.zshenv
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
