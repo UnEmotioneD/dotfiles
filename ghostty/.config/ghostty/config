@@ -8,8 +8,7 @@ font-feature = -liga
 
 cursor-style-blink = false
 
-# config-file = tokyo-night-storm
-theme = catppuccin-mocha
+config-file = tokyo-night-storm
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 1
