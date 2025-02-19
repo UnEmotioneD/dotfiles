@@ -5,37 +5,68 @@ return {
     local alpha = require('alpha')
     local dashboard = require('alpha.themes.dashboard')
 
+    -- Detect OS using Neovim's libuv interface
+    local os_name = vim.loop.os_uname().sysname
+
     -- https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=LAZYVIM
-    dashboard.section.header.val = {
-      '                                                                                               ',
-      '                                                                                               ',
-      '                                                                                               ',
-      '                                                                                               ',
-      '                                                                                               ',
-      '                                                                                               ',
-      '                                                                                               ',
-      '                                                                                               ',
-      ' ██╗   ██╗███╗   ██╗███████╗███╗   ███╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗██████╗ ',
-      ' ██║   ██║████╗  ██║██╔════╝████╗ ████║██╔═══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╔══██╗',
-      ' ██║   ██║██╔██╗ ██║█████╗  ██╔████╔██║██║   ██║   ██║   ██║██║   ██║██╔██╗ ██║█████╗  ██║  ██║',
-      ' ██║   ██║██║╚██╗██║██╔══╝  ██║╚██╔╝██║██║   ██║   ██║   ██║██║   ██║██║╚██╗██║██╔══╝  ██║  ██║',
-      ' ╚██████╔╝██║ ╚████║███████╗██║ ╚═╝ ██║╚██████╔╝   ██║   ██║╚██████╔╝██║ ╚████║███████╗██████╔╝',
-      '  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═════╝ ',
-      -- '                      ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗                       ',
-      -- '                      ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║                       ',
-      -- '                      ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║                       ',
-      -- '                      ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║                       ',
-      -- '                      ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║                       ',
-      -- '                      ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝                       ',
-    }
+    local header = {}
+
+    if os_name == 'Darwin' then
+      -- macOS dashboard header (customize as you wish)
+      header = {
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        ' ██╗   ██╗███╗   ██╗███████╗███╗   ███╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗██████╗ ',
+        ' ██║   ██║████╗  ██║██╔════╝████╗ ████║██╔═══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╔══██╗',
+        ' ██║   ██║██╔██╗ ██║█████╗  ██╔████╔██║██║   ██║   ██║   ██║██║   ██║██╔██╗ ██║█████╗  ██║  ██║',
+        ' ██║   ██║██║╚██╗██║██╔══╝  ██║╚██╔╝██║██║   ██║   ██║   ██║██║   ██║██║╚██╗██║██╔══╝  ██║  ██║',
+        ' ╚██████╔╝██║ ╚████║███████╗██║ ╚═╝ ██║╚██████╔╝   ██║   ██║╚██████╔╝██║ ╚████║███████╗██████╔╝',
+        '  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═════╝ ',
+      }
+    elseif os_name == 'Linux' then
+      header = {
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                                                                                               ',
+        '                 █████╗ ██████╗  ██████╗██╗  ██╗    ██████╗ ████████╗██╗    ██╗                ',
+        '                ██╔══██╗██╔══██╗██╔════╝██║  ██║    ██╔══██╗╚══██╔══╝██║    ██║                ',
+        '                ███████║██████╔╝██║     ███████║    ██████╔╝   ██║   ██║ █╗ ██║                ',
+        '                ██╔══██║██╔══██╗██║     ██╔══██║    ██╔══██╗   ██║   ██║███╗██║                ',
+        '                ██║  ██║██║  ██║╚██████╗██║  ██║    ██████╔╝   ██║   ╚███╔███╔╝                ',
+        '                ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═════╝    ╚═╝    ╚══╝╚══╝                 ',
+      }
+    else
+      -- Default header for other OSes
+      header = {
+        '                      ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗                       ',
+        '                      ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║                       ',
+        '                      ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║                       ',
+        '                      ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║                       ',
+        '                      ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║                       ',
+        '                      ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝                       ',
+      }
+    end
+
+    dashboard.section.header.val = header
 
     dashboard.section.buttons.val = {
-      dashboard.button('e', '  > New File', '<cmd>ene<CR>'), -- After creating new file <Cmd>w {file-name}<Cr> to name it
-      dashboard.button('SPC ee', '  > File explorer', '<Cmd>NvimTreeToggle<CR>'),
-      dashboard.button('SPC ff', '󰱼  > Find File', '<Cmd>Telescope find_files<CR>'),
-      dashboard.button('SPC fs', '  > Live Grep', '<Cmd>Telescope live_grep<CR>'),
-      dashboard.button('SPC wr', '󰁯  > Restore Session', '<Cmd>SessionRestore<CR>'), -- Restore session for CWD
-      dashboard.button('q', '  > Quit NVIM', '<Cmd>qa<CR>'),
+      dashboard.button('e', '  > New File', '<cmd>ene<CR>'),
+      dashboard.button('SPC ee', '  > File explorer', '<cmd>NvimTreeToggle<CR>'),
+      dashboard.button('SPC ff', '󰱼  > Find File', '<cmd>Telescope find_files<CR>'),
+      dashboard.button('SPC fs', '  > Live Grep', '<cmd>Telescope live_grep<CR>'),
+      dashboard.button('SPC wr', '󰁯  > Restore Session', '<cmd>SessionRestore<CR>'),
+      dashboard.button('q', '  > Quit NVIM', '<cmd>qa<CR>'),
     }
 
     alpha.setup(dashboard.opts)
@@ -43,3 +74,5 @@ return {
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
   end,
 }
+--[[
+-- ]]
