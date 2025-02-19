@@ -6,7 +6,7 @@ return {
     output = {
       -- (string) The full path of the file to save to.
       file = '',
-      -- (boolean) Whether to copy the image to clipboard instead of saving to file.
+      -- clipboard or path
       clipboard = false,
       -- (string) Where to save images, defaults to the current directory.
       --  e.g. /home/user/Pictures
@@ -47,8 +47,7 @@ return {
     watermark = {
       text = nil, -- (string) The text to use as the watermark, set to nil to disable.
       color = '#75715e', -- (string) The color for the watermark text.
-      -- (string) The style for the watermark text, possible values are:
-      -- 'bold', 'italic', 'bolditalic', or anything else defaults to 'regular'.
+      ---@type string | 'bold' | 'italic' | 'bolditalic' | 'regular'
       style = 'bold',
     },
   },
