@@ -138,10 +138,12 @@ alias brewup='brew update && brew upgrade && brew upgrade --cask'
 alias n="NVIM_APPNAME=nvim nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 alias prime="NVIM_APPNAME=ThePrimeagen nvim"
+alias jvim="NVIM_APPNAME=JavaNvim nvim"
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
 alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
+alias rmjvim='rm -rf ~/.local/share/JavaNvim/ && rm -rf ~/.local/state/JavaNvim/'
 
 function nvims() {
   items=("Default" "ThePrimeagen" "KickStart")
@@ -158,3 +160,4 @@ function nvims() {
 bindkey -s ^a "nvims\n"
 
 source ~/.zshenv
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
