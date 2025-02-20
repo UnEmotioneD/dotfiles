@@ -18,7 +18,7 @@ return {
       lua = { 'stylua' },
       python = { 'isort', 'black' },
       toml = { 'taplo' },
-      sh = { 'shfmt' },
+      sh = { 'beautysh' }, -- install "beautysh" package with homebrew
     },
     format_on_save = {
       lsp_fallback = true,
@@ -27,7 +27,7 @@ return {
     },
     -- format_on_save = false,
 
-    -- BUG: Cannot format .zshrc, .ideavimrc
+    -- BUG: Cannot format .ideavimrc
     vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
       pattern = { '.bashrc', '.zshrc', 'config.fish', '.zshenv', '.ideavimrc', 'sketchybarrc' },
       command = 'set filetype=sh',

@@ -1,10 +1,10 @@
 " General Settings
 set number                " Show line numbers
 set relativenumber        " Show relative line numbers
-set scrolloff=5           " Keep 5 lines visible when scrolling
+set scrolloff=5
 set visualbell            " Use visual bell instead of beeping
-set noerrorbells          " Disable error bells
-set clipboard=unnamedplus " Use system clipboard by default
+set noerrorbells
+set clipboard=unnamedplus " Use system clipboard
 set clipboard^=ideaputset " Support IDE clipboard integration
 set ideajoin              " Enable IntelliJ IDEA's join lines feature
 
@@ -44,8 +44,8 @@ let g:qs_disable_for_diffs = 1       " Disable in diff mode
 " Harpoon
 nmap <leader><leader>h :action AddToHarpoon<CR>
 nmap <leader><leader>e :action ShowHarpoon<CR>
-nmap <leader><leader>1 :action GotoHarpoon1<CR>
-nmap <leader><leader>2 :action GotoHarpoon2<CR>
-nmap <leader><leader>3 :action GotoHarpoon3<CR>
-nmap <leader><leader>4 :action GotoHarpoon4<CR>
-nmap <leader><leader>5 :action GotoHarpoon5<CR>
+nmap <leader>1 :action GotoHarpoon1<CR>
+nmap <leader>2 :action GotoHarpoon2<CR>
+nmap <leader>3 :action GotoHarpoon3<CR>
+nmap <leader>4 :action GotoHarpoon4<CR>
+nmap <leader>5 :action GotoHarpoon5<CR>
