@@ -31,8 +31,9 @@ return {
         winblend = 0,
         previewer = false,
       }))
-    end, { desc = '[/] Fuzzily search in current buffer' })
-    vim.keymap.set('n', '<leader>sn', function()
+    end, { desc = '[/] Fuzzy search current buffer' })
+
+    vim.keymap.set('n', '<leader>fn', function()
       builtin.find_files({ cwd = vim.fn.stdpath('config') })
     end, { desc = '[f]ind [n]eovim files' })
 
