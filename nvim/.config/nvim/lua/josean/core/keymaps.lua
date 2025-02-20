@@ -27,9 +27,6 @@ m.set('v', 'K', ":m '<-2<Cr>gv=gv")
 -- Paste over selection without overriding reg
 m.set('v', 'p', 'pgvy')
 
-m.set('n', '<leader>+', '<C-a>', { desc = 'Increase number by 1' })
-m.set('n', '<leader>-', '<C-x>', { desc = 'Decrease number by 1' })
-
 m.set('n', '<leader>sv', '<C-w>v', { desc = '[s]plit [v]ertically' })
 m.set('n', '<leader>sh', '<C-w>s', { desc = '[s]plit [h]orizontally' })
 m.set('n', '<leader>se', '<C-w>=', { desc = '[s]plits into [e]qual size' })
@@ -40,12 +37,6 @@ m.set('n', '<leader>tf', ':tabnew %<Cr>', { desc = '[t]ab [f]ile (open current b
 m.set('n', '<leader>tx', ':tabclose<Cr>', { desc = '[t]ab [x] close current tab' })
 m.set('n', '<leader>tn', ':tabn<Cr>', { desc = '[t]ab [n]ext tab' })
 m.set('n', '<leader>tp', ':tabp<Cr>', { desc = '[t]ab [p]revious tab' })
-
-m.set('n', '<leader>ww', ':w<Cr>', { desc = 'Write current buffer' })
-m.set('n', '<leader>wa', ':wa<Cr>', { desc = 'Write all buffers' })
-m.set('n', '<leader>wq', ':wqa<Cr>', { desc = 'Write and quit Nvim' })
-m.set('n', '<leader>qq', ':Alpha<Cr>', { desc = 'Quit current window', silent = true })
-m.set('n', '<leader>qa', ':qa<Cr>', { desc = 'Quit Nvim' })
 
 m.set('n', '<leader>cd', ':q1<Cr>', { desc = '[C]lose [D]iff window' })
 

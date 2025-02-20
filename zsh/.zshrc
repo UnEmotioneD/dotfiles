@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# Run 'p10k configure' to configure prompt
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # quiet off
@@ -16,8 +16,11 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search zsh-history-substring-search)
 
-# enable zsh-autosuggestions
+# Enable zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Eable zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -132,21 +135,20 @@ bindkey -s ^f "tmux-sessionizer\n"
 # --- my alias ---
 alias c="clear"
 alias e="exit"
+
 alias lg="lazygit"
 alias python="python3"
-alias trash="rm -rf"
+
 alias brewup='brew update && brew upgrade && brew upgrade --cask'
+
+alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
+alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
+alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
 
 # --- Neovim config selector ---
 alias nvim="NVIM_APPNAME=nvim nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 alias prime="NVIM_APPNAME=ThePrimeagen nvim"
-alias jvim="NVIM_APPNAME=JavaNvim nvim"
-
-alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
-alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
-alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
-alias rmjvim='rm -rf ~/.local/share/JavaNvim/ && rm -rf ~/.local/state/JavaNvim/'
 
 function nvims() {
     items=("Default" "ThePrimeagen" "KickStart")

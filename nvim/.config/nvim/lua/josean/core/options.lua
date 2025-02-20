@@ -47,11 +47,12 @@ o.spellsuggest = 'best' -- Use best suggestion for spelling corrections
 o.swapfile = false -- Disable swap file creation
 
 -- Performance and Timeout Settings
+o.updatetime = 300
 o.ttyfast = true -- Optimize for fast terminals
 o.timeout = true -- Enable timeout for mapped sequences
 o.timeoutlen = 500 -- Wait 500ms for a mapping to complete
 o.ttimeoutlen = 100 -- Wait 100ms for key code sequences (helps with escape delays)
-o.lazyredraw = false -- Redraw screen immediately (can help with macros)
+o.lazyredraw = true -- Redraw screen immediately (can help with macros)
 
 vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
