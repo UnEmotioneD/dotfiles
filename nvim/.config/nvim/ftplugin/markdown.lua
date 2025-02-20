@@ -9,10 +9,6 @@ opt.linebreak = true
 opt.textwidth = 80
 opt.formatoptions:append('t') -- Automatically wrap text using textwidth
 
--- Use conceal to hide certain Markdown syntax markers (e.g., emphasis markers)
-opt.conceallevel = 2
-opt.concealcursor = 'n' -- Only conceal when not in insert mode
-
 -- Indentation settings for lists and nested elements
 opt.shiftwidth = 2
 opt.tabstop = 2

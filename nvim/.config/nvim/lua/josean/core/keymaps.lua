@@ -18,7 +18,7 @@ m.set('n', '<C-u>', '<C-u>zz')
 -- Delete char without yanking
 m.set('n', 'x', '"_x')
 -- Cursor stays in place when joining lines
-m.set('n', 'J', 'mzJ`z')
+m.set('n', 'J', 'J<C-G>U')
 -- Yank to end of the line
 m.set('n', 'Y', 'y$')
 -- Move selection up or down
