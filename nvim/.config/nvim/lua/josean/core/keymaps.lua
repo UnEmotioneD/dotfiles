@@ -22,8 +22,8 @@ m.set('n', 'J', 'J<C-G>U')
 -- Yank to end of the line
 m.set('n', 'Y', 'y$')
 -- Move selection up or down
-m.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
-m.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
+m.set('v', 'J', ":m '>+1<CR>gv=gv")
+m.set('v', 'K', ":m '<-2<CR>gv=gv")
 -- Paste over selection without overriding reg
 m.set('v', 'p', 'pgvy')
 
