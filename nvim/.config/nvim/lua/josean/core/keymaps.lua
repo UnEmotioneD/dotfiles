@@ -34,6 +34,7 @@ m.set('n', '<Leader>sv', '<C-w>v', { desc = '[s]plit [v]ertically' })
 m.set('n', '<Leader>sh', '<C-w>s', { desc = '[s]plit [h]orizontally' })
 m.set('n', '<Leader>se', '<C-w>=', { desc = '[s]plits into [e]qual size' })
 m.set('n', '<Leader>sx', ':close<CR>', { desc = '[s]plit [x] close' })
+m.set('n', '<leader>sx', ':close<Cr>', { desc = '[s]plit [x] close' })
 
 m.set('n', '<Leader>to', ':tabnew<CR>', { desc = '[t]ab [o]pen new tab' })
 m.set('n', '<Leader>tf', ':tabnew %<CR>', { desc = '[t]ab [f]ile (open current buffer in new tab)' })
