@@ -22,6 +22,7 @@ return {
       { '<leader>s', group = '[S]plit' },
       { '<leader>t', group = '[T]ab' },
       { '<leader>x', group = '[X]trouble' },
+      { '<leader>/', group = '[/]Search' },
     },
   },
 }
