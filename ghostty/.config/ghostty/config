@@ -8,7 +8,7 @@ font-feature = -liga
 
 cursor-style-blink = false
 
-theme = tokyonight-storm
+theme = tokyonight_moon
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 1
