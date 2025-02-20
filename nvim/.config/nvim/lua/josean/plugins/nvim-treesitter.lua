@@ -38,6 +38,7 @@ return {
         'vimdoc',
         'c',
         'python',
+        'git_config',
       },
       modules = {},
       ignore_install = {},
