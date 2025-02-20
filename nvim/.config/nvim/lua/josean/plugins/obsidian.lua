@@ -20,6 +20,10 @@ return {
         name = 'MySQL',
         path = '~/Documents/vaults/mysql/',
       },
+      {
+        name = 'Resume',
+        path = '~/Documents/vaults/resume/',
+      },
     },
     -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
     -- 'workspaces'. For example:
