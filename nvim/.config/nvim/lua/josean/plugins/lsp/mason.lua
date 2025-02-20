@@ -41,7 +41,6 @@ return {
         'isort',
         'black',
         'pylint',
-        'beautysh', -- shell formatter
       },
     })
   end,

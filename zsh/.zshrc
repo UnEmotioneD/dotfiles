@@ -83,12 +83,28 @@ _fzf_comprun() {
     esac
 }
 
+fcd() {
+    local dir
+    dir=$(find ${1:-.} -mindepth 1 -type d 2>/dev/null | fzf --preview 'tree -C {} | head -50') && cd "$dir"
+}
+
+fvim() {
+    local file
+    file=$(find ${1:-.} -type f -o -type d 2>/dev/null | fzf --preview '
+        if [ -d {} ]; then
+          tree -C {} | head -50
+        else
+          bat --style=numbers --color=always --line-range=:50 {}
+        fi
+    ') && nvim "$file"
+}
+
 # --- Zoxide (better cd) ---
 eval "$(zoxide init zsh)"
+alias cd="z"
 
 # --- Eza (better ls) ---
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first"
-alias cd="z"
 
 # --- Bat (better cat) ---
 export BAT_THEME=tokyonight_night
