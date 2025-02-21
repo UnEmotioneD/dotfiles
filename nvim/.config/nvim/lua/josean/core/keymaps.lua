@@ -38,8 +38,6 @@ m.set('n', '<leader>tx', ':tabclose<Cr>', { desc = '[t]ab [x] close current tab'
 m.set('n', '<leader>tn', ':tabn<Cr>', { desc = '[t]ab [n]ext tab' })
 m.set('n', '<leader>tp', ':tabp<Cr>', { desc = '[t]ab [p]revious tab' })
 
-m.set('n', '<leader>cd', ':q1<Cr>', { desc = '[C]lose [D]iff window' })
-
 m.set('n', '<leader>dm', ':delm!<Cr>', { desc = 'Delete Marks' })
 
 m.set('n', '<leader>cs', ':setlocal spell! spell?<Cr>', { desc = '[C]heck [S]pell' })
@@ -66,15 +64,18 @@ m.set('n', '<leader>ge', ':ChatGPTEditWithInstruction<Cr>', { desc = '[g]pt [e]d
 m.set('n', '<leader>gg', ':ChatGPTRun grammar_correction<Cr>', { desc = '[g]pt Correct [g]rammer' })
 m.set('n', '<leader>gf', ':ChatGPTRun fix_bugs<Cr>', { desc = '[g]pt [f]ix bugs' })
 
+-- Conform
+m.set({ 'n', 'v' }, '<leader>p', function()
+  require('conform').format()
+end, { desc = 'Format(in range)' })
+
 -- Flash
 m.set('n', '<leader><leader>f', function()
   require('flash').jump()
 end, { desc = '[f]lash' })
 
--- Conform
-m.set({ 'n', 'v' }, '<leader>p', function()
-  require('conform').format()
-end, { desc = 'Format(in range)' })
+-- Gitsings
+m.set('n', '<leader>hc', ':q1<Cr>', { desc = 'Diff [c]lose' })
 
 -- Lazygit
 m.set('n', '<leader>hg', ':LazyGit<Cr>', { desc = 'Lazy[g]it' })
@@ -102,6 +103,7 @@ m.set('n', '<leader>fr', ':Telescope oldfiles<Cr>', { desc = '[f]ind [r]ecent' }
 m.set('n', '<leader>fs', ':Telescope live_grep<Cr>', { desc = '[f]ind [s]tring in cwd' })
 m.set('n', '<leader>fc', ':Telescope grep_string<Cr>', { desc = '[f]ind string under [c]ursor in cwd' })
 m.set('n', '<leader>ft', ':TodoTelescope<Cr>', { desc = '[f]ind [t]odos' })
+m.set('n', '<leader>fk', ':Telescope keymaps<Cr>', { desc = '[f]ind [k]keymaps' })
 
 -- Trouble
 m.set('n', '<leader>xw', ':Trouble diagnostics toggle<Cr>', { desc = 'Open trouble [w]orkspace diagnostics' })
