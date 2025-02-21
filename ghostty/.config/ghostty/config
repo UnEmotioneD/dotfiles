@@ -1,14 +1,16 @@
-font-size = 16
-font-thicken = true
-font-family = FiraCode-Retina
+font-family = MesloLGS Nerd Font Mono
 font-family-bold = auto
 font-family-italic = auto
 font-family-bold-italic = auto
-font-feature = -liga
+
+font-size = 16
+font-thicken = true
+
+# font-feature = -liga
 
 cursor-style-blink = false
 
-theme = tokyonight_night
+theme = tokyonight-storm
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 1

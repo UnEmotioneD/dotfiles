@@ -21,6 +21,7 @@ return {
       { '<leader>q', group = '[Q]uit' },
       { '<leader>s', group = '[S]plit' },
       { '<leader>t', group = '[T]ab' },
+      { '<leader>w', group = '[W]session' },
       { '<leader>x', group = '[X]trouble' },
       { '<leader>/', group = '[/]Search' },
     },

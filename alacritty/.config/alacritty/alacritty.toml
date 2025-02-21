@@ -1,5 +1,4 @@
 [general]
-# import = ["~/.config/alacritty/coolnight.toml"]
 import = ["~/.config/alacritty/tokyonight-storm.toml"]
 
 [env]

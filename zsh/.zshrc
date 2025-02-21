@@ -3,24 +3,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
 export ZSH="$HOME/.oh-my-zsh"
-
 source $ZSH/oh-my-zsh.sh
 
-# Run 'p10k configure' to configure prompt
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# quiet off
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search zsh-history-substring-search)
-
-# Enable zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Eable zsh-syntax-highlighting
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search web-search)
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -86,12 +78,12 @@ _fzf_comprun() {
     esac
 }
 
-fcd() {
+cdf() {
     local dir
     dir=$(find ${1:-.} -mindepth 1 -type d 2>/dev/null | fzf --preview 'tree -C {} | head -50') && cd "$dir"
 }
 
-fvim() {
+nvimf() {
     local file
     file=$(find ${1:-.} -type f -o -type d 2>/dev/null | fzf --preview '
         if [ -d {} ]; then
@@ -144,11 +136,12 @@ alias brewup='brew update && brew upgrade && brew upgrade --cask'
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
 alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
+alias rmmini='rm -rf ~/.local/share/mini/ && rm -rf ~/.local/state/mini/'
 
 # --- Neovim config selector ---
-alias nvim="NVIM_APPNAME=nvim nvim"
-alias kick="NVIM_APPNAME=KickStart nvim"
-alias prime="NVIM_APPNAME=ThePrimeagen nvim"
+alias kick="env NVIM_APPNAME=KickStart nvim"
+alias prime="env NVIM_APPNAME=ThePrimeagen nvim"
+alias mini="env NVIM_APPNAME=mini nvim"
 
 function nvims() {
     items=("Default" "ThePrimeagen" "KickStart")
@@ -159,9 +152,8 @@ function nvims() {
     elif [[ $config == "Default" ]]; then
         config=""
     fi
-    NVIM_APPNAME=$config nvim $@
+    env NVIM_APPNAME=$config nvim $@
 }
-
 bindkey -s ^a "nvims\n"
 
 source ~/.zshenv
