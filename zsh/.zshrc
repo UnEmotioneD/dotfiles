@@ -22,6 +22,9 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Eable zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Nerdnetch
+nerdfetch
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
