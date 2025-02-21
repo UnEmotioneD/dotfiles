@@ -22,6 +22,9 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Eable zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Nerdnetch
+nerdfetch
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -135,10 +138,15 @@ bindkey -s ^f "tmux-sessionizer\n"
 # --- my alias ---
 alias c="clear"
 alias e="exit"
+
 alias lg="lazygit"
 alias python="python3"
-alias trash="rm -rf"
+
 alias brewup='brew update && brew upgrade && brew upgrade --cask'
+
+alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
+alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
+alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
 
 # --- Neovim config selector ---
 alias nvim="NVIM_APPNAME=nvim nvim"

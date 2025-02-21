@@ -16,3 +16,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Conten
 
 # Rust
 source "$HOME/.cargo/env"
+
+# Lazygit config path
+export XDG_CONFIG_HOME="$HOME/.config"
