@@ -11,10 +11,10 @@ return {
       right = '<S-l>',
 
       -- Move current line in Normal mode
-      line_left = '<S-h>',
-      line_down = '<S-j>',
-      line_up = '<S-k>',
-      line_right = '<S-l>',
+      line_left = '',
+      line_down = '',
+      line_up = '',
+      line_right = '',
     },
 
     -- Options which control moving behavior

@@ -52,9 +52,15 @@ m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tm
 -- files
 m.set('n', '-', ':lua MiniFiles.open(vim.fn.expand("%:p:h"))<Cr>')
 
--- tablien
+-- tabline
 m.set('n', '<C-PageUp>', ':bprev<Cr>')
 m.set('n', '<C-PageDown>', ':bnext<Cr>')
+
+-- pick
+m.set('n', '<leader>ff', ':Pick files<Cr>', { desc = '[f]ind [f]iles' })
+m.set('n', '<leader>fs', ':Pick grep_live<Cr>', { desc = '[f]ind [s]tring' })
+m.set('n', '<leader>fr', ':Pick resume<Cr>', { desc = '[f]ind [r]esume' })
+m.set('n', '<leader>fh', ':Pick help<Cr>', { desc = '[f]ind [h]elp' })
 
 ---------------------
 -- Plugin Keymaps --
@@ -88,14 +94,6 @@ m.set('n', '<leader>lt', ':LiveServerToggle<Cr>', { desc = '[l]ive server [t]ogg
 
 -- Silicon
 m.set('v', '<leader>ss', ':Silicon<Cr>', { desc = '[S]ilicon [S]creenshot' })
-
--- Telescope
-m.set('n', '<leader>ff', ':Telescope find_files<Cr>', { desc = '[f]ind [f]iles' })
-m.set('n', '<leader>fr', ':Telescope oldfiles<Cr>', { desc = '[f]ind [r]ecent' })
-m.set('n', '<leader>fs', ':Telescope live_grep<Cr>', { desc = '[f]ind [s]tring in cwd' })
-m.set('n', '<leader>fc', ':Telescope grep_string<Cr>', { desc = '[f]ind string under [c]ursor in cwd' })
-m.set('n', '<leader>ft', ':TodoTelescope<Cr>', { desc = '[f]ind [t]odos' })
-m.set('n', '<leader>fk', ':Telescope keymaps<Cr>', { desc = '[f]ind [k]keymaps' })
 
 -- Trouble
 m.set('n', '<leader>xw', ':Trouble diagnostics toggle<Cr>', { desc = 'Open trouble [w]orkspace diagnostics' })

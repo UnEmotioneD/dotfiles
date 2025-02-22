@@ -1,6 +1,9 @@
 return {
   'echasnovski/mini.tabline',
   version = '*',
+  dependencies = {
+    'echasnovski/mini.icons',
+  },
   opts = {
     -- Whether to show file icons (requires 'mini.icons')
     show_icons = true,
