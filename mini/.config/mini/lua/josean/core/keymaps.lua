@@ -54,6 +54,9 @@ m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tm
 -- Plugin Keymaps --
 ---------------------
 
+-- Mini.files
+m.set('n', '-', ': lua MiniFiles.open()<Cr>', { desc = '[e]xplorer toggle' })
+
 -- Auto-session
 m.set('n', '<leader>wr', ':SessionRestore<Cr>', { desc = 'Restore session for cwd' })
 m.set('n', '<leader>ws', ':SessionSave<Cr>', { desc = 'Save session for auto session root dir' })
@@ -87,15 +90,6 @@ m.set('n', '<leader>lt', ':LiveServerToggle<Cr>', { desc = '[l]ive server [t]ogg
 
 -- Silicon
 m.set('v', '<leader>ss', ':Silicon<Cr>', { desc = '[S]ilicon [S]creenshot' })
-
--- Tree
-m.set('n', '<leader>ee', ':NvimTreeToggle<Cr>', { desc = '[e]xplorer toggle' })
-m.set('n', '<leader>ef', ':NvimTreeFindFileToggle<Cr>', { desc = '[e]xplorer on current [f]ile' })
-m.set('n', '<leader>ec', ':NvimTreeCollapse<Cr>', { desc = '[e]explorer [c]ollapse' })
-m.set('n', '<leader>er', ':NvimTreeRefresh<Cr>', { desc = '[e]xplorer [r]efresh' })
-
--- Oil
-m.set('n', '-', ':Oil<Cr>', { desc = 'Open parent directory' })
 
 -- Telescope
 m.set('n', '<leader>ff', ':Telescope find_files<Cr>', { desc = '[f]ind [f]iles' })
