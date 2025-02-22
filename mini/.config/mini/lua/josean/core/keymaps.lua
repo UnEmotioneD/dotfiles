@@ -55,8 +55,8 @@ m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tm
 ---------------------
 
 -- Auto-session
-m.set('n', '<leader>wr', ':SessionRestore<Cr>', { desc = 'session [s]ave' })
-m.set('n', '<leader>ws', ':SessionSave<Cr>', { desc = 'session [r]estore' })
+m.set('n', '<leader>wr', ':SessionRestore<Cr>', { desc = 'Restore session for cwd' })
+m.set('n', '<leader>ws', ':SessionSave<Cr>', { desc = 'Save session for auto session root dir' })
 
 -- ChatGPT
 m.set('n', '<leader>go', ':ChatGPT<Cr>', { desc = '[g]pt [o]pen' })
