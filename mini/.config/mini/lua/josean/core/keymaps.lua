@@ -17,13 +17,8 @@ m.set('n', '<C-d>', '<C-d>zz')
 m.set('n', '<C-u>', '<C-u>zz')
 -- Delete char without yanking
 m.set('n', 'x', '"_x')
--- Cursor stays in place when joining lines
-m.set('n', 'J', 'J<C-G>U')
 -- Yank to end of the line
 m.set('n', 'Y', 'y$')
--- Move selection up or down
-m.set('v', 'J', ":m '>+1<Cr>gv=gv")
-m.set('v', 'K', ":m '<-2<Cr>gv=gv")
 -- Paste over selection without overriding reg
 m.set('v', 'p', 'pgvy')
 
@@ -58,8 +53,6 @@ m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tm
 m.set('n', '-', ':lua MiniFiles.open(vim.fn.expand("%:p:h"))<Cr>')
 
 -- tablien
-m.set('n', 'H', ':bprev<Cr>')
-m.set('n', 'L', ':bnext<Cr>')
 m.set('n', '<C-PageUp>', ':bprev<Cr>')
 m.set('n', '<C-PageDown>', ':bnext<Cr>')
 
