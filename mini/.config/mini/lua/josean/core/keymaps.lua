@@ -49,6 +49,9 @@ m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tm
 -- Mini.nvim --
 ---------------
 
+-- bufremove
+m.set('n', '<leader>qq', ':lua MiniBufremove.delete()<Cr>')
+
 -- files
 m.set('n', '-', ':lua MiniFiles.open(vim.fn.expand("%:p:h"))<Cr>')
 
