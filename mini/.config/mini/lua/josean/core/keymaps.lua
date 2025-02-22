@@ -50,12 +50,18 @@ m.set('n', 'Q', '<Nop>', { noremap = true, silent = true })
 -- Open tmux sessionizer in a new tmux window
 m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tmux sessionizer' })
 
----------------------
+---------------
 -- Mini.nvim --
----------------------
+---------------
 
 -- files
-m.set('n', '-', ': lua MiniFiles.open()<Cr>')
+m.set('n', '-', ':lua MiniFiles.open(vim.fn.expand("%:p:h"))<Cr>')
+
+-- tablien
+m.set('n', 'H', ':bprev<Cr>')
+m.set('n', 'L', ':bnext<Cr>')
+m.set('n', '<C-PageUp>', ':bprev<Cr>')
+m.set('n', '<C-PageDown>', ':bnext<Cr>')
 
 ---------------------
 -- Plugin Keymaps --

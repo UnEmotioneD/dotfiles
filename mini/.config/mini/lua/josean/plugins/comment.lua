@@ -11,4 +11,5 @@ return {
       pre_hook = ts_context_commentstring.create_pre_hook(), -- for commenting tsx, jsx, svelte, html files
     })
   end,
+  enabled = false,
 }
