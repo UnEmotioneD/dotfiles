@@ -17,13 +17,8 @@ m.set('n', '<C-d>', '<C-d>zz')
 m.set('n', '<C-u>', '<C-u>zz')
 -- Delete char without yanking
 m.set('n', 'x', '"_x')
--- Cursor stays in place when joining lines
-m.set('n', 'J', 'J<C-G>U')
 -- Yank to end of the line
 m.set('n', 'Y', 'y$')
--- Move selection up or down
-m.set('v', 'J', ":m '>+1<Cr>gv=gv")
-m.set('v', 'K', ":m '<-2<Cr>gv=gv")
 -- Paste over selection without overriding reg
 m.set('v', 'p', 'pgvy')
 
@@ -50,6 +45,23 @@ m.set('n', 'Q', '<Nop>', { noremap = true, silent = true })
 -- Open tmux sessionizer in a new tmux window
 m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tmux sessionizer' })
 
+---------------
+-- Mini.nvim --
+---------------
+
+-- files
+m.set('n', '-', ':lua MiniFiles.open(vim.fn.expand("%:p:h"))<Cr>')
+
+-- tabline
+m.set('n', '<C-PageUp>', ':bprev<Cr>')
+m.set('n', '<C-PageDown>', ':bnext<Cr>')
+
+-- pick
+m.set('n', '<leader>ff', ':Pick files<Cr>', { desc = '[f]ind [f]iles' })
+m.set('n', '<leader>fs', ':Pick grep_live<Cr>', { desc = '[f]ind [s]tring' })
+m.set('n', '<leader>fr', ':Pick resume<Cr>', { desc = '[f]ind [r]esume' })
+m.set('n', '<leader>fh', ':Pick help<Cr>', { desc = '[f]ind [h]elp' })
+
 ---------------------
 -- Plugin Keymaps --
 ---------------------
@@ -69,11 +81,6 @@ m.set({ 'n', 'v' }, '<leader>p', function()
   require('conform').format()
 end, { desc = 'Format(in range)' })
 
--- Flash
-m.set('n', '<leader><leader>f', function()
-  require('flash').jump()
-end, { desc = '[f]lash' })
-
 -- Gitsings
 m.set('n', '<leader>hc', ':q1<Cr>', { desc = 'Diff [c]lose' })
 
@@ -87,23 +94,6 @@ m.set('n', '<leader>lt', ':LiveServerToggle<Cr>', { desc = '[l]ive server [t]ogg
 
 -- Silicon
 m.set('v', '<leader>ss', ':Silicon<Cr>', { desc = '[S]ilicon [S]creenshot' })
-
--- Tree
-m.set('n', '<leader>ee', ':NvimTreeToggle<Cr>', { desc = '[e]xplorer toggle' })
-m.set('n', '<leader>ef', ':NvimTreeFindFileToggle<Cr>', { desc = '[e]xplorer on current [f]ile' })
-m.set('n', '<leader>ec', ':NvimTreeCollapse<Cr>', { desc = '[e]explorer [c]ollapse' })
-m.set('n', '<leader>er', ':NvimTreeRefresh<Cr>', { desc = '[e]xplorer [r]efresh' })
-
--- Oil
-m.set('n', '-', ':Oil<Cr>', { desc = 'Open parent directory' })
-
--- Telescope
-m.set('n', '<leader>ff', ':Telescope find_files<Cr>', { desc = '[f]ind [f]iles' })
-m.set('n', '<leader>fr', ':Telescope oldfiles<Cr>', { desc = '[f]ind [r]ecent' })
-m.set('n', '<leader>fs', ':Telescope live_grep<Cr>', { desc = '[f]ind [s]tring in cwd' })
-m.set('n', '<leader>fc', ':Telescope grep_string<Cr>', { desc = '[f]ind string under [c]ursor in cwd' })
-m.set('n', '<leader>ft', ':TodoTelescope<Cr>', { desc = '[f]ind [t]odos' })
-m.set('n', '<leader>fk', ':Telescope keymaps<Cr>', { desc = '[f]ind [k]keymaps' })
 
 -- Trouble
 m.set('n', '<leader>xw', ':Trouble diagnostics toggle<Cr>', { desc = 'Open trouble [w]orkspace diagnostics' })
