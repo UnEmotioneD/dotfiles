@@ -151,7 +151,7 @@ alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStar
 alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/'
 
 function nvims() {
-    items=("Default" "mini" "ThePrimeagen" "KickStart")
+    items=("Default" "Mini" "ThePrimeagen" "KickStart")
     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
