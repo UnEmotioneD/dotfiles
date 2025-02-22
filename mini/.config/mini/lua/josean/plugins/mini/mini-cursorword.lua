@@ -3,6 +3,6 @@ return {
   version = '*',
   opts = {
     -- Delay (in ms) between when cursor moved and when highlighting appeared
-    delay = 100,
+    delay = 300,
   },
 }
