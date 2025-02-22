@@ -13,7 +13,7 @@ return {
     -- Options for visual effects
     view = {
       -- Whether to dim lines with at least one jump spot
-      dim = false,
+      dim = true,
 
       -- How many steps ahead to show. Set to big number to show all steps.
       n_steps_ahead = 0,
@@ -42,7 +42,7 @@ return {
 
     -- Module mappings. Use `''` (empty string) to disable one.
     mappings = {
-      start_jumping = '<CR>',
+      start_jumping = '<leader><leader>f',
     },
 
     -- Whether to disable showing non-error feedback
