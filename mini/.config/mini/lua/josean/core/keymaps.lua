@@ -51,11 +51,15 @@ m.set('n', 'Q', '<Nop>', { noremap = true, silent = true })
 m.set('n', '<C-f>', ':silent !tmux neww tmux-sessionizer<Cr>', { desc = 'Open tmux sessionizer' })
 
 ---------------------
--- Plugin Keymaps --
+-- Mini.nvim --
 ---------------------
 
--- Mini.files
-m.set('n', '-', ': lua MiniFiles.open()<Cr>', { desc = '[e]xplorer toggle' })
+-- files
+m.set('n', '-', ': lua MiniFiles.open()<Cr>')
+
+---------------------
+-- Plugin Keymaps --
+---------------------
 
 -- Auto-session
 m.set('n', '<leader>wr', ':SessionRestore<Cr>', { desc = 'Restore session for cwd' })
@@ -71,11 +75,6 @@ m.set('n', '<leader>gf', ':ChatGPTRun fix_bugs<Cr>', { desc = '[g]pt [f]ix bugs'
 m.set({ 'n', 'v' }, '<leader>p', function()
   require('conform').format()
 end, { desc = 'Format(in range)' })
-
--- Flash
-m.set('n', '<leader><leader>f', function()
-  require('flash').jump()
-end, { desc = '[f]lash' })
 
 -- Gitsings
 m.set('n', '<leader>hc', ':q1<Cr>', { desc = 'Diff [c]lose' })
