@@ -7,7 +7,11 @@
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
-after-login-command = ['workspace U']
+after-login-command = [
+  'workspace Y',
+  'move-workspace-to-monitor --wrap-around next',
+  'workspace U',
+]
 
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
@@ -16,7 +20,11 @@ after-login-command = ['workspace U']
 # Run Sketchybar together with AeroSpace
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
-after-startup-command = ['workspace U']
+after-startup-command = [
+  'workspace Y',
+  'move-workspace-to-monitor --wrap-around next',
+  'workspace U',
+]
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = [
