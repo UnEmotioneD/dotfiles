@@ -21,7 +21,7 @@ background-blur-radius = 20
 link-url = true
 
 window-padding-x = 15
-window-padding-y = 15
+window-padding-y = 15, 5
 window-padding-balance = true
 window-vsync = true
 window-theme = dark
