@@ -42,5 +42,4 @@ return {
     -- idle time if user input is required.
     silent = false,
   },
-  enabled = false,
 }
