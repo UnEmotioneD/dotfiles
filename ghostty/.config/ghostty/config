@@ -1,3 +1,5 @@
+command=/bin/sh -c "/opt/homebrew/bin/tmux a -t home || /opt/homebrew/bin/tmux new-s -s home"
+
 font-family = MesloLGS Nerd Font Mono
 font-family-bold = auto
 font-family-italic = auto
