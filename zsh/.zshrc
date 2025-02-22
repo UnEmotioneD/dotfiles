@@ -144,7 +144,7 @@ alias prime="env NVIM_APPNAME=ThePrimeagen nvim"
 alias mini="env NVIM_APPNAME=mini nvim"
 
 function nvims() {
-    items=("Default" "ThePrimeagen" "KickStart")
+    items=("Default" "mini" "ThePrimeagen" "KickStart")
     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
