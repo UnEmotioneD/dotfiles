@@ -6,7 +6,7 @@ return {
     view = {
       -- Visualization style. Possible values are 'sign' and 'number'.
       -- Default: 'number' if line numbers are enabled, 'sign' otherwise.
-      style = vim.go.number and 'number' or 'sign',
+      style = vim.go.number and 'sign' or 'number',
 
       -- Signs used for hunks with 'sign' view
       signs = { add = '▒', change = '▒', delete = '▒' },
