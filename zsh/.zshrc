@@ -14,6 +14,9 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-s
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Nerdfetch
+nerdfetch
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000

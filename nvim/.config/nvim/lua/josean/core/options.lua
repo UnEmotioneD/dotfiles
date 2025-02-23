@@ -19,6 +19,7 @@ o.smartcase = true
 
 o.termguicolors = true
 o.background = 'dark'
+o.guicursor = '' -- block cursor only
 o.cursorline = true
 o.signcolumn = 'yes' -- prevents text shifting
 o.wrap = false
