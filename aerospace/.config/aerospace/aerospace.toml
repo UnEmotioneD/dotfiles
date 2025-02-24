@@ -220,10 +220,10 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-# Use the command below in terminal with aerospace turned on
-# $ aerospace list-apps
+# --- workspace rule ---
+# $ "aerospace list-apps" to see running program's name
 
-# === workspace U ===
+# --- workspace U ---
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
@@ -237,7 +237,7 @@ run = ["layout floating", "move-node-to-workspace U"]
 if.app-id = 'com.github.GitHubClient'
 run = "move-node-to-workspace U"
 
-# === workspace I ===
+# --- workspace I ---
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
@@ -247,7 +247,7 @@ run = "move-node-to-workspace I"
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace I"
 
-# === workspace O ===
+# --- workspace O ---
 
 [[on-window-detected]]
 if.app-id = 'com.apple.dt.Xcode'
@@ -289,7 +289,7 @@ run = "move-node-to-workspace O"
 if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace O"
 
-# === workspace P ===
+# --- workspace P ---
 
 [[on-window-detected]]
 if.app-id = 'com.oracle.workbench.MySQLWorkbench'
@@ -307,7 +307,7 @@ run = ["layout floating", "move-node-to-workspace P"]
 if.app-id = 'us.zoom.xos'
 run = ["move-node-to-workspace P"]
 
-# === workspace M ===
+# --- workspace M ---
 
 [[on-window-detected]]
 if.app-id = 'com.kakao.KakaoTalkMac'
@@ -329,7 +329,7 @@ run = "move-node-to-workspace M"
 if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace M"
 
-# === workspace N ===
+# --- workspace N ---
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
