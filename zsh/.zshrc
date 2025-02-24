@@ -141,9 +141,9 @@ alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/TheP
 alias rmmini='rm -rf ~/.local/share/mini/ && rm -rf ~/.local/state/mini/'
 
 # --- Neovim config selector ---
-alias kick="env NVIM_APPNAME=KickStart nvim"
-alias prime="env NVIM_APPNAME=ThePrimeagen nvim"
-alias mini="env NVIM_APPNAME=mini nvim"
+alias kick="NVIM_APPNAME=KickStart nvim"
+alias prime="NVIM_APPNAME=ThePrimeagen nvim"
+alias mini="NVIM_APPNAME=mini nvim"
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/'
