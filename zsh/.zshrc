@@ -14,9 +14,6 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-s
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Nerdfetch
-nerdfetch
-
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -49,7 +46,7 @@ _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/fzf-git.sh/fzf-git.sh
+source ~/Repository/fzf-git.sh/fzf-git.sh
 
 # Fzf theme to tokyonight
 fg="#a9b1d6"
@@ -130,7 +127,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 # --- my alias ---
 alias c="clear"
 alias e="exit"
+alias so="source"
 
+alias n="nvim"
 alias lg="lazygit"
 alias python="python3"
 
