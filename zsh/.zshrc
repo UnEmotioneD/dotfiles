@@ -130,7 +130,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 # --- my alias ---
 alias c="clear"
 alias e="exit"
+alias so="source"
 
+alias n="nvim"
 alias lg="lazygit"
 alias python="python3"
 
