@@ -4,10 +4,10 @@ return {
   opts = {
     delay = 300,
     icons = {
-      mappings = vim.g.have_nerd_font,
-      keys = vim.g.have_nerd_font and {} or {
+      keys = {
         Esc = '<Esc>',
         BS = '<BS>',
+        Space = '<Space>',
       },
     },
     spec = {
@@ -24,6 +24,11 @@ return {
       { '<leader>w', group = '[W]session' },
       { '<leader>x', group = '[X]trouble' },
       { '<leader>/', group = '[/]Search' },
+    },
+
+    win = {
+      ---@type string | "single" | "double" | "solid" | "shadow"
+      border = 'rounded',
     },
   },
 }

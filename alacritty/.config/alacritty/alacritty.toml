@@ -19,7 +19,7 @@ option_as_alt = "Both"
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
-bold.style = "Bold"
+bold.style = "Regular"
 size = 16
 
 [mouse]
