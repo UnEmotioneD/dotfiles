@@ -5,22 +5,18 @@ import = ["~/.config/alacritty/tokyonight-storm.toml"]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 10
-
+padding = { x = 10, y = 10 }
 dynamic_padding = true
-
 decorations = "Buttonless"
-
 opacity = 0.85
 blur = true
 
-option_as_alt = "Both"
-
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
-bold.style = "Regular"
 size = 16
+
+[selection]
+save_to_clipboard = true
 
 [mouse]
 hide_when_typing = true
