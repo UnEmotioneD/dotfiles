@@ -7,7 +7,7 @@ return {
     if os_name == 'Darwin' then
       output_path = '/Users/unemotioned/Documents/silicon/'
     else
-      output_path = '/home/unemotioned/Documents/silicon/'
+      output_path = '/home/unemotioned/doc/silicon/'
     end
 
     require('silicon').setup({

@@ -10,6 +10,9 @@ return {
       },
       -- delay in ms
       delay = 200,
+      filetypes_denylist = {
+        'toml',
+      },
       filetypes_allowlist = {
         'sh',
         'lua',
