@@ -6,7 +6,7 @@ local m = vim.keymap
 -- General Keymaps --
 ---------------------
 
-m.set('n', '<Esc>', ':nohl<Cr>')
+m.set('n', '<Esc>', ':nohl<Cr>', { desc = 'Clear highlight search', silent = true })
 
 -- Center cursor when navigating search
 m.set('n', 'n', 'nzz')
@@ -95,7 +95,7 @@ m.set('n', '<leader>ec', ':NvimTreeCollapse<Cr>', { desc = '[e]explorer [c]ollap
 m.set('n', '<leader>er', ':NvimTreeRefresh<Cr>', { desc = '[e]xplorer [r]efresh' })
 
 -- Oil
-m.set('n', '-', ':Oil<Cr>', { desc = 'Open parent directory' })
+m.set('n', '-', ':Oil<Cr>', { desc = 'Open parent directory', silent = true })
 
 -- Telescope
 m.set('n', '<leader>ff', ':Telescope find_files<Cr>', { desc = '[f]ind [f]iles' })
