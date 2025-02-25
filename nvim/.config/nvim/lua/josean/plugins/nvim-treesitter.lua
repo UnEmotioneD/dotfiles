@@ -40,6 +40,7 @@ return {
         'python',
         'git_config',
         'toml',
+        'tmux',
       },
       modules = {},
       ignore_install = {},
