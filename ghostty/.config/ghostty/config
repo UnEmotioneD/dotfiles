@@ -1,4 +1,4 @@
-# command = /bin/zsh -c "/opt/homebrew/bin/tmux a -t home || /opt/homebrew/bin/tmux new-s -s home"
+command = /bin/zsh -c "/opt/homebrew/bin/tmux a -t home || /opt/homebrew/bin/tmux new-s -s home"
 
 font-family = "JetBrains Mono"
 font-family-bold = auto
@@ -8,7 +8,7 @@ font-family-bold-italic = auto
 font-size = 16
 font-thicken = true
 
-# font-feature = -liga
+font-feature = -liga
 
 cursor-style-blink = false
 
