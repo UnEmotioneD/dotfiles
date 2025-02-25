@@ -6,7 +6,7 @@ opt.wrap = true
 opt.linebreak = true
 
 -- Set a comfortable text width for automatic formatting (adjust as needed)
-opt.textwidth = 80
+opt.textwidth = 100
 opt.formatoptions:append('t') -- Automatically wrap text using textwidth
 
 -- Indentation settings for lists and nested elements

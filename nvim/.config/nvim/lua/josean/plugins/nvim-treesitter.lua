@@ -39,6 +39,7 @@ return {
         'c',
         'python',
         'git_config',
+        'toml',
       },
       modules = {},
       ignore_install = {},
