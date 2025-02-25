@@ -12,6 +12,7 @@ return {
       delay = 200,
       filetypes_denylist = {
         'toml',
+        'jsonc',
       },
       filetypes_allowlist = {
         'sh',
