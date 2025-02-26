@@ -33,7 +33,7 @@ o.splitright = true
 o.splitbelow = true
 
 -- Performance and Timeout Settings
-o.updatetime = 300
+o.updatetime = 100
 o.ttyfast = true
 o.timeout = true
 o.timeoutlen = 500 -- Wait 500ms for a mapping to complete
