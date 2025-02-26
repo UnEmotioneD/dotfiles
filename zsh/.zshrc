@@ -138,15 +138,13 @@ alias brewup='brew update && brew upgrade && brew upgrade --cask'
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/ && rm -rf ~/.cache/nvim/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/ && rm -rf ~/.cache/KickStart/'
 alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/ && rm -rf ~/.cache/ThePrimeagen/'
-alias rmmini='rm -rf ~/.local/share/Mini/ && rm -rf ~/.local/state/Mini/ && rm -rf ~/.cache/Mini/'
 
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
 alias prime="NVIM_APPNAME=ThePrimeagen nvim"
-alias mini="NVIM_APPNAME=Mini nvim"
 
 function nvims() {
-    items=("Default" "Mini" "ThePrimeagen" "KickStart")
+    items=("Default" "ThePrimeagen" "KickStart")
     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
