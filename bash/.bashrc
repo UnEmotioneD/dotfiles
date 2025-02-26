@@ -39,7 +39,6 @@ alias n="nvim"
 alias rmnvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 alias rmkick="rm -rf ~/.local/share/KickStart && rm -rf ~/.local/state/KickStart"
 alias rmprime="rm -rf ~/.local/share/ThePrimeagen && rm -rf ~/.local/state/ThePrimeagen"
-alias rmmini="rm -rf ~/.local/share/mini && rm -rf ~/.local/state/mini"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
@@ -137,10 +136,9 @@ bind '"\C-f": "tmux-sessionizer\n"'
 alias nvim="env NVIM_APPNAME=nvim nvim"
 alias kick="env NVIM_APPNAME=KickStart nvim"
 alias prime="env NVIM_APPNAME=ThePrimeagen nvim"
-alias mini="env NVIM_APPNAME=mini nvim"
 
 function nvims() {
-    items=("Default" "Mini" "ThePrimeagen" "KickStart")
+    items=("Default" "ThePrimeagen" "KickStart")
     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
