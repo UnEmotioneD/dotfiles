@@ -16,8 +16,8 @@ return {
       end)(),
       dependencies = {
         -- `friendly-snippets` contains a variety of premade snippets.
-        --    See the README about individual language/framework/plugin snippets:
-        --    https://github.com/rafamadriz/friendly-snippets
+        --  See the README about individual language/framework/plugin snippets:
+        --   https://github.com/rafamadriz/friendly-snippets
         -- {
         --   'rafamadriz/friendly-snippets',
         --   config = function()
@@ -49,9 +49,9 @@ return {
       completion = { completeopt = 'menu,menuone,noinsert' },
 
       -- For an understanding of why these mappings were
-      -- chosen, you will need to read `:help ins-completion`
+      --  chosen, you will need to read `:help ins-completion`
       --
-      -- No, but seriously. Please read `:help ins-completion`, it is really good!
+      --  No, but seriously. Please read `:help ins-completion`, it is really good!
       mapping = cmp.mapping.preset.insert({
         -- Select the [n]ext item
         ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -98,7 +98,7 @@ return {
         end, { 'i', 's' }),
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
-        --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
+        --  https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       }),
       sources = {
         {
