@@ -188,7 +188,7 @@ return {
               callSnippet = 'Replace',
             },
             -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-            --  diagnostics = { disable = { 'missing-fields' } },
+            diagnostics = { disable = { 'missing-fields' } },
           },
         },
       },
@@ -226,10 +226,6 @@ return {
           require('lspconfig')[server_name].setup(server)
         end,
       },
-
-      -- To silence "Missing required fields" warnings
-      ensure_installed = {},
-      automatic_installation = {},
     })
   end,
 }
