@@ -1,6 +1,6 @@
 # command = /bin/zsh -c "/opt/homebrew/bin/tmux a -t home || /opt/homebrew/bin/tmux new-s -s home"
 
-font-family = "MesloLGS Nerd Font Mono"
+font-family = "JetBrainsMono Nerd Font Mono"
 font-family-bold = auto
 font-family-italic = auto
 font-family-bold-italic = auto
