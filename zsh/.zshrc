@@ -10,9 +10,10 @@ source $ZSH/oh-my-zsh.sh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search web-search)
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search web-search)
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -46,7 +47,7 @@ _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/Repository/fzf-git.sh/fzf-git.sh
+source ~/fzf-git.sh/fzf-git.sh
 
 # Fzf theme to tokyonight
 fg="#a9b1d6"
@@ -103,10 +104,6 @@ alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time
 
 # --- Bat (better cat) ---
 export BAT_THEME=tokyonight_night
-
-# thefuck alias
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
 
 # --- Yazi ---
 # Move to directory when exiting yazi
