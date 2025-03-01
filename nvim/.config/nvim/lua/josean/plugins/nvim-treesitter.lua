@@ -41,6 +41,7 @@ return {
         'git_config',
         'toml',
         'tmux',
+        'norg',
       },
       modules = {},
       ignore_install = {},
