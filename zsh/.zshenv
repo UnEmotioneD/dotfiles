@@ -1,8 +1,5 @@
-# Global bin dir
-export PATH="/opt/homebrew/bin:$PATH"
-
-# Neovim
-export EDITOR="nvim"
+# Rust
+. "$HOME/.cargo/env"
 
 # pnpm
 export PNPM_HOME="/Users/unemotioned/Library/pnpm"
@@ -11,11 +8,17 @@ case ":$PATH:" in
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# JDK
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home
+# Global bin dir
+export PATH="/opt/homebrew/bin:$PATH"
 
-# Rust
-source "$HOME/.cargo/env"
+# Neovim
+export EDITOR="nvim"
 
 # Lazygit config path
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# If you need to have openjdk@17 first in your PATH, run:
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# For compilers to find openjdk@17 you may need to set:
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
