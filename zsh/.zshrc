@@ -11,8 +11,8 @@ source $ZSH/oh-my-zsh.sh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search web-search)
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # history setup
