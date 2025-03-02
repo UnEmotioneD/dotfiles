@@ -9,14 +9,6 @@ return {
   opts = {
     workspaces = {
       {
-        name = 'Java',
-        path = '~/Documents/vaults/java/',
-      },
-      {
-        name = 'React',
-        path = '~/Documents/vaults/react/',
-      },
-      {
         name = 'Resume',
         path = '~/Documents/vaults/resume/',
       },

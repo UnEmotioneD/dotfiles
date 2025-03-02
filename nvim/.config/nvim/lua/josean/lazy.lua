@@ -8,7 +8,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({ { import = 'josean.plugins' }, { import = 'josean.plugins.lsp' } }, {
+require('lazy').setup({
+  { import = 'josean.plugins' },
+  { import = 'josean.plugins.lsp' },
+}, {
   rocks = {
     enabled = false,
     hererocks = false,
