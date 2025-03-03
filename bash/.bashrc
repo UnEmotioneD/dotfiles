@@ -158,7 +158,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 source ~/.profile
-. "$HOME/.cargo/env"
