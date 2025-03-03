@@ -161,3 +161,4 @@ esac
 source "$HOME/.cargo/env"
 
 source ~/.profile
+. "$HOME/.cargo/env"
