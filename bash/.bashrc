@@ -10,8 +10,8 @@ parse_git_branch() {
   git branch --no-color 2>/dev/null | sed -n '/^\*/ s/^\* \(.*\)/ (\1)/p'
 }
 
-neofetch
-alias fetch="neofetch"
+# Fetch system info
+pfetch
 
 # Color codes
 BLACK='\[\033[01;30m\]'
