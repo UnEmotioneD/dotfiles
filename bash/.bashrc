@@ -5,13 +5,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Fetch system info
+pfetch
+
 # Function to parse the current Git branch
 parse_git_branch() {
   git branch --no-color 2>/dev/null | sed -n '/^\*/ s/^\* \(.*\)/ (\1)/p'
 }
-
-# Fetch system info
-pfetch
 
 # Color codes
 BLACK='\[\033[01;30m\]'
