@@ -108,8 +108,7 @@ nvimf() {
 }
 
 # --- Zoxide (better cd) ---
-eval "$(zoxide init bash)"
-alias cd="z"
+eval "$(zoxide init --cmd cd bash)"
 
 # --- Eza (better ls) ---
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first"
