@@ -1,11 +1,11 @@
 -- key mapping for vim
--- Convert input soruce as English and sends 'escape' if inputSource is not English.
+-- Convert input source as English and sends 'escape' if inputSource is not English.
 -- Sends 'escape' if inputSource is English.
 -- key bindding reference --> https://www.hammerspoon.org/docs/hs.hotkey.html
 local inputEnglish = "com.apple.keylayout.ABC"
 local esc_bind
 
-function convert_to_eng_with_esc()
+function TO_ENG()
 	local inputSource = hs.keycodes.currentSourceID()
 	if not (inputSource == inputEnglish) then
 		hs.keycodes.currentSourceID(inputEnglish)
@@ -15,4 +15,14 @@ function convert_to_eng_with_esc()
 	esc_bind:enable()
 end
 
-esc_bind = hs.hotkey.new({}, "escape", convert_to_eng_with_esc):enable()
+esc_bind = hs.hotkey.new({}, "escape", TO_ENG):enable()
+
+-- Input source to English when focus on terminal apps
+--[[
+hs.window.filter.new({ "Terminal", "Alacritty", "Wezterm", "Ghostty" }):subscribe(hs.window.filter.windowFocused, function()
+	local inputSource = hs.keycodes.currentSourceID()
+	if not (inputSource == inputEnglish) then
+		hs.keycodes.currentSourceID(inputEnglish)
+	end
+end)
+--]]
