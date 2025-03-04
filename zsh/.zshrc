@@ -135,6 +135,7 @@ alias so="source"
 
 alias n="nvim"
 alias lg="lazygit"
+alias fetch="neofetch"
 
 alias python="python3"
 alias von="source venv/bin/activate"
