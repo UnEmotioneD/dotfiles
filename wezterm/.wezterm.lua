@@ -15,10 +15,10 @@ config = {
 	window_background_opacity = 0.85,
 	macos_window_background_blur = 20,
 	window_padding = {
-		left = 15,
-		right = 15,
-		top = 15,
-		bottom = 10,
+		left = 20,
+		right = 20,
+		top = 20,
+		bottom = 20,
 	},
 
 	max_fps = 240,
