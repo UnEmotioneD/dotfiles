@@ -16,7 +16,9 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # fetch
-neofetch
+if [[ "$TERM_PROGRAM" != "code" ]]; then
+    neofetch
+fi
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -125,9 +127,12 @@ alias so="source"
 
 alias n="nvim"
 alias lg="lazygit"
-alias python="python3"
 
-alias brewup='brew update && brew upgrade && brew upgrade --cask'
+alias python="python3"
+alias von="source venv/bin/activate"
+alias voff="deactivate"
+
+alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/ && rm -rf ~/.cache/nvim/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/ && rm -rf ~/.cache/KickStart/'

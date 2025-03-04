@@ -5,7 +5,7 @@ o.number = true
 
 o.startofline = true -- 'gg' to start of line
 
-o.scrolloff = 10
+o.scrolloff = 5
 
 local indent = 2
 o.tabstop = indent -- Tab as 2 spaces
