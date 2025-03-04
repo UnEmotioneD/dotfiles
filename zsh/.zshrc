@@ -1,8 +1,10 @@
+# For transiant prompt (must be at top)
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
@@ -22,16 +24,23 @@ fi
 
 # history setup
 HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
+SAVEHIST=1024
+HISTSIZE=1024
+HISTDUP=erase               # erase duplicates in .zhistory
+setopt appendhistory        # append executed cmd to .zhistory rather then overwriting it
+setopt sharehistory         # share cmds through out sessions
+setopt hist_ignore_space    # add space before cmd to keep it away from history
+setopt hist_ignore_all_dups # keep duplicates away
 setopt hist_ignore_dups
-setopt hist_verify
+setopt hist_save_no_dups
+setopt hist_find_no_dups    # don't show duplicates on suggestion
 
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
@@ -75,7 +84,6 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 _fzf_comprun() {
     local command=$1
     shift
-
     case "$command" in
         cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
         export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
