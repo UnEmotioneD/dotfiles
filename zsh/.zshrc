@@ -79,12 +79,7 @@ _fzf_comprun() {
     esac
 }
 
-cdf() {
-    local dir
-    dir=$(find ${1:-.} -mindepth 1 -type d 2>/dev/null | fzf --preview 'tree -C {} | head -50') && cd "$dir"
-}
-
-nvimf() {
+ni() {
     local file
     file=$(find ${1:-.} -type f -o -type d 2>/dev/null | fzf --preview '
         if [ -d {} ]; then
@@ -109,7 +104,7 @@ export BAT_THEME=tokyonight_night
 function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"
-    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    if cwd="$(command bat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
         builtin cd -- "$cwd"
     fi
     rm -f -- "$tmp"

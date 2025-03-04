@@ -68,6 +68,7 @@ m.set('n', '<leader>gf', ':ChatGPTRun fix_bugs<Cr>', { desc = '[g]pt [f]ix bugs'
 m.set({ 'n', 'v' }, '<leader>p', function()
   require('conform').format()
 end, { desc = 'Format(in range)' })
+m.set('n', '<leader>ci', ':ConformInfo<Cr>', { desc = '[C]onform [I]nfo' })
 
 -- Flash
 m.set('n', '<leader><leader>f', function()
@@ -82,7 +83,7 @@ m.set('n', '<leader>hg', ':LazyGit<Cr>', { desc = 'Lazy[g]it' })
 
 -- Live server
 m.set('n', '<leader>lo', ':LiveServerStart<Cr>', { desc = '[l]ive server [o]pen' })
-m.set('n', '<leader>lc', ':LiveServerStop<Cr>', { desc = '[l]ive server [s]top' })
+m.set('n', '<leader>lc', ':LiveServerStop<Cr>', { desc = '[l]ive server [c]lose' })
 m.set('n', '<leader>lt', ':LiveServerToggle<Cr>', { desc = '[l]ive server [t]oggle' })
 
 -- Silicon
