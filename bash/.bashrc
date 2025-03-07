@@ -32,9 +32,13 @@ alias ..="cd .."
 alias c="clear -x"
 alias e="exit"
 alias so="source"
+
+alias n="nvim"
+
 alias lg="lazygit"
 alias python="python3"
-alias n="nvim"
+alias von="source venv/bin/activate"
+alias voff="deactivate"
 
 alias rmnvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 alias rmkick="rm -rf ~/.local/share/KickStart && rm -rf ~/.local/state/KickStart"
