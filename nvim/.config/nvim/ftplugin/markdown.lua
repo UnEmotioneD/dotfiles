@@ -16,7 +16,7 @@ opt.softtabstop = 2
 opt.expandtab = true
 
 -- For obsidian.nvim
-vim.o.conceallevel = 2
+-- vim.o.conceallevel = 2
 
 -- Optional: Configure folding based on Markdown headers
 -- This simple expression folds sections starting at Markdown headers (e.g., "#", "##", etc.)
