@@ -40,7 +40,7 @@ m.set('n', '<leader>tp', ':tabp<Cr>', { desc = '[t]ab [p]revious tab' })
 
 m.set('n', '<leader>dm', ':delm!<Cr>', { desc = 'Delete Marks' })
 
-m.set('n', '<leader>cs', ':setlocal spell! spell?<Cr>', { desc = '[C]heck [S]pell' })
+m.set('n', '<leader>cs', ':setlocal spell! spell?<Cr>', { desc = '[C]heck [S]pell toggle' })
 
 -- Disable conflicting keybinds with tmux
 m.set('', '<C-n>', '<Nop>', { noremap = true, silent = true })
