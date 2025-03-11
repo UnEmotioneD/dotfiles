@@ -7,6 +7,7 @@
 
 # Fetch system info
 pfetch
+alias fetch='pfetch'
 
 # Color codes
 BLACK='\[\033[01;30m\]'
