@@ -8,11 +8,6 @@
 # Fetch system info
 pfetch
 
-# Function to parse the current Git branch
-parse_git_branch() {
-  git branch --no-color 2>/dev/null | sed -n '/^\*/ s/^\* \(.*\)/ (\1)/p'
-}
-
 # Color codes
 BLACK='\[\033[01;30m\]'
 RED='\[\033[01;31m\]'
@@ -23,19 +18,24 @@ MAGENTA='\[\033[01;35m\]'
 CYAN='\[\033[01;36m\]'
 RESET='\[\033[00m\]'
 
+# Function to parse the current Git branch
+parse_git_branch() {
+  git branch --no-color 2>/dev/null | sed -n '/^\*/ s/^\* \(.*\)/ (\1)/p'
+}
+
 # Set PS1 with colors
 PS1="${GREEN}\w${CYAN}\$(parse_git_branch)${MAGENTA}\n\$ ${RESET}"
 
 alias grep='grep --color=auto'
 
-alias ..="cd .."
 alias c="clear -x"
 alias e="exit"
 alias so="source"
+alias ..="cd .."
 
 alias n="nvim"
-
 alias lg="lazygit"
+
 alias python="python3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
