@@ -27,6 +27,7 @@ return {
         'ts_ls',
         'emmet_ls',
         'pyright',
+        'clangd',
         'typos_lsp',
         'taplo', -- .toml LSP
       },
@@ -41,6 +42,7 @@ return {
         'isort',
         'black',
         'pylint',
+        'cpplint',
       },
     })
   end,
