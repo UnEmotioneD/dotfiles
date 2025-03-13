@@ -1,6 +1,10 @@
+#     __               __
+#    / /_  ____ ______/ /_  __________
+#   / __ \/ __ `/ ___/ __ \/ ___/ ___/
+#  / /_/ / /_/ (__  ) / / / /  / /__ 
+# /_.___/\__,_/____/_/ /_/_/   \___/ 
 #
-# ~/.bashrc
-#
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -114,27 +118,28 @@ function y() {
     rm -f -- "$tmp"
 }
 
+# --- Sessionizer ---
+PATH="$PATH":"$HOME/.local/scripts/"
+bind '"\C-f": "tmux-sessionizer\n"'
+
+alias grep='grep --color=auto'
+
 alias c="clear -x"
 alias e="exit"
 alias so="source"
-alias grep='grep --color=auto'
 alias ..="cd .."
 
+alias lg="lazygit"
 alias python="python3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
 
-alias lg="lazygit"
 alias n="nvim"
 
 alias rmnvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 alias rmkick="rm -rf ~/.local/share/KickStart && rm -rf ~/.local/state/KickStart"
 alias rmprime="rm -rf ~/.local/share/ThePrimeagen && rm -rf ~/.local/state/ThePrimeagen"
 alias rmchad="rm -rf ~/.local/share/NVChad && rm -rf ~/.local/state/NVChad"
-
-# --- Sessionizer ---
-PATH="$PATH":"$HOME/.local/scripts/"
-bind '"\C-f": "tmux-sessionizer\n"'
 
 # --- Neovim config selector ---
 alias nvim="env NVIM_APPNAME=nvim nvim"

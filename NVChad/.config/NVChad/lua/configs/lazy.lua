@@ -42,7 +42,7 @@ return {
         "compiler",
         "bugreport",
         "ftplugin",
---]]
+        --]]
       },
     },
   },
