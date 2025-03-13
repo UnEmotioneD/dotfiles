@@ -96,12 +96,12 @@ map('n', '<leader>ec', ':NvimTreeCollapse<Cr>', { desc = '[e]explorer [c]ollapse
 map('n', '<leader>er', ':NvimTreeRefresh<Cr>', { desc = '[e]xplorer [r]efresh' })
 
 -- Todo-comments
-local todo = require('todo-comments')
 map('n', ']t', function()
-  todo.jump_next()
+  require('todo-comments').jump_next()
 end, { desc = 'Next todo comment' })
+
 map('n', '[t', function()
-  todo.jump_prev()
+  require('todo-comments').jump_prev()
 end, { desc = 'Previous todo comment' })
 
 -- Oil
