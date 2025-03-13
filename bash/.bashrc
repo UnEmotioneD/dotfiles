@@ -27,24 +27,6 @@ parse_git_branch() {
 # Set PS1 with colors
 PS1="${GREEN}\w${CYAN}\$(parse_git_branch)${MAGENTA}\n\$ ${RESET}"
 
-alias grep='grep --color=auto'
-
-alias c="clear -x"
-alias e="exit"
-alias so="source"
-alias ..="cd .."
-
-alias n="nvim"
-alias lg="lazygit"
-
-alias python="python3"
-alias von="source venv/bin/activate"
-alias voff="deactivate"
-
-alias rmnvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
-alias rmkick="rm -rf ~/.local/share/KickStart && rm -rf ~/.local/state/KickStart"
-alias rmprime="rm -rf ~/.local/share/ThePrimeagen && rm -rf ~/.local/state/ThePrimeagen"
-
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
@@ -132,6 +114,24 @@ function y() {
     rm -f -- "$tmp"
 }
 
+alias c="clear -x"
+alias e="exit"
+alias so="source"
+alias grep='grep --color=auto'
+alias ..="cd .."
+
+alias python="python3"
+alias von="source venv/bin/activate"
+alias voff="deactivate"
+
+alias lg="lazygit"
+alias n="nvim"
+
+alias rmnvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
+alias rmkick="rm -rf ~/.local/share/KickStart && rm -rf ~/.local/state/KickStart"
+alias rmprime="rm -rf ~/.local/share/ThePrimeagen && rm -rf ~/.local/state/ThePrimeagen"
+alias rmchad="rm -rf ~/.local/share/NVChad && rm -rf ~/.local/state/NVChad"
+
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bind '"\C-f": "tmux-sessionizer\n"'
@@ -140,9 +140,10 @@ bind '"\C-f": "tmux-sessionizer\n"'
 alias nvim="env NVIM_APPNAME=nvim nvim"
 alias kick="env NVIM_APPNAME=KickStart nvim"
 alias prime="env NVIM_APPNAME=ThePrimeagen nvim"
+alias chad="env NVIM_APPNAME=NVChad nvim"
 
 function nvims() {
-    items=("Default" "ThePrimeagen" "KickStart")
+    items=("Default" "ThePrimeagen" "KickStart" "NVChad")
     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
