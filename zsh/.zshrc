@@ -1,3 +1,11 @@
+#              __
+#  ____  _____/ /_  __________
+# /_  / / ___/ __ \/ ___/ ___/
+#  / /_(__  ) / / / /  / /__
+# /___/____/_/ /_/_/   \___/
+#
+
+
 # For transiant prompt (must be at top)
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -146,7 +154,7 @@ alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/ && rm -rf ~/.cache/nvim/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/ && rm -rf ~/.cache/KickStart/'
 alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/ && rm -rf ~/.cache/ThePrimeagen/'
-alias rmchat='rm -rf ~/.local/share/NVChad/ && rm -rf ~/.local/state/NVChad/ && rm -rf ~/.cache/NVChad/'
+alias rmchad='rm -rf ~/.local/share/NVChad/ && rm -rf ~/.local/state/NVChad/ && rm -rf ~/.cache/NVChad/'
 
 # --- Neovim config selector ---
 alias kick="NVIM_APPNAME=KickStart nvim"
