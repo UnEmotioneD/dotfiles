@@ -71,7 +71,7 @@ end, { desc = 'Format(in range)' })
 m.set('n', '<leader>ci', ':ConformInfo<Cr>', { desc = '[C]onform [I]nfo' })
 
 -- Flash
-m.set('n', '<leader><leader>f', function()
+m.set('n', '<leader><Cr>', function()
   require('flash').jump()
 end, { desc = '[f]lash' })
 

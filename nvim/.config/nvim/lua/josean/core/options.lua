@@ -8,9 +8,9 @@ o.startofline = true -- 'gg' to start of line
 o.scrolloff = 5
 
 local indent = 2
-o.tabstop = indent -- Tab as 2 spaces
-o.shiftwidth = indent -- Auto indent to 2 spaces
-o.softtabstop = indent -- Tab and BS as 2 spaces
+o.tabstop = indent -- Tab as spaces
+o.shiftwidth = indent -- Auto indent to spaces
+o.softtabstop = indent -- Tab and BS as spaces
 o.expandtab = true -- Use spaces instead of literal tab characters
 o.autoindent = true -- Maintain indent of current line
 
