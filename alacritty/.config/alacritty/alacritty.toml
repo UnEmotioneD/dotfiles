@@ -1,4 +1,6 @@
 [general]
+# import = ["~/.config/alacritty/themes/catppuccin-macchiato.toml"]
+# import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 import = ["~/.config/alacritty/themes/tokyonight-storm.toml"]
 
 [env]
