@@ -1,8 +1,9 @@
 local options = {
   formatters_by_ft = {
-    lua = { "stylua" },
-    css = { "prettier" },
-    html = { "prettier" },
+    lua = { 'stylua' },
+    html = { 'prettier' },
+    css = { 'prettier' },
+    javascript = { 'prettier' },
   },
 
   -- These options will be passed to conform.format()
