@@ -1,0 +1,13 @@
+modmap:
+  - name: CapsLock to Ctrl
+    remap:
+      CAPSLOCK:
+        held: LEFTCTRL
+        alone: ESC
+        alone_timeout_millis: 200
+
+  - name: RightAlt to F16
+    device:
+      only: ["AT Translated Set 2 keyboard"]
+    remap:
+      KEY_RIGHTALT: KEY_F16
