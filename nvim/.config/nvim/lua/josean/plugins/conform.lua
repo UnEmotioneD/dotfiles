@@ -3,21 +3,16 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   opts = {
     formatters_by_ft = {
-      javascript = { 'prettier' },
-      typescript = { 'prettier' },
-      javascriptreact = { 'prettier' },
-      typescriptreact = { 'prettier' },
-      svlte = { 'prettier' },
+      lua = { 'stylua' },
+      html = { 'prettier' },
       css = { 'prettier' },
-      -- html = { 'prettier' }, -- Prettier formats HTML into XHTML
+      javascript = { 'prettier' },
+      javascriptreact = { 'prettier' },
+      markdown = { 'prettier' },
       json = { 'prettier' },
       yaml = { 'prettier' },
-      markdown = { 'prettier' },
-      graphql = { 'prettier' },
-      liquid = { 'prettier' },
-      lua = { 'stylua' },
-      python = { 'isort', 'black' },
       toml = { 'taplo' },
+      python = { 'isort', 'black' },
     },
     format_on_save = {
       lsp_fallback = true,
