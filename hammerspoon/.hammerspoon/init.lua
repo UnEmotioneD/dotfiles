@@ -17,12 +17,12 @@ end
 
 esc_bind = hs.hotkey.new({}, "escape", TO_ENG):enable()
 
--- Input source to English when focus on terminal apps
---[[
-hs.window.filter.new({ "Terminal", "Alacritty", "Wezterm", "Ghostty" }):subscribe(hs.window.filter.windowFocused, function()
-	local inputSource = hs.keycodes.currentSourceID()
-	if not (inputSource == inputEnglish) then
-		hs.keycodes.currentSourceID(inputEnglish)
-	end
-end)
---]]
+--# Input source to English when focus on terminal apps
+-- hs.window.filter
+-- 	.new({ "Terminal", "Wezterm", "Alacritty", "Kitty", "Ghostty" })
+-- 	:subscribe(hs.window.filter.windowFocused, function()
+-- 		local inputSource = hs.keycodes.currentSourceID()
+-- 		if not (inputSource == inputEnglish) then
+-- 			hs.keycodes.currentSourceID(inputEnglish)
+-- 		end
+-- 	end)
