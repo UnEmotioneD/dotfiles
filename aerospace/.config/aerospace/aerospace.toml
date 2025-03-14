@@ -100,8 +100,8 @@ outer.right = 10
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-alt-b = 'exec-and-forget open -n /Applications/Chrome.app'
-alt-enter = 'exec-and-forget open -n /Applications/Alacritty.app'
+# alt-b = 'exec-and-forget open -n /Applications/Chrome.app'
+# alt-enter = 'exec-and-forget open -n /Applications/Alacritty.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-comma = 'layout tiles vertical horizontal'

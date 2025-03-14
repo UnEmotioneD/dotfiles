@@ -8,6 +8,8 @@ local map = vim.keymap.set
 
 map('n', '<Esc>', ':nohl<Cr>', { desc = 'Clear highlight search', silent = true })
 
+map('n', ';', ':', { desc = 'Enter command mode w/ semi-colon' })
+
 -- Center cursor when navigating search
 map('n', 'n', 'nzz')
 map('n', 'N', 'Nzz')
