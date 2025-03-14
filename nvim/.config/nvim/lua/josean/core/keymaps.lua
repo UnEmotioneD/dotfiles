@@ -15,12 +15,6 @@ local map = vim.keymap.set
 -- c : Command
 -- t : Terminal
 
--- TODO: Do this on Arch Linux key remap program
-map('n', '<Caps>', '<C>', { desc = 'Caps to Ctrl', silent = true })
-map({ 'i', 'v' }, '<Caps>', '<Esc>', { desc = 'Caps to Esc', silent = true })
-
-map({ 'i', 'v', 'c' }, '<Caps>', '<Esc>', { desc = 'Caps to Esc', silent = true })
-
 map('n', '<Esc>', ':nohl<Cr>', { desc = 'Clear highlight search', silent = true })
 
 map('n', ';', ':', { desc = 'Enter command mode w/ semi-colon' })
