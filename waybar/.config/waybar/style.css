@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.3);
-  border-top: 3px solid rgba(100, 114, 125, 0.5);
+  background-color: rgba(43, 48, 59, 1);
+  /* border-top: 3px solid rgba(100, 114, 125, 0.5); */
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -138,7 +138,7 @@ button:hover {
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
   color: #ffffff;
-  animation-name: blink;
+  animation-name: static; /* static, blink */
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
   animation-iteration-count: infinite;
