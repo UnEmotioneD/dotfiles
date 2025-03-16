@@ -23,6 +23,10 @@ local cat = {
       transparent_background = false,
     })
     vim.cmd.colorscheme('catppuccin')
+
+    -- Color for line numbers (from vscode catppuccin-mocha line number)
+    vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = '#7f849c' })
+    vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#7F849C' })
   end,
 }
 

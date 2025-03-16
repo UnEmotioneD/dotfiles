@@ -9,7 +9,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Fetch system info
+# Fetch
 pfetch
 alias fetch='pfetch'
 
@@ -30,6 +30,18 @@ parse_git_branch() {
 
 # Set PS1 with colors
 PS1="${GREEN}\w${CYAN}\$(parse_git_branch)${MAGENTA}\n\$ ${RESET}"
+
+alias c="clear -x"
+alias e="exit"
+alias so="source"
+alias ..="cd .."
+
+alias n="nvim"
+alias lg="lazygit"
+
+alias python="python3"
+alias von="source venv/bin/activate"
+alias voff="deactivate"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
@@ -108,28 +120,16 @@ bind '"\C-f": "tmux-sessionizer\n"'
 
 alias grep='grep --color=auto'
 
-alias c="clear -x"
-alias e="exit"
-alias so="source"
-alias ..="cd .."
-
-alias lg="lazygit"
-alias python="python3"
-alias von="source venv/bin/activate"
-alias voff="deactivate"
-
-alias n="nvim"
-
 alias rmnvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
+alias rmchad="rm -rf ~/.local/share/NVChad && rm -rf ~/.local/state/NVChad"
 alias rmkick="rm -rf ~/.local/share/KickStart && rm -rf ~/.local/state/KickStart"
 alias rmprime="rm -rf ~/.local/share/ThePrimeagen && rm -rf ~/.local/state/ThePrimeagen"
-alias rmchad="rm -rf ~/.local/share/NVChad && rm -rf ~/.local/state/NVChad"
 
 # --- Neovim config selector ---
 alias nvim="env NVIM_APPNAME=nvim nvim"
+alias chad="env NVIM_APPNAME=NVChad nvim"
 alias kick="env NVIM_APPNAME=KickStart nvim"
 alias prime="env NVIM_APPNAME=ThePrimeagen nvim"
-alias chad="env NVIM_APPNAME=NVChad nvim"
 
 function nvims() {
     items=("Default" "ThePrimeagen" "KickStart" "NVChad")
