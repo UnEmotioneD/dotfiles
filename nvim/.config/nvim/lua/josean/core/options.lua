@@ -1,53 +1,53 @@
-local o = vim.opt
+local opt = vim.opt
 
-o.relativenumber = true
-o.number = true
+opt.relativenumber = true
+opt.number = true
 
-o.startofline = true -- 'gg' to start of line
+opt.startofline = true -- 'gg' to start of line
 
-o.scrolloff = 5
+opt.scrolloff = 5
 
 local indent = 2
-o.tabstop = indent -- Tab as spaces
-o.shiftwidth = indent -- Auto indent to spaces
-o.softtabstop = indent -- Tab and BS as spaces
-o.expandtab = true -- Use spaces instead of literal tab characters
-o.autoindent = true -- Maintain indent of current line
+opt.tabstop = indent -- Tab as spaces
+opt.shiftwidth = indent -- Auto indent to spaces
+opt.softtabstop = indent -- Tab and BS as spaces
+opt.expandtab = true -- Use spaces instead of literal tab characters
+opt.autoindent = true -- Maintain indent of current line
 
-o.ignorecase = true
-o.smartcase = true
+opt.ignorecase = true
+opt.smartcase = true
 
-o.termguicolors = true
-o.background = 'dark'
+opt.termguicolors = true
+opt.background = 'dark'
 -- o.guicursor = '' -- block cursor only
-o.cursorline = true
-o.signcolumn = 'yes' -- prevents text shifting
-o.wrap = false
+opt.cursorline = true
+opt.signcolumn = 'yes' -- prevents text shifting
+opt.wrap = false
 
-o.backspace = 'indent,eol,start' -- More intuitive backspacing
+opt.backspace = 'indent,eol,start' -- More intuitive backspacing
 
-o.clipboard:append('unnamedplus') -- Use the system clipboard
+opt.clipboard:append('unnamedplus') -- Use the system clipboard
 
 -- Split window placement
-o.splitright = true
-o.splitbelow = true
+opt.splitright = true
+opt.splitbelow = true
 
 -- Performance and Timeout Settings
-o.updatetime = 100
-o.ttyfast = true
-o.timeout = true
-o.timeoutlen = 500 -- Wait 500ms for a mapping to complete
-o.ttimeoutlen = 100 -- Wait 100ms for key code sequences (helps with escape delays)
-o.lazyredraw = true
+opt.updatetime = 100
+opt.ttyfast = true
+opt.timeout = true
+opt.timeoutlen = 500 -- Wait 500ms for a mapping to complete
+opt.ttimeoutlen = 100 -- Wait 100ms for key code sequences (helps with escape delays)
+opt.lazyredraw = true
 
-o.undofile = false
-o.backup = false
-o.writebackup = false
-o.swapfile = false
+opt.undofile = false
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
 
-o.spell = false
-o.spelllang = { 'en', 'cjk' } -- Do not mark Chinese, Japanese, and Korean as errors
-o.spellsuggest = 'best'
+opt.spell = false
+opt.spelllang = { 'en', 'cjk' } -- Do not mark Chinese, Japanese, and Korean as errors
+opt.spellsuggest = 'best'
 
 vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
