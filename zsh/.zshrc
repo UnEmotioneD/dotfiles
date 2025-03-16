@@ -152,17 +152,17 @@ alias voff="deactivate"
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 
 alias rmnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.local/state/nvim/ && rm -rf ~/.cache/nvim/'
+alias rmchad='rm -rf ~/.local/share/NVChad/ && rm -rf ~/.local/state/NVChad/ && rm -rf ~/.cache/NVChad/'
 alias rmkick='rm -rf ~/.local/share/KickStart/ && rm -rf ~/.local/state/KickStart/ && rm -rf ~/.cache/KickStart/'
 alias rmprime='rm -rf ~/.local/share/ThePrimeagen/ && rm -rf ~/.local/state/ThePrimeagen/ && rm -rf ~/.cache/ThePrimeagen/'
-alias rmchad='rm -rf ~/.local/share/NVChad/ && rm -rf ~/.local/state/NVChad/ && rm -rf ~/.cache/NVChad/'
 
 # --- Neovim config selector ---
+alias chad="NVIM_APPNAME=NVChad nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
 alias prime="NVIM_APPNAME=ThePrimeagen nvim"
-alias chad="NVIM_APPNAME=NVChad nvim"
 
 function nvims() {
-    items=("Default" "ThePrimeagen" "KickStart" "NVChad")
+    items=("Default" "NVChad" "KickStart" "ThePrimeagen")
     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z $config ]]; then
         echo "Nothing selected"
