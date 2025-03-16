@@ -82,12 +82,7 @@ _fzf_comprun() {
     esac
 }
 
-cdf() {
-    local dir
-    dir=$(find ${1:-.} -mindepth 1 -type d 2>/dev/null | fzf --preview 'tree -C {} | head -50') && cd "$dir"
-}
-
-nvimf() {
+ni() {
     local file
     file=$(find ${1:-.} -type f -o -type d 2>/dev/null | fzf --preview '
         if [ -d {} ]; then
