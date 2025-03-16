@@ -6,18 +6,22 @@ local map = vim.keymap.set
 -- General Keymaps --
 ---------------------
 
--- n : Normal
--- i : Insert
--- v : Visual & Select
--- x : Visual only
--- s : Select only
--- o : Operator-pending
--- c : Command
--- t : Terminal
+--[[
+n : Normal
+i : Insert
+v : Visual & Select
+x : Visual only
+s : Select only
+o : Operator-pending
+c : Command
+t : Terminal
+--]]
 
 map('n', '<Esc>', ':nohl<Cr>', { desc = 'Clear highlight search', silent = true })
 
 map('n', ';', ':', { desc = 'Enter command mode w/ semi-colon' })
+
+-- map('n', '<leader>dm', ':delm!<Cr>', { desc = 'Delete Marks' })
 
 -- Center cursor when navigating search
 map('n', 'n', 'nzz')
@@ -48,8 +52,6 @@ map('n', '<leader>tf', ':tabnew %<Cr>', { desc = '[t]ab [f]ile (open current buf
 map('n', '<leader>tx', ':tabclose<Cr>', { desc = '[t]ab [x] close current tab' })
 map('n', '<leader>tn', ':tabn<Cr>', { desc = '[t]ab [n]ext tab' })
 map('n', '<leader>tp', ':tabp<Cr>', { desc = '[t]ab [p]revious tab' })
-
-map('n', '<leader>dm', ':delm!<Cr>', { desc = 'Delete Marks' })
 
 map('n', '<leader>cs', ':setlocal spell! spell?<Cr>', { desc = '[C]heck [S]pell toggle' })
 
