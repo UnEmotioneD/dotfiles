@@ -7,6 +7,7 @@ modmap:
         held: LEFTCTRL
         alone: ESC
         alone_timeout_millis: 200
+      ESC: CAPSLOCK
 
   - name: RightAlt to F16
     remap:
