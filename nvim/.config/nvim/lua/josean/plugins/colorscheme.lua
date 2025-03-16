@@ -18,7 +18,7 @@ local cat = {
   priority = 1000,
   config = function()
     require('catppuccin').setup({
-      ---@type string | 'auto' | 'latte' | 'frappe' | 'macchiato' | 'mocah'
+      ---@type string | 'auto' | 'latte' | 'frappe' | 'macchiato' | 'mocha'
       flavour = 'mocha',
       transparent_background = false,
     })
