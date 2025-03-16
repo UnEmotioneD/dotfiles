@@ -82,17 +82,6 @@ _fzf_comprun() {
     esac
 }
 
-ni() {
-    local file
-    file=$(find ${1:-.} -type f -o -type d 2>/dev/null | fzf --preview '
-        if [ -d {} ]; then
-          tree -C {} | head -50
-        else
-          bat --style=numbers --color=always --line-range=:50 {}
-        fi
-    ') && nvim "$file"
-}
-
 # --- Zoxide (better cd) ---
 eval "$(zoxide init --cmd cd bash)"
 
