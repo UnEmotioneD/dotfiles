@@ -62,7 +62,7 @@ _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/repo/fzf-git.sh/fzf-git.sh
+source ~/Repository/fzf-git.sh/fzf-git.sh
 
 # Fzf theme to tokyonight
 fg="#a9b1d6"
