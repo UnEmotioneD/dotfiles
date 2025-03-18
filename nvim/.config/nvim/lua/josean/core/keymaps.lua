@@ -92,28 +92,35 @@ end, { desc = '[f]lash' })
 map('n', '<leader>hc', ':q1<Cr>', { desc = 'Diff [c]lose' })
 
 -- Haproon
-map('n', '<M-u>', function()
+local mod = '<M-'
+
+-- TODO: Use command key for macOS
+-- if vim.loop.os_uname().sysname == 'Darwin' then
+--   mod = ''
+-- end
+
+map('n', mod .. 'u>', function()
   require('harpoon'):list():add()
 end, { desc = '[h]arpoon File' })
 
-map('n', '<M-i>', function()
+map('n', mod .. 'i>', function()
   local harpoon = require('harpoon')
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = 'Harpoon [e]dit' })
 
-map('n', '<M-h>', function()
+map('n', mod .. 'h>', function()
   require('harpoon'):list():select(1)
 end, { desc = 'Harpoon to 1' })
 
-map('n', '<M-j>', function()
+map('n', mod .. 'j>', function()
   require('harpoon'):list():select(2)
 end, { desc = 'Harpoon to 2' })
 
-map('n', '<M-k>', function()
+map('n', mod .. 'k>', function()
   require('harpoon'):list():select(3)
 end, { desc = 'Harpoon to 3' })
 
-map('n', '<M-l>', function()
+map('n', mod .. 'l>', function()
   require('harpoon'):list():select(4)
 end, { desc = 'Harpoon to 4' })
 
