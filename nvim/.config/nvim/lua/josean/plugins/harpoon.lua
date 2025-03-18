@@ -13,34 +13,4 @@ return {
       save_on_toggle = true,
     },
   },
-  keys = function()
-    local keys = {
-      {
-        '<leader><leader>h',
-        function()
-          require('harpoon'):list():add()
-        end,
-        desc = '[h]arpoon File',
-      },
-      {
-        '<leader><leader>e',
-        function()
-          local harpoon = require('harpoon')
-          harpoon.ui:toggle_quick_menu(harpoon:list())
-        end,
-        desc = 'Harpoon [e]dit',
-      },
-    }
-
-    for i = 1, 4 do
-      table.insert(keys, {
-        '<leader><leader>' .. i,
-        function()
-          require('harpoon'):list():select(i)
-        end,
-        desc = 'Harpoon to ' .. i,
-      })
-    end
-    return keys
-  end,
 }

@@ -91,6 +91,32 @@ end, { desc = '[f]lash' })
 -- Gitsings
 map('n', '<leader>hc', ':q1<Cr>', { desc = 'Diff [c]lose' })
 
+-- Haproon
+map('n', '<leader><leader>h', function()
+  require('harpoon'):list():add()
+end, { desc = '[h]arpoon File' })
+
+map('n', '<leader><leader>e', function()
+  local harpoon = require('harpoon')
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end, { desc = 'Harpoon [e]dit' })
+
+map('n', '<leader><leader>1', function()
+  require('harpoon'):list():select(1)
+end, { desc = 'Harpoon to 1' })
+
+map('n', '<leader><leader>2', function()
+  require('harpoon'):list():select(2)
+end, { desc = 'Harpoon to 2' })
+
+map('n', '<leader><leader>3', function()
+  require('harpoon'):list():select(3)
+end, { desc = 'Harpoon to 3' })
+
+map('n', '<leader><leader>4', function()
+  require('harpoon'):list():select(4)
+end, { desc = 'Harpoon to 4' })
+
 -- Lazygit
 map('n', '<leader>hg', ':LazyGit<Cr>', { desc = 'Lazy[g]it' })
 
