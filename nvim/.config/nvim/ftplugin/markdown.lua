@@ -1,5 +1,5 @@
 local opt = vim.opt_local
-local m = vim.keymap.set
+local map = vim.keymap.set
 
 -- Enable word wrap and break lines at word boundaries
 opt.wrap = true
@@ -23,17 +23,15 @@ opt.expandtab = true
 opt.foldmethod = 'expr'
 opt.foldexpr = "getline(v:lnum)=~'^\\s*#' ? '>' . (strlen(submatch(0)) - 1) : '='"
 
-m('n', 'j', 'gj')
-m('n', 'k', 'gk')
-m('n', '<Down>', 'gj')
-m('n', '<Up>', 'gk')
+map('n', 'j', 'gj')
+map('n', 'k', 'gk')
 
 -- Keymaps for render, preview and open in obsidian
-m('n', '<leader>mp', '<Cmd>MarkdownPreview<CR>', { desc = '[m]arkdown [p]erview' })
+map('n', '<leader>mp', '<Cmd>MarkdownPreview<CR>', { desc = '[m]arkdown [p]erview' })
 
-m('n', '<leader>mr', function()
+map('n', '<leader>mr', function()
   require('render-markdown').toggle()
 end, { desc = '[m]arkdown [r]ender' })
 
 -- Obsidian
-m('n', '<leader>mo', '<Cmd>ObsidianOpen<CR>', { desc = '[m]arkdown in [o]bsidian' })
+map('n', '<leader>mo', '<Cmd>ObsidianOpen<CR>', { desc = '[m]arkdown in [o]bsidian' })
