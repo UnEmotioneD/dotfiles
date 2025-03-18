@@ -36,6 +36,8 @@ alias e="exit"
 alias so="source"
 alias ..="cd .."
 
+alias rsnm="sudo systemctl restart NetworkManager"
+
 alias n="nvim"
 alias lg="lazygit"
 
