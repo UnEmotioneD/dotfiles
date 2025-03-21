@@ -70,7 +70,7 @@
     "states": {
       // "good": 95,
       "warning": 30,
-      "critical": 15,
+      "critical": 10,
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
@@ -80,9 +80,6 @@
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""],
-  },
-  "battery#bat2": {
-    "bat": "BAT2",
   },
   "power-profiles-daemon": {
     "format": "{icon}",
