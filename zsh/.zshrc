@@ -27,7 +27,7 @@ source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-high
 
 # fetch
 if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
-    neofetch
+    nerdfetch
 fi
 
 # history setup
@@ -143,7 +143,7 @@ alias so="source"
 
 alias n="nvim"
 alias lg="lazygit"
-alias fetch="neofetch"
+alias fetch="nerdfetch"
 
 alias python="python3"
 alias von="source venv/bin/activate"
