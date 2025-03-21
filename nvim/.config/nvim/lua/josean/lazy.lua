@@ -24,6 +24,7 @@ require('lazy').setup({
     notify = false,
   },
   ui = {
+    border = 'single',
     icons = {
       cmd = '⌘',
       config = '🛠',
