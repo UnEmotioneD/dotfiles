@@ -124,6 +124,14 @@ map('n', mod .. 'l>', function()
   require('harpoon'):list():select(4)
 end, { desc = 'Harpoon to 4' })
 
+-- Hlslens
+local function hlslens_key(key)
+  return string.format("<Cmd>execute('normal! ' .. v:count1 .. '%s')<CR><Cmd>lua require('hlslens').start()<CR>", key)
+end
+
+map('n', 'n', hlslens_key('n'), { desc = 'Next hlsearch', noremap = true, silent = true })
+map('n', 'N', hlslens_key('N'), { desc = 'Prev hlsearch', noremap = true, silent = true })
+
 -- Lazygit
 map('n', '<leader>hg', ':LazyGit<Cr>', { desc = 'Lazy[g]it' })
 
