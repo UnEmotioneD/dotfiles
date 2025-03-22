@@ -10,7 +10,5 @@ modmap:
       ESC: CAPSLOCK
 
   - name: RightAlt to F16
-    device:
-      only: ["AT Translated Set 2 keyboard", "Corne Keyboard", "TOTEM Keyboard"]
     remap:
       KEY_RIGHTALT: KEY_F16
