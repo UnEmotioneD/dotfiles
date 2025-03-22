@@ -43,6 +43,7 @@ return {
         'isort',
         'black',
         'pylint',
+        'debugpy',
         'cpplint',
         'clang-format',
       },
