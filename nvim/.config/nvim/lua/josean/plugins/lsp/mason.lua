@@ -22,6 +22,7 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
+        'typos_lsp',
         'lua_ls',
         'html',
         'cssls',
@@ -29,7 +30,6 @@ return {
         'emmet_ls',
         'pyright',
         'clangd',
-        'typos_lsp',
         'taplo', -- .toml LSP
       },
       automatic_installation = true,
@@ -40,9 +40,9 @@ return {
         'stylua',
         'prettier',
         'eslint_d',
+        'pylint',
         'isort',
         'black',
-        'pylint',
         'debugpy',
         'cpplint',
         'clang-format',
