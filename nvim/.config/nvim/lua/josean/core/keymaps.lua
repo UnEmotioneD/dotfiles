@@ -26,13 +26,8 @@ map('n', '<C-d>', '<C-d>zz')
 map('n', '<C-u>', '<C-u>zz')
 -- Delete char without yanking
 map('n', 'x', '"_x')
--- Cursor stays in place when joining lines
-map('n', 'J', 'J<C-G>U')
 -- Yank to end of the line
 map('n', 'Y', 'y$')
--- Move selection up or down
-map('v', 'J', ":m '>+1<CR>gv=gv")
-map('v', 'K', ":m '<-2<CR>gv=gv")
 -- Paste over selection without overriding reg
 map('v', 'p', 'pgvy')
 
