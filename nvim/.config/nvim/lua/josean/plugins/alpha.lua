@@ -26,12 +26,12 @@ return {
     dashboard.section.header.val = header
 
     dashboard.section.buttons.val = {
-      dashboard.button('e', '  > File explorer', ':NvimTreeToggle<Cr>'),
-      dashboard.button('f', '󰱼  > Find File', ':Telescope find_files<Cr>'),
-      dashboard.button('s', '  > Live Grep', ':Telescope live_grep<Cr>'),
-      dashboard.button('k', '  > Find Keymaps', ':Telescope keymaps<Cr>'),
-      dashboard.button('r', '󰁯  > Restore Session', ':SessionRestore<Cr>'),
-      dashboard.button('q', '  > Quit NVIM', ':qa<Cr>'),
+      dashboard.button('e', '  > File explorer', ':NvimTreeToggle<CR>'),
+      dashboard.button('f', '󰱼  > Find File', ':Telescope find_files<CR>'),
+      dashboard.button('s', '  > Live Grep', ':Telescope live_grep<CR>'),
+      dashboard.button('k', '  > Find Keymaps', ':Telescope keymaps<CR>'),
+      dashboard.button('r', '󰁯  > Restore Session', ':SessionRestore<CR>'),
+      dashboard.button('q', '  > Quit NVIM', ':qa<CR>'),
     }
 
     alpha.setup(dashboard.opts)
