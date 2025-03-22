@@ -5,7 +5,7 @@ modmap:
     remap:
       CAPSLOCK:
         held: LEFTCTRL
-        alone: ESC
+        alone: KEY_ESC
         alone_timeout_millis: 200
       ESC: CAPSLOCK
 
