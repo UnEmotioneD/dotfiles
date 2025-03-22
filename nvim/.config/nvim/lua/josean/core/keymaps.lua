@@ -73,7 +73,7 @@ end, { desc = 'Format(in range)' })
 map('n', '<leader>ci', ':ConformInfo<CR>', { desc = '[C]onform [I]nfo' })
 
 -- Flash
-map('n', '<leader><CR>', function()
+map('n', '<leader><leader>f', function()
   require('flash').jump()
 end, { desc = '[f]lash' })
 
