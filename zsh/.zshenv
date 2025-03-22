@@ -6,6 +6,8 @@
 #
 
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # Rust
 . "$HOME/.cargo/env"
 
