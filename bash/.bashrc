@@ -41,6 +41,8 @@ alias rsnm="sudo systemctl restart NetworkManager"
 alias n="nvim"
 alias lg="lazygit"
 
+alias th="tmux new-s -s home"
+
 alias python="python3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
