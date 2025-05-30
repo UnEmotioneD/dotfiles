@@ -1,0 +1,140 @@
+# For transiant prompt (must be at top)
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+plugins=(git web-search)
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1024
+HISTSIZE=1024
+HISTDUP=erase               # erase duplicates in .zhistory
+
+setopt appendhistory        # append executed cmd to .zhistory rather then overwriting it
+setopt sharehistory         # share cmds through out sessions
+setopt hist_ignore_space    # add space before cmd to keep it away from history
+setopt hist_ignore_all_dups # keep duplicates away
+setopt hist_ignore_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups    # don't show duplicates on suggestion
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# fetch
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    pfetch
+fi
+
+alias c="clear"
+alias e="exit"
+alias so="source ~/.zshrc"
+
+alias vim="nvim --clean"
+alias n="nvim ."
+alias fetch="clear && pfetch"
+
+alias py="python3"
+alias von="source venv/bin/activate"
+alias voff="deactivate"
+
+alias dvim="NVIM_APPNAME=daniel nvim"
+
+alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+alias rmdvim='rm -rf ~/.local/share/daniel && rm -rf ~/.local/state/daniel && rm -rf ~/.cache/daniel'
+
+alias fc="fc-cache -fv"
+alias fl="fc-list | fzf"
+
+# Git aliases
+alias gca="git commit --amend"
+alias gcl="git clone"
+
+alias lg="lazygit"
+
+# --- FZF ---
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# Use fd instead of fzf
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+_fzf_compgen_path() {
+    fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+    fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/Repository/fzf-git.sh/fzf-git.sh
+
+# tokyonight theme for Fzf
+fg="#a9b1d6"
+bg="#1a1b26"
+bg_highlight="#28344a"
+purple="#bb9af7"
+blue="#7aa2f7"
+cyan="#7dcfff"
+
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+    local command=$1
+    shift
+    case "$command" in
+        cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+        export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
+        ssh)          fzf --preview 'dig {}'                                   "$@" ;;
+        *)            fzf --preview "$show_file_or_dir_preview"                "$@" ;;
+    esac
+}
+
+# --- Zoxide (better cd) ---
+eval "$(zoxide init --cmd cd zsh)"
+
+# --- Eza (better ls) ---
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+
+# --- Bat (better cat) ---
+export BAT_THEME=tokyonight_night
+
+# --- Yazi ---
+# Move to directory when exiting yazi
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command bat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
+# --- sessionizer ---
+PATH="$PATH":"$HOME/.local/scripts/"
+bindkey -s ^f "tmux-sessionizer\n"
+
+source ~/.profile
