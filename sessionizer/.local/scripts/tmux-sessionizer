@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# check arguments
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ~ ~/.config ~/Developer ~/Documents -mindepth 1 -maxdepth 4 -type d | fzf)
+fi
+
+# if nothing is selected exit gracefully
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+# generate tmux session name
+selected_name=$(basename "$selected" | tr . _)
+# check if tmux is already running
+tmux_running=$(pgrep tmux)
+
+# start tmux if not running already
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $selected
+    exit 0
+fi
+
+# create detached session if already running
+if ! tmux has-session -t=$selected_name 2>/dev/null; then
+    tmux new-session -ds $selected_name -c $selected
+fi
+
+# attach or switch to the newly created session
+if [[ -z $TMUX ]]; then
+    tmux attach -t $selected_name
+else
+    tmux switch-client -t $selected_name
+fi
