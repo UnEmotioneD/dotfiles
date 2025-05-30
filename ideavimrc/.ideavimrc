@@ -1,0 +1,58 @@
+let mapleader = " "
+
+set number
+set relativenumber
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set scrolloff=6
+
+set visualbell
+set noerrorbells
+
+set clipboard=unnamedplus " Use system clipboard
+set clipboard^=ideaputset " Support IDE clipboard integration
+set clipboard^=ideaput
+set ideajoin              " Enable IntelliJ IDEA's join lines feature
+
+nmap <Esc> :noh<Cr>
+
+" Enter command mode with semi-colon
+nmap ; :
+
+" Center cursor when navigating through search
+nmap n nzz
+nmap N Nzz
+
+" Center cursor when scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Override the clipboard when pasting in visual mode
+xnoremap p "_dp
+
+" Yank to end of the line
+nnoremap Y y$
+
+" Delete char without yanking
+nnoremap x "_x
+
+" Plugins
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+Plug 'easymotion/vim-easymotion'
+
+" Harpoon
+nmap <leader><leader>h :action AddToHarpoon<CR>
+nmap <leader><leader>e :action ShowHarpoon<CR>
+nmap <C-7> :action GotoHarpoon1<CR>
+nmap <C-8> :action GotoHarpoon2<CR>
+nmap <C-9> :action GotoHarpoon3<CR>
+nmap <C-0> :action GotoHarpoon4<CR>
+
+" Telescope like actions
+map <leader>ff :action GotoFile<Cr>
