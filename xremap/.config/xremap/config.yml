@@ -1,0 +1,18 @@
+# To get the name of the device
+# $ libinput list-devices
+
+modmap:
+  - name: CapsLock to Ctrl
+    device:
+      only:
+        ["AT Translated Set 2 keyboard", "Mode M75H", "Wooting Wooting 60HE+"]
+    remap:
+      CAPSLOCK:
+        held: LEFTCTRL
+        alone: KEY_ESC
+        alone_timeout_millis: 200
+      ESC: CAPSLOCK
+
+  - name: RightAlt to F16
+    remap:
+      KEY_RIGHTALT: KEY_F16
