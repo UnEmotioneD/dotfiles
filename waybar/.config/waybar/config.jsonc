@@ -1,0 +1,85 @@
+{
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "temperature",
+    "power-profiles-daemon",
+    "battery",
+    "clock",
+  ],
+  "hyprland/workspaces": {
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "󰈹",
+      "3": "",
+      "4": "󰨞",
+      "5": "",
+      "6": "󰙯",
+      "7": "",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+    },
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 20,
+    },
+    "format": "{icon} {capacity}",
+    "format-full": "{icon} {capacity}",
+    "format-charging": "  {capacity}",
+    "format-plugged": "  {capacity}",
+    "format-icons": [" ", " ", " ", " ", " "],
+  },
+  "clock": {
+    "format": "{:%H:%M %b %d %a}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "cpu": {
+    "format": "  {usage}",
+  },
+  "network": {
+    "format-wifi": "  {signalStrength}",
+    "format-ethernet": "",
+    "tooltip-format": "{essid} {ifname} via {gwaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "kitty -e nmtui",
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "format-icons": {
+      "power-saver": "",
+      "balanced": "",
+      "performance": "",
+    },
+    "tooltip": false,
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}",
+    "format-bluetooth": " {icon}  {volume}",
+    "format-bluetooth-muted": "  ",
+    "format-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "headset": " ",
+      "default": [" ", " ", " "],
+    },
+    "on-click": "pavucontrol",
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}",
+    "format-icons": ["", "", ""],
+    "tooltip": false,
+  },
+  "tray": {
+    "spacing": 10,
+    "tooltip": false,
+  },
+}
