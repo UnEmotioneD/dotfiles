@@ -1,0 +1,30 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 16
+font-thicken = true
+
+theme = tokyonight-storm
+
+cursor-style-blink = false
+mouse-hide-while-typing = true
+
+background-opacity = 0.80
+background-blur-radius = 20
+
+window-padding-x = 15
+window-padding-y = 15
+window-padding-balance = true
+
+window-colorspace = display-p3
+
+copy-on-select = clipboard
+
+confirm-close-surface = false
+quit-after-last-window-closed = true
+initial-window = true
+
+shell-integration-features = no-cursor, no-sudo
+
+desktop-notifications = false
+
+macos-titlebar-style = hidden
+macos-auto-secure-input = false
