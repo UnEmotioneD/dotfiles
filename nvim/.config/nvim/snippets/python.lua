@@ -8,14 +8,6 @@ return {
     'main',
     fmt(
       [[
-      """
-      Chapter {}
-      Page {}
-      ---
-      {}
-      """
-
-
       def main() -> None:
           {}
 
@@ -24,10 +16,7 @@ return {
           main()
       ]],
       {
-        i(1),
-        i(2),
-        i(3),
-        i(0, "print('Hello, world')"),
+        i(1, "print('Hello, world')"),
       }
     )
   ),
