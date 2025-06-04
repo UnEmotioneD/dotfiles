@@ -13,7 +13,6 @@ return {
       'trouble',
     }
 
-    vim.keymap.set({ 'n', 'x' }, '<leader>tq', ':QuickScopeToggle<CR>', { desc = 'Quick-scope toggle' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>tq', ':QuickScopeToggle<CR>', { desc = 'Quick-scope' })
   end,
-  enabled = false,
 }
