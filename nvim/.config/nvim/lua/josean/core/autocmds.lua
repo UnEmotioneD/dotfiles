@@ -6,7 +6,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
---[[
 -- Prevent auto-comments after commented line
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('DisableAutoCommenting', { clear = true }),
@@ -31,7 +30,6 @@ vim.api.nvim_create_autocmd('CmdlineLeave', {
     })
   end,
 })
---]]
 
 -- Highlight word under cursor
 vim.api.nvim_create_autocmd('LspAttach', {
