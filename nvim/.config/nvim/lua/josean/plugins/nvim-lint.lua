@@ -4,8 +4,8 @@ return {
     local lint = require('lint')
 
     lint.linters_by_ft = {
-      -- c = { 'cpplint' },
-      -- cpp = { 'cpplint' },
+      c = { 'cpplint' },
+      cpp = { 'cpplint' },
       python = { 'pylint' },
       javascript = { 'eslint_d' },
       typescript = { 'eslint_d' },

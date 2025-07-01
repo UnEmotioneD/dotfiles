@@ -7,9 +7,9 @@ return {
     conform.setup({
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- c = { 'clang-format' },
-        -- cpp = { 'clang-format' },
-        -- java = { 'google-java-format' },
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
+        java = { 'google-java-format' },
         python = { 'isort', 'blue' },
         html = { 'prettierd' },
         css = { 'prettierd' },

@@ -101,5 +101,10 @@ return {
       capabilities = capabilities,
       filetypes = { 'html', 'css', 'javascriptreact' },
     })
+    lsp_config('jdtls', {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      filetypes = { 'java' },
+    })
   end,
 }

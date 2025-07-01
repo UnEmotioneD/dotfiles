@@ -11,8 +11,8 @@ return {
       ensure_installed = {
         'typos_lsp',
         'lua_ls',
-        -- 'clangd',
-        -- 'jdtls',
+        'clangd',
+        'jdtls',
         'pyright',
         'html',
         'cssls',
@@ -26,9 +26,9 @@ return {
     require('mason-tool-installer').setup({
       ensure_installed = {
         'stylua',
-        -- 'cpplint',
-        -- 'clang-format',
-        -- 'google-java-format',
+        'cpplint',
+        'clang-format',
+        'google-java-format',
         'prettierd', -- faster prettier
         'pylint',
         'isort', -- python import sorter
