@@ -54,10 +54,7 @@ alias voff="deactivate"
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
 
-alias dvim="NVIM_APPNAME=daniel nvim"
-
 alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
-alias rmdvim='rm -rf ~/.local/share/daniel && rm -rf ~/.local/state/daniel && rm -rf ~/.cache/daniel'
 
 alias fc="fc-cache -fv"
 alias fl="fc-list | fzf"
