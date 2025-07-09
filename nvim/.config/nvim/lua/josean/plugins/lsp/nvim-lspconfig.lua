@@ -109,11 +109,17 @@ return {
     lsp_config('gopls', {
       on_attach = on_attach,
       capabilities = capabilities,
-      filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+      cmd = { 'gopls' },
+      filetypes = { 'go', 'gomod', 'gosum', 'gowork', 'gotmpl' },
       settings = {
         gopls = {
           completeUnimported = true,
           usePlaceholders = true,
+          analyses = {
+            unusedparams = true,
+            shadow = true,
+          },
+          staticcheck = true,
         },
       },
     })
