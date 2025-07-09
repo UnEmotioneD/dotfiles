@@ -39,6 +39,7 @@ return {
         'vim',
         'vimdoc',
         'yaml',
+        'go',
       },
       incremental_selection = {
         enable = true,

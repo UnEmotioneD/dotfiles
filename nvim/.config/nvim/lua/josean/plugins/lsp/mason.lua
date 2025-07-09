@@ -20,6 +20,7 @@ return {
         'emmet_ls',
         'marksman', -- markdown
         'taplo', -- toml
+        'gopls',
       },
     })
 
@@ -36,6 +37,10 @@ return {
         'debugpy',
         'eslint_d',
         'markdownlint',
+        'gofumpt',
+        'golines',
+        'goimports',
+        -- 'golangci-lint',
       },
     })
   end,
