@@ -39,7 +39,7 @@ return {
         'markdownlint',
         'gofumpt',
         'golines',
-        'goimports',
+        'goimports-reviser',
         -- 'golangci-lint',
       },
     })
