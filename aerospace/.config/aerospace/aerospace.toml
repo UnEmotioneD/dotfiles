@@ -1,5 +1,3 @@
-after-login-command = ['workspace U']
-
 after-startup-command = ['workspace U']
 
 start-at-login = true
