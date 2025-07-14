@@ -27,6 +27,12 @@ nmap ; :
 nmap n nzz
 nmap N Nzz
 
+" .ideavimrc
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Center cursor when scrolling
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
@@ -47,12 +53,12 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'easymotion/vim-easymotion'
 
 " Harpoon
-nmap <leader><leader>h :action AddToHarpoon<CR>
-nmap <leader><leader>e :action ShowHarpoon<CR>
-nmap <C-7> :action GotoHarpoon1<CR>
-nmap <C-8> :action GotoHarpoon2<CR>
-nmap <C-9> :action GotoHarpoon3<CR>
-nmap <C-0> :action GotoHarpoon4<CR>
+nnoremap <BS><leader> :action AddToHarpoon<CR>
+nnoremap <BS><BS> :action ShowHarpoon<CR>
+nnoremap <BS>j :action GotoHarpoon1<CR>
+nnoremap <BS>k :action GotoHarpoon2<CR>
+nnoremap <BS>l :action GotoHarpoon3<CR>
+nnoremap <BS>; :action GotoHarpoon4<CR>
 
 " Telescope like actions
 map <leader>ff :action GotoFile<Cr>
