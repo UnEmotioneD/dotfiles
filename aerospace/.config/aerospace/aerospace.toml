@@ -198,6 +198,10 @@ run = "move-node-to-workspace P"
 if.app-id = 'com.microsoft.Powerpoint'
 run = "move-node-to-workspace P"
 
+[[on-window-detected]]
+if.app-id = 'com.gluonhq.scenebuilder'
+run = "move-node-to-workspace P"
+
 # --- workspace M ---
 
 [[on-window-detected]]
