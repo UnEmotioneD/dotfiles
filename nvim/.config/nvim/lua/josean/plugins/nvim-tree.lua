@@ -11,6 +11,7 @@ return {
       width = 40,
     },
     renderer = {
+      group_empty = true,
       indent_markers = {
         enable = true,
         inline_arrows = true,
