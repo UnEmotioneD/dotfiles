@@ -52,8 +52,10 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'easymotion/vim-easymotion'
 
+map <Leader><CR> <Plug>(easymotion-bd-f)
+
 " Harpoon
-nnoremap <BS><leader> :action AddToHarpoon<CR>
+nnoremap <BS><Leader> :action AddToHarpoon<CR>
 nnoremap <BS><BS> :action ShowHarpoon<CR>
 nnoremap <BS>j :action GotoHarpoon1<CR>
 nnoremap <BS>k :action GotoHarpoon2<CR>
@@ -61,4 +63,4 @@ nnoremap <BS>l :action GotoHarpoon3<CR>
 nnoremap <BS>; :action GotoHarpoon4<CR>
 
 " Telescope like actions
-map <leader>ff :action GotoFile<Cr>
+map <Leader>ff :action GotoFile<Cr>
