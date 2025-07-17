@@ -20,9 +20,6 @@ set ideajoin              " Enable IntelliJ IDEA's join lines feature
 
 nmap <Esc> :noh<Cr>
 
-" Enter command mode with semi-colon
-nmap ; :
-
 " Center cursor when navigating through search
 nmap n nzz
 nmap N Nzz
