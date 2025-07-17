@@ -12,6 +12,7 @@ return {
       javascriptreact = { 'eslint_d' },
       typescriptreact = { 'eslint_d' },
       markdown = { 'markdownlint' },
+      -- go = { 'golangci-lint' },
     }
 
     ---@return vim.Diagnostic | nil

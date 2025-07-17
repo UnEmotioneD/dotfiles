@@ -26,3 +26,8 @@ export MANPAGER="/usr/local/bin/nvr -c 'Man!' -o -"
 
 # Lazygit config path
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Go
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"

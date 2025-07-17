@@ -39,6 +39,11 @@ return {
         'vim',
         'vimdoc',
         'yaml',
+        'go',
+        'gomod', -- declares module and its dependencies
+        'gosum', -- dependency integrity checksum
+        'gotmpl',
+        'gowork', -- workspace for multiple modules
       },
       incremental_selection = {
         enable = true,
