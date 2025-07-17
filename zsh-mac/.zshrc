@@ -42,11 +42,14 @@ fi
 alias c="clear"
 alias e="exit"
 alias so="source ~/.zshrc"
+alias fetch="clear && nerdfetch"
 
 alias vi="nvim --clean"
 alias vim="nvim"
 alias n="nvim ."
-alias fetch="clear && nerdfetch"
+alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+
+alias lg="lazygit"
 
 alias py="python3"
 alias von="source venv/bin/activate"
@@ -54,16 +57,9 @@ alias voff="deactivate"
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
 
-alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
-
-alias fc="fc-cache -fv"
-alias fl="fc-list | fzf"
-
 # Git aliases
 alias gca="git commit --amend"
 alias gcl="git clone"
-
-alias lg="lazygit"
 
 # QMK aliases
 alias cdsfl="cd /Users/unemotioned/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
