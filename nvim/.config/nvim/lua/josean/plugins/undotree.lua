@@ -28,7 +28,7 @@ return {
   },
   keys = {
     {
-      '<leader>u',
+      '<leader>uu',
       function()
         require('undotree').toggle()
       end,
