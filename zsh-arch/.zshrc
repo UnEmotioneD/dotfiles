@@ -42,7 +42,8 @@ alias c="clear"
 alias e="exit"
 alias so="source ~/.zshrc"
 
-alias vim="nvim --clean"
+alias vi="nvim --clean"
+alias vim="nvim"
 alias n="nvim ."
 alias fetch="clear && pfetch"
 
