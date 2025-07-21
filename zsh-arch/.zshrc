@@ -4,6 +4,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
@@ -12,9 +13,9 @@ source $ZSH/oh-my-zsh.sh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 plugins=(git web-search)
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -46,15 +47,13 @@ alias vi="nvim --clean"
 alias vim="nvim"
 alias n="nvim ."
 alias fetch="clear && pfetch"
+alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+
+alias lg="lazygit"
 
 alias py="python3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
-
-alias dvim="NVIM_APPNAME=daniel nvim"
-
-alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
-alias rmdvim='rm -rf ~/.local/share/daniel && rm -rf ~/.local/state/daniel && rm -rf ~/.cache/daniel'
 
 alias fc="fc-cache -fv"
 alias fl="fc-list | fzf"
@@ -62,8 +61,6 @@ alias fl="fc-list | fzf"
 # Git aliases
 alias gca="git commit --amend"
 alias gcl="git clone"
-
-alias lg="lazygit"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
