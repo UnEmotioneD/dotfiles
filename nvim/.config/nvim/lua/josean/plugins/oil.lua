@@ -12,7 +12,12 @@ return {
     view_options = {
       show_hidden = true,
       is_always_hidden = function(name, _)
-        return name == '..' or name == '.git' or name == '.gitignore' or name == '.DS_Store'
+        return vim.tbl_contains({
+          '..',
+          '.DS_Store',
+          '.git',
+          '.gitignore',
+        }, name)
       end,
     },
   },
