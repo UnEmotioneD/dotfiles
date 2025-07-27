@@ -1,6 +1,6 @@
 return {
   'barrett-ruth/live-server.nvim',
-  event = 'FileType html',
+  ft = 'html',
   config = function()
     require('live-server').setup()
 
