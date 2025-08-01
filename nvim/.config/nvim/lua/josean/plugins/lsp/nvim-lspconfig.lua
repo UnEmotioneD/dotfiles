@@ -101,10 +101,36 @@ return {
       capabilities = capabilities,
       filetypes = { 'html', 'css', 'javascriptreact' },
     })
+
+    local home = vim.fn.expand('~')
+    local jdtls_path = home .. '/.local/share/nvim/mason/packages/jdtls'
+    local lombok_path = home .. '/.local/share/lombok/lombok.jar'
+    local jdtls_launcher = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
+    local config_path = jdtls_path .. '/config_mac'
+    local workspace_path = home .. '/.cache/jdtls/workspace'
     lsp_config('jdtls', {
       on_attach = on_attach,
       capabilities = capabilities,
       filetypes = { 'java' },
+      cmd = {
+        'java', -- run interpreter
+        '-javaagent:' .. lombok_path, -- for annotation processing
+        '-Xbootclasspath/a:' .. lombok_path, -- add to JVM boot classpath
+        -- Eclipse JDTLS properties
+        '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+        '-Dosgi.bundles.defaultStartLevel=4',
+        '-Declipse.product=org.eclipse.jdt.ls.core.product',
+        '-Dlog.protocol=true',
+        '-Dlog.level=ALL',
+        '-jar', -- main JDTLS searver launcher
+        jdtls_launcher,
+        -- Mac specific JDTLS config
+        '-configuration',
+        config_path,
+        -- path to workspace specific data
+        '-data',
+        workspace_path,
+      },
     })
     lsp_config('gopls', {
       on_attach = on_attach,
