@@ -38,8 +38,6 @@ return {
     },
     spec = {
       { '<leader>c', group = 'Conform' },
-      { '<leader>d', group = 'Dap' },
-      { '<leader>dp', group = 'Python' },
       { '<leader>e', group = 'Explorer' },
       { '<leader>f', group = 'Find' },
       { '<leader>g', group = 'Git' },

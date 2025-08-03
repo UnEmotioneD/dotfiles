@@ -34,7 +34,6 @@ return {
         'pylint',
         'isort', -- python import sorter
         'blue', -- python formatter
-        'debugpy',
         'eslint_d',
         'markdownlint',
         'gofumpt',
