@@ -39,7 +39,6 @@ return {
         'gofumpt',
         'golines',
         'goimports-reviser',
-        -- 'golangci-lint',
       },
     })
   end,
