@@ -4,7 +4,6 @@ return {
   dependencies = {
     'windwp/nvim-ts-autotag',
     { 'fladson/vim-kitty', ft = 'kitty', tag = 'v1.3' },
-    { 'bezhermoso/tree-sitter-ghostty', build = 'make nvim_install' },
   },
   config = function()
     require('nvim-treesitter.configs').setup({
@@ -15,7 +14,6 @@ return {
         'c',
         'cpp',
         'css',
-        'dockerfile',
         'git_config',
         'gitignore',
         'html',
@@ -23,11 +21,9 @@ return {
         'javascript',
         'json',
         'jsonc',
-        'latex',
         'lua',
         'markdown',
         'markdown_inline',
-        'norg',
         'python',
         'query',
         'regex',
