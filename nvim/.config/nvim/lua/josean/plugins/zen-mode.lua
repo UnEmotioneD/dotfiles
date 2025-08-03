@@ -16,9 +16,6 @@ return {
       elseif vim.bo.filetype == 'c' or 'cpp' then
         vim.api.nvim_win_set_width(win, 100)
         vim.opt.colorcolumn = '89'
-      elseif vim.bo.filetype == 'java' then
-        vim.api.nvim_win_set_width(win, 110)
-        vim.opt.colorcolumn = '99'
       elseif vim.bo.filetype == 'python' then
         vim.api.nvim_win_set_width(win, 98)
         vim.opt.colorcolumn = '87'

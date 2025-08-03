@@ -20,7 +20,6 @@ return {
         'gitignore',
         'html',
         'hyprlang',
-        'java',
         'javascript',
         'json',
         'jsonc',

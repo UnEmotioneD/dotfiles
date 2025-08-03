@@ -32,10 +32,6 @@ return {
           -- python
           'venv/',
           '__pycache__/',
-          -- java
-          '.class',
-          '.project',
-          '.prefs',
         },
       },
       case_mode = 'smart_case',

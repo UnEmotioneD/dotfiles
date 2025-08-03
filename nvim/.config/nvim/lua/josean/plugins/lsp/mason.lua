@@ -12,7 +12,6 @@ return {
         'typos_lsp',
         'lua_ls',
         'clangd',
-        'jdtls',
         'pyright',
         'html',
         'cssls',
@@ -29,7 +28,6 @@ return {
         'stylua',
         'cpplint',
         'clang-format',
-        'google-java-format',
         'prettierd', -- faster prettier
         'pylint',
         'isort', -- python import sorter

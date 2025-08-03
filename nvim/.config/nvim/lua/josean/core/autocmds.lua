@@ -86,17 +86,6 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- Java print macro to register papa
-local javaPrintMacro = vim.api.nvim_create_augroup('JavaPrintMacro', { clear = true })
-vim.api.nvim_create_autocmd('FileType', {
-  group = javaPrintMacro,
-  pattern = { 'java' },
-  callback = function()
-    local macro = 'yoSystem.out.println("' .. esc .. 'pa: " + ' .. esc .. 'pa);' .. esc
-    vim.fn.setreg('p', macro)
-  end,
-})
-
 -- Python print macro to register papa
 local pythopPrintMacro = vim.api.nvim_create_augroup('PythonPrintMacro', { clear = true })
 vim.api.nvim_create_autocmd('FileType', {
