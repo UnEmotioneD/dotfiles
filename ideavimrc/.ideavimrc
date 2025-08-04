@@ -60,4 +60,4 @@ nnoremap <BS>l :action GotoHarpoon3<CR>
 nnoremap <BS>; :action GotoHarpoon4<CR>
 
 " Telescope like actions
-map <Leader>ff :action GotoFile<Cr>
+map <Leader>ff :action GotoFile<CR>
