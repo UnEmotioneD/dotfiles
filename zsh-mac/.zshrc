@@ -45,7 +45,7 @@ alias so="source ~/.zshrc"
 alias fetch="clear && nerdfetch"
 
 alias vi="nvim --clean"
-alias vim="nvim"
+alias vim="nvim" # Useful after tmux-naviator since the first input gets hijacked
 alias n="nvim ."
 alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
