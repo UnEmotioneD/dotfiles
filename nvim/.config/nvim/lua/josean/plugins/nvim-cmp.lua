@@ -53,37 +53,6 @@ return {
         { name = 'render-markdown' }, -- add suggestions for markdown
       }),
 
-      -- Snippets for search or directory
-      cmp.setup.cmdline({ '/', '?' }, {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = 'buffer' },
-        },
-      }),
-
-      -- Snippets for cmd
-      cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-          { name = 'path' },
-        }, {
-          {
-            name = 'cmdline',
-            option = {
-              ignore_cmds = { 'Man', '!' },
-            },
-          },
-        }),
-      }),
-
-      -- For Cargo.toml enable crates.nvim completion
-      cmp.setup.filetype('toml', {
-        sources = cmp.config.sources({
-          { name = 'crates' },
-          { name = 'buffer' }, -- Optionally add buffer completion
-        }),
-      }),
-
       format = function(entry, vim_item)
         -- De-duplicate common sources
         if entry.source.name == 'nvim_lsp' or entry.source.name == 'buffer' then
@@ -126,6 +95,37 @@ return {
           cmp.config.compare.order,
         },
       },
+    })
+
+    -- Snippets for search or directory
+    cmp.setup.cmdline({ '/', '?' }, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' },
+      },
+    })
+
+    -- Snippets for cmd
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' },
+      }, {
+        {
+          name = 'cmdline',
+          option = {
+            ignore_cmds = { 'Man', '!' },
+          },
+        },
+      }),
+    })
+
+    -- For Cargo.toml enable crates.nvim completion
+    cmp.setup.filetype('toml', {
+      sources = cmp.config.sources({
+        { name = 'crates' },
+        { name = 'buffer' }, -- Optionally add buffer completion
+      }),
     })
   end,
 }
