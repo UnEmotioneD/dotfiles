@@ -21,16 +21,5 @@ return {
       }
     )
   ),
-  s(
-    'func',
-    fmt(
-      [[
-    func {}({}) {} {{
-      {}
-    }}
-    ]],
-      { i(1, 'name'), i(2), i(3), i(0) }
-    )
-  ),
   s('print', fmt('fmt.Println({})', { i(0) })),
 }

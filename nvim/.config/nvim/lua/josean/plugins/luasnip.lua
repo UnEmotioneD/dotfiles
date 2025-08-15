@@ -5,10 +5,12 @@ return {
     local luasnip = require('luasnip')
     local cmp = require('cmp')
 
-    luasnip.config.set_config({
+    luasnip.config.setup({
       history = true,
-      updateevents = 'TextChanged,TextChangedI',
       enable_autosnippets = true,
+      region_check_events = 'CursorMoved,CursorHold,InsertEnter',
+      delete_check_events = 'TextChanged,TextChangedI',
+      updateevents = 'TextChanged,TextChangedI',
     })
 
     cmp.setup({
