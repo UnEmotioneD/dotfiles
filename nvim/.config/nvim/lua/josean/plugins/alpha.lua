@@ -47,7 +47,7 @@ return {
       dashboard.button('e', '  > Open Explorer', ':NvimTreeToggle<CR>'),
       dashboard.button('f', '󰱼  > Find File', ':Telescope find_files<CR>'),
       dashboard.button('w', '  > Find Word', ':Telescope live_grep<CR>'),
-      dashboard.button('r', '󰁯  > Restore Session', ':SessionRestore<CR>'),
+      dashboard.button('r', '󰁯  > Restore Session', ':AutoSession restore<CR>'),
       dashboard.button('g', '  > Open LazyGit', ':LazyGit<CR>'),
       dashboard.button('q', '  > Quit NVIM', ':qa<CR>'),
     }

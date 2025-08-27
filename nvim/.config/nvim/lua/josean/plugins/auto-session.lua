@@ -17,9 +17,9 @@ return {
     },
   },
   keys = {
-    { '<leader>wf', ':SessionSearch<CR>', desc = 'Find' },
-    { '<leader>wp', ':SessionPurgeOrphaned<CR>', desc = 'Purge' },
-    { '<leader>wr', ':SessionRestore<CR>', desc = 'Restore' },
-    { '<leader>ws', ':SessionSave<CR>', desc = 'Save' },
+    { '<leader>wf', ':AutoSession search<CR>', desc = 'Find' },
+    { '<leader>wp', ':AutoSession purgeOrphaned<CR>', desc = 'Purge' },
+    { '<leader>wr', ':AutoSession restore<CR>', desc = 'Restore' },
+    { '<leader>ws', ':AutoSession save<CR>', desc = 'Save' },
   },
 }
