@@ -30,7 +30,6 @@ return {
 
       map('n', '<leader>hd', gs.diffthis, 'Diff this file')
       map('n', '<leader>hD', function() gs.diffthis '@' end, 'Diff against last commit')
-      map('n', '<leader>hc', ':q1<CR>', 'Close diff window')
 
       map('n', '<leader>hq', gs.setqflist, 'Buffer diffs to qflist')
       map('n', '<leader>hQ', function() gs.setqflist('all') end, 'Workspace diffs to qflist')
