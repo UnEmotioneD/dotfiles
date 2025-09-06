@@ -1,15 +1,13 @@
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     'nvim-telescope/telescope-ui-select.nvim',
-    { 'jvgrootveld/telescope-zoxide', dependencies = { 'nvim-lua/popup.nvim' } },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   config = function()
     local telescope = require('telescope')
     local actions = require('telescope.actions')
     local builtin = require('telescope.builtin')
-    local z_utils = require('telescope._extensions.zoxide.utils')
 
     telescope.setup({
       defaults = {
@@ -47,18 +45,11 @@ return {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
         },
-        zoxide = {
-          prompt_title = 'Telescope-zoxide',
-          mappings = {
-            ['<C-h>'] = { action = z_utils.create_basic_command('split') },
-          },
-        },
       },
     })
 
     telescope.load_extension('fzf')
     telescope.load_extension('ui-select')
-    telescope.load_extension('zoxide')
 
     local map = vim.keymap.set
     -- File pickers
@@ -84,9 +75,5 @@ return {
     map('n', '<leader>gl', ':Telescope git_bcommits_range<CR>', { desc = 'Line commits' })
     map('n', '<leader>gb', ':Telescope git_branches<CR>', { desc = 'Branches' })
     map('n', '<leader>gs', ':Telescope git_status<CR>', { desc = 'Status' })
-    -- Treesitter picker
-    map('n', '<leader>ft', ':Telescope treesitter<CR>', { desc = 'Treesitter' })
-    -- Telescope-zoxide
-    map('n', '<leader>fd', telescope.extensions.zoxide.list, { desc = 'Directories' })
   end,
 }

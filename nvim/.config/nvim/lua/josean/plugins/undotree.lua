@@ -2,8 +2,8 @@ return {
   'jiaoshijie/undotree',
   opts = {
     float_diff = true, -- `true` disables layout option
-    layout = 'left_bottom', ---@type 'left_bottom' | 'left_left_bottom'
-    position = 'left', ---@type 'left' | 'right' | 'bottom'
+    layout = 'left_bottom',
+    position = 'left',
     ignore_filetype = {
       'TelescopePrompt',
       'qf',

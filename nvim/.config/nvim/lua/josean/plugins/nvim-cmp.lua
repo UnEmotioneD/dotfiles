@@ -2,11 +2,11 @@ return {
   'hrsh7th/nvim-cmp',
   dependencies = {
     'hrsh7th/cmp-buffer', -- source for text in buffer
-    'hrsh7th/cmp-path', -- source for file system paths
     'hrsh7th/cmp-cmdline', -- source for nvim cmds
-    'saadparwaiz1/cmp_luasnip', -- for autocompletion
-    'rafamadriz/friendly-snippets', -- useful snippets
+    'hrsh7th/cmp-path', -- source for file system paths
     'onsails/lspkind.nvim', -- vs-code like pictograms
+    'rafamadriz/friendly-snippets', -- useful snippets
+    'saadparwaiz1/cmp_luasnip', -- for autocompletion
   },
   config = function()
     local cmp = require('cmp')
@@ -32,15 +32,14 @@ return {
         documentation = cmp.config.window.bordered({ border = 'single' }),
       },
       mapping = cmp.mapping.preset.insert({
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }), -- select first suggestion if none selected
-        ['<C-k>'] = cmp.mapping.select_prev_item(), -- previous suggestion
-        ['<C-j>'] = cmp.mapping.select_next_item(), -- next suggestion
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(), -- show completion suggestions
-        ['<C-e>'] = cmp.mapping.abort(), -- close completion window
-        ['<CR>'] = cmp.mapping.confirm({ select = false }), -- close completion window if none selected
-        -- disable arrow for selection (because I use arrow for navigation)
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
         ['<UP>'] = cmp.config.disable,
         ['<DOWN>'] = cmp.config.disable,
       }),

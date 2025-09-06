@@ -3,6 +3,12 @@ return {
   opts = {
     filesize = 2,
     pattern = { '*' },
-    features = { 'filetype', 'lsp', 'syntax', 'treesitter', 'vimopts' },
+    features = {
+      'filetype',
+      'lsp',
+      'syntax',
+      'treesitter',
+      'vimopts',
+    },
   },
 }
