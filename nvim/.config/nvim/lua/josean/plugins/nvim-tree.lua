@@ -33,7 +33,7 @@ return {
       custom = {
         '.DS_Store',
         '.classpath',
-        '.git',
+        '^.git$',
         '.idea',
         '.project',
         '.settings',
