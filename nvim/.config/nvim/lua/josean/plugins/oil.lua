@@ -11,13 +11,17 @@ return {
     },
     view_options = {
       show_hidden = true,
-      is_always_hidden = function(name, _)
+      is_always_hidden = function(file, _)
         return vim.tbl_contains({
           '..',
           '.DS_Store',
           '.git',
-          '.gitignore',
-        }, name)
+          '.idea',
+          -- Eclipse
+          '.classpath',
+          '.project',
+          '.settings',
+        }, file)
       end,
     },
   },

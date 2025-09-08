@@ -32,9 +32,10 @@ return {
       enable = true,
       custom = {
         '.DS_Store',
-        '.classpath',
         '^.git$',
         '.idea',
+        -- Eclipse
+        '.classpath',
         '.project',
         '.settings',
       },
