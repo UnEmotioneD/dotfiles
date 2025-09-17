@@ -1,6 +1,9 @@
 # To get the name of the device
 # $ libinput list-devices
 
+# To get the input codes
+# $ libinput debug-events
+
 modmap:
   - name: CapsLock to Ctrl
     device:
@@ -16,3 +19,10 @@ modmap:
   - name: RightAlt to F16
     remap:
       KEY_RIGHTALT: KEY_F16
+
+  - name: remap trackball
+    device:
+      only: ["Kensington Slimblade Trackball"]
+    remap:
+      BTN_SIDE: BTN_RIGHT
+      BTN_RIGHT: BTN_SIDE
