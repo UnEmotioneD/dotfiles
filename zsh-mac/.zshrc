@@ -51,10 +51,13 @@ alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf
 
 alias lg="lazygit"
 
+# python
 alias py="python3"
 alias pip="pip3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
+alias cav="conda activate venv"
+alias cdv="conda deactivate"
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
 

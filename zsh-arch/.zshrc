@@ -51,12 +51,10 @@ alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf
 
 alias lg="lazygit"
 
+# python
 alias py="python3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
-
-alias fc="fc-cache -fv"
-alias fl="fc-list | fzf"
 
 # Git aliases
 alias gca="git commit --amend"
