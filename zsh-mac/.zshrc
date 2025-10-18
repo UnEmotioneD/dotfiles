@@ -39,33 +39,13 @@ if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm
     nerdfetch
 fi
 
-alias c="clear"
-alias e="exit"
-alias so="source ~/.zshrc"
-alias fetch="clear && nerdfetch"
-
-alias vi="nvim --clean"
-alias vim="nvim" # Useful after tmux-naviator since the first input gets hijacked
-alias n="nvim ."
-alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
-
-alias lg="lazygit"
-
-# python
-alias py="python3"
-alias pip="pip3"
-alias von="source venv/bin/activate"
-alias voff="deactivate"
-alias cav="conda activate venv"
-alias cdv="conda deactivate"
-
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
 
-# Git aliases
-alias gca="git commit --amend"
-alias gcl="git clone"
+alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
-# QMK aliases
+alias von="source venv/bin/activate"
+alias voff="deactivate"
+
 alias cdsfl="cd /Users/unemotioned/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
 alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km unemotioned_sofle"
 
