@@ -39,26 +39,10 @@ if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     pfetch
 fi
 
-alias c="clear"
-alias e="exit"
-alias so="source ~/.zshrc"
-
-alias vi="nvim --clean"
-alias vim="nvim" # Useful after tmux-naviator since the first input gets hijacked
-alias n="nvim ."
-alias fetch="clear && pfetch"
 alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
-alias lg="lazygit"
-
-# python
-alias py="python3"
 alias von="source venv/bin/activate"
 alias voff="deactivate"
-
-# Git aliases
-alias gca="git commit --amend"
-alias gcl="git clone"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
