@@ -40,11 +40,7 @@ if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm
 fi
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
-
 alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
-
-alias von="source venv/bin/activate"
-alias voff="deactivate"
 
 alias cdsfl="cd /Users/unemotioned/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
 alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km unemotioned_sofle"
