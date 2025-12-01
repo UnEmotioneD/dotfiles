@@ -15,6 +15,7 @@ return {
         return vim.tbl_contains({
           '..',
           '.DS_Store',
+          '.localized',
           '.git',
           '.idea',
           -- Eclipse
