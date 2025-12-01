@@ -42,7 +42,7 @@ fi
 alias fetch='clear && pfetch'
 
 alias e='exit'
-alias c='clean'
+alias c='clear'
 alias lg='lazygit'
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 

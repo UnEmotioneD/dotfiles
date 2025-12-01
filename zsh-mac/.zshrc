@@ -42,7 +42,7 @@ fi
 alias fetch='clear && nerdfetch'
 
 alias e='exit'
-alias c='clean'
+alias c='clear'
 alias lg='lazygit'
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
