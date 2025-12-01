@@ -39,10 +39,12 @@ if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     pfetch
 fi
 
-alias rmnvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+alias fetch='clear && pfetch'
 
-alias von="source venv/bin/activate"
-alias voff="deactivate"
+alias e='exit'
+alias c='clean'
+alias lg='lazygit'
+alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
