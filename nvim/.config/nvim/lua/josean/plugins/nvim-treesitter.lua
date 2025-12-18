@@ -6,9 +6,10 @@ return {
     { 'fladson/vim-kitty', ft = 'kitty', tag = 'v1.3' },
   },
   config = function()
-    require('nvim-treesitter.configs').setup({
+    require('nvim-treesitter').setup({
       highlight = { enable = true },
       indent = { enable = true },
+      install_dir = vim.fn.stdpath('data') .. '/site', -- set runtimepath
       ensure_installed = {
         'bash',
         'c',
