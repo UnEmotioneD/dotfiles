@@ -31,4 +31,5 @@ return {
       }
     )
   ),
+  s('log', fmt('console.log({})', { i(0) })),
 }
