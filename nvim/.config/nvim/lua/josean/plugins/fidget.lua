@@ -11,9 +11,9 @@ return {
         done_icon = '',
       },
     },
-    integration = {
-      ['nvim-tree'] = {
-        enable = true,
+    notification = {
+      window = {
+        avoide = { 'NvimTree' },
       },
     },
   },
