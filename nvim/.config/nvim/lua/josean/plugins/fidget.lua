@@ -13,7 +13,7 @@ return {
     },
     notification = {
       window = {
-        avoide = { 'NvimTree' },
+        avoid = { 'NvimTree' },
       },
     },
   },
