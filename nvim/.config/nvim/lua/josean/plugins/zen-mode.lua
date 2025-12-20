@@ -9,6 +9,8 @@ return {
         laststatus = 3,
       },
     },
+    -- width  == (formatter line length) + 10
+    -- column == (formatter line length) - 1
     on_open = function(win)
       if vim.bo.filetype == 'lua' then
         vim.api.nvim_win_set_width(win, 130)
@@ -19,6 +21,9 @@ return {
       elseif vim.bo.filetype == 'python' then
         vim.api.nvim_win_set_width(win, 98)
         vim.opt.colorcolumn = '87'
+      elseif vim.bo.filetype == 'javascript' then
+        vim.api.nvim_win_set_width(win, 90)
+        vim.opt.colorcolumn = '79'
       end
     end,
     on_close = function()
