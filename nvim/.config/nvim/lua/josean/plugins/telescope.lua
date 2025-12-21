@@ -23,13 +23,12 @@ return {
           },
         },
         file_ignore_patterns = {
-          '.DS_Store', -- macOS
+          '.DS_Store',
           '.git/',
-          '.idea/', -- jetbrains
-          'build/',
-          -- python
-          'venv/',
+          '.idea/',
           '__pycache__/',
+          'build/',
+          'node_modules/',
         },
       },
       case_mode = 'smart_case',
