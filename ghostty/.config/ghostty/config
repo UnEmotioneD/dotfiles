@@ -2,7 +2,7 @@ font-family = JetBrainsMono Nerd Font
 font-size = 16
 font-thicken = true
 
-theme = tokyonight-storm
+theme = TokyoNight Storm
 
 cursor-style-blink = false
 mouse-hide-while-typing = true
