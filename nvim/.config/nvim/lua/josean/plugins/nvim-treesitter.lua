@@ -22,6 +22,7 @@ return {
         'javascript',
         'json',
         'jsonc',
+        'jsx',
         'lua',
         'markdown',
         'markdown_inline',
