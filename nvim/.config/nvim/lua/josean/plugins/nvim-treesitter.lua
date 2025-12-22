@@ -3,7 +3,7 @@ return {
   build = ':TSUpdate',
   dependencies = {
     'windwp/nvim-ts-autotag',
-    { 'fladson/vim-kitty', ft = 'kitty', tag = 'v1.3' },
+    { 'fladson/vim-kitty', ft = 'kitty', tag = 'v1.6' },
   },
   config = function()
     require('nvim-treesitter').setup({
