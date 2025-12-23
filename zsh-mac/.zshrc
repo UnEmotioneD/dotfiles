@@ -21,29 +21,24 @@ source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-high
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1024
 HISTSIZE=1024
-HISTDUP=erase               # erase duplicates in .zhistory
+HISTDUP=erase
 
-setopt appendhistory        # append executed cmd to .zhistory rather then overwriting it
-setopt sharehistory         # share cmds through out sessions
-setopt hist_ignore_space    # add space before cmd to keep it away from history
-setopt hist_ignore_all_dups # keep duplicates away
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space # add space before cmd to keep it away from history
+setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt hist_save_no_dups
-setopt hist_find_no_dups    # don't show duplicates on suggestion
+setopt hist_find_no_dups # don't show duplicates on suggestion
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# fetch
 if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
     nerdfetch
 fi
 
-alias fetch='clear && nerdfetch'
-
-alias e='exit'
-alias c='clear'
-alias lg='lazygit'
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup'
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
@@ -71,7 +66,7 @@ _fzf_compgen_dir() {
 
 source ~/Repository/fzf-git.sh/fzf-git.sh
 
-# tokyonight theme for Fzf
+# theme
 fg="#a9b1d6"
 bg="#1a1b26"
 bg_highlight="#28344a"
@@ -100,17 +95,11 @@ _fzf_comprun() {
     esac
 }
 
-# --- Zoxide (better cd) ---
 eval "$(zoxide init --cmd cd zsh)"
 
-# --- Eza (better ls) ---
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
-
-# --- Bat (better cat) ---
 export BAT_THEME=tokyonight_night
 
-# --- Yazi ---
-# Move to directory when exiting yazi
+# yazi
 function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"
@@ -120,7 +109,7 @@ function y() {
     rm -f -- "$tmp"
 }
 
-# --- sessionizer ---
+# sessionizer
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
