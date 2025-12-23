@@ -1,15 +1,13 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'master',
   build = ':TSUpdate',
   dependencies = {
     'windwp/nvim-ts-autotag',
     { 'fladson/vim-kitty', ft = 'kitty', tag = 'v1.6' },
   },
   config = function()
-    require('nvim-treesitter').setup({
-      highlight = { enable = true },
-      indent = { enable = true },
-      install_dir = vim.fn.stdpath('data') .. '/site', -- set runtimepath
+    require('nvim-treesitter.configs').setup({
       ensure_installed = {
         'bash',
         'c',
@@ -22,7 +20,6 @@ return {
         'javascript',
         'json',
         'jsonc',
-        'jsx',
         'lua',
         'markdown',
         'markdown_inline',
@@ -42,6 +39,10 @@ return {
         'gotmpl',
         'gowork', -- workspace for multiple modules
       },
+      sync_install = true,
+      auto_install = true,
+      highlight = { enable = true },
+      indent = { enable = true },
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -51,6 +52,7 @@ return {
           node_decremental = '<BS>',
         },
       },
+
       vim.filetype.add({
         pattern = {
           ['.*/hypr/.*%.conf'] = 'hyprlang',
