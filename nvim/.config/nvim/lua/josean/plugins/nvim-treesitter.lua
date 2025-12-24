@@ -40,6 +40,10 @@ return {
         'gowork', -- workspace for multiple modules
       },
       indent = { enable = true },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -49,12 +53,12 @@ return {
           node_decremental = '<BS>',
         },
       },
+    })
 
-      vim.filetype.add({
-        pattern = {
-          ['.*/hypr/.*%.conf'] = 'hyprlang',
-        },
-      }),
+    vim.filetype.add({
+      pattern = {
+        ['.*/hypr/.*%.conf'] = 'hyprlang',
+      },
     })
 
     require('nvim-ts-autotag').setup({
