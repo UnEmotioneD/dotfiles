@@ -31,7 +31,7 @@ return {
         'prettierd', -- faster prettier
         'pylint',
         'isort', -- python import sorter
-        'blue', -- python formatter
+        'black', -- python formatter
         'eslint_d',
         'markdownlint',
         'gofumpt',
