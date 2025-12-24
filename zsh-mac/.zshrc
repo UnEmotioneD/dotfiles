@@ -24,7 +24,8 @@ if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm
     nerdfetch
 fi
 
-alias lg='lazygit'
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+alias lg="lazygit"
 
 alias brewup="brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup"
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
@@ -81,9 +82,6 @@ _fzf_comprun() {
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
-
-# --- Eza ---
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 
 # --- Bat ---
 export BAT_THEME=tokyonight_night

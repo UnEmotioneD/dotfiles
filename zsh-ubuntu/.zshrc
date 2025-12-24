@@ -21,6 +21,10 @@ source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+alias bat="batcat"
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+alias lg="lazygit"
+
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
 # --- FZF ---
@@ -75,11 +79,6 @@ _fzf_comprun() {
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
 
-# --- Eza ---
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
-
-# --- Bat ---
-alias bat="batcat"
 export BAT_THEME=tokyonight_night
 
 # --- Yazi ---

@@ -25,6 +25,9 @@ if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     pfetch
 fi
 
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+alias lg="lazygit"
+
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
 
 # --- FZF ---
@@ -76,9 +79,6 @@ _fzf_comprun() {
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
-
-# --- Eza ---
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 
 # --- Bat ---
 export BAT_THEME=tokyonight_night
