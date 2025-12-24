@@ -43,9 +43,6 @@ map('n', '<leader>sx', '<C-w>x', { desc = 'Swap side' })
 map('n', '<leader>qn', ':cnext<CR>', { desc = 'Next qf item' })
 map('n', '<leader>qp', ':cprev<CR>', { desc = 'Previous qf item' })
 
--- gitsigns
-map('n', '<leader>hc', ':q1', { desc = 'Close diff window', silent = true })
-
 -- Disable Ex mode (old command interface)
 map({ 'n', 'x' }, 'Q', '<Nop>')
 
