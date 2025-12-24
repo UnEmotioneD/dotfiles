@@ -96,4 +96,8 @@ function y() {
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
+# --- fzf-git ---
+# Used by nvim
+source ~/Repository/fzf-git.sh
+
 source ~/.profile
