@@ -47,7 +47,7 @@ _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
 }
 
-# FZF theme
+# Fzf theme
 fg="#a9b1d6"
 bg="#1a1b26"
 bg_highlight="#28344a"
@@ -96,7 +96,7 @@ function y() {
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
-# --- fzf-git ---
+# --- Fzf-git ---
 # Used by nvim
 source ~/Repository/fzf-git.sh
 
