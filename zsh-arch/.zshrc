@@ -13,23 +13,10 @@ source $ZSH/oh-my-zsh.sh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 plugins=(git web-search)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
-# history setup
-HISTFILE=$HOME/.zhistory
-SAVEHIST=1024
-HISTSIZE=1024
-HISTDUP=erase
-
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space # add space before cmd to keep it away from history
-setopt hist_ignore_all_dups
-setopt hist_ignore_dups
-setopt hist_save_no_dups
-setopt hist_find_no_dups # don't show duplicates on suggestion
+export ZSH_PLUGIN="/usr/share/zsh/plugins"
+source $ZSH_PLUGIN/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_PLUGIN/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $ZSH_PLUGIN/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -38,9 +25,7 @@ if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     pfetch
 fi
 
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
-
-alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
@@ -60,9 +45,7 @@ _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/Repository/fzf-git.sh/fzf-git.sh
-
-# theme
+# FZF theme
 fg="#a9b1d6"
 bg="#1a1b26"
 bg_highlight="#28344a"
@@ -91,11 +74,17 @@ _fzf_comprun() {
     esac
 }
 
+# --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
 
+# --- Eza ---
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+
+# --- Bat ---
 export BAT_THEME=tokyonight_night
 
-# yazi
+# --- Yazi ---
+# Move to dir on exit
 function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"
@@ -105,7 +94,7 @@ function y() {
     rm -f -- "$tmp"
 }
 
-# sessionizer
+# --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
