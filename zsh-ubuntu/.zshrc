@@ -42,8 +42,9 @@ alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf 
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
-
-source <(fzf --zsh)
+if command -v fzf >/dev/null; then
+	source <(fzf --zsh)
+fi
 
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
