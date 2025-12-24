@@ -4,12 +4,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 # User local bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# JAVA
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@21/include"  # for compiler to find jdk
-
-# Rust
-. "$HOME/.cargo/env"
+export EDITOR="nvim"
 
 # node@24
 export PATH="/opt/homebrew/opt/node@24/bin:$PATH"
@@ -23,14 +18,12 @@ case ":$PATH:" in
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# Neovim
-export EDITOR="nvim"
+# JAVA
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@21/include"  # for compiler to find jdk
 
-# Nvim as man pager
-export MANPAGER="/usr/local/bin/nvr -c 'Man!' -o -"
-
-# Lazygit config path
-export XDG_CONFIG_HOME="$HOME/.config"
+# Rust
+. "$HOME/.cargo/env"
 
 # Go
 export GOPATH="$HOME/go"
