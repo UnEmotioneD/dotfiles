@@ -37,8 +37,6 @@ return {
       map('n', '<leader>ht', gs.toggle_deleted, 'Toggle deleted hunks')
       map('n', '<leader>hw', gs.toggle_word_diff, 'Toggle word diff')
 
-      map('n', '<leader>hc', ':q1<CR>', { desc = 'Close diff window', silent = true })
-
       map({ 'o', 'x' }, 'ih', gs.select_hunk, 'Select hunk')
       -- stylua: ignore end
     end,
