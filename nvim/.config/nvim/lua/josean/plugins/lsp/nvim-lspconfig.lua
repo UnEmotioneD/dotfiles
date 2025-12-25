@@ -89,13 +89,6 @@ return {
       capabilities = capabilities_utf_16,
       filetypes = { 'c', 'cpp' },
     })
-    lsp_config('ruff', {
-      on_attach = function(client)
-        client.server_capabilities.hoverProvider = false
-        client.server_capabilities.completionProvider = false
-      end,
-      filetypes = { 'python' },
-    })
     lsp_config('emmet_ls', {
       on_attach = on_attach,
       capabilities = capabilities,
