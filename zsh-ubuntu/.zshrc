@@ -13,7 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 plugins=(git web-search)
-export ZSH_PLUGINS="$HOME/custom/plugins"
+export ZSH_PLUGINS="$ZSH/custom/plugins"
 source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -78,7 +78,7 @@ _fzf_comprun() {
 
 # --- Fzf-git ---
 # Used by nvim
-source ~/Repository/fzf-git.sh
+source ~/repo/fzf-git.sh
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
