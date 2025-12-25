@@ -79,7 +79,7 @@ _fzf_comprun() {
 
 # --- Fzf-git ---
 # Used by nvim
-source ~/Repository/fzf-git.sh
+source ~/repo/fzf-git.sh
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
