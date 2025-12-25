@@ -21,7 +21,6 @@ return {
         jsonc = { 'prettierd' },
         yaml = { 'prettierd' },
         toml = { 'taplo' },
-        go = { 'gofumpt', 'golines', 'goimports' },
       },
       default_format_opts = {
         timeout_ms = 5000,

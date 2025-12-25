@@ -33,11 +33,6 @@ return {
         'vim',
         'vimdoc',
         'yaml',
-        'go',
-        'gomod', -- declares module and its dependencies
-        'gosum', -- dependency integrity checksum
-        'gotmpl',
-        'gowork', -- workspace for multiple modules
       },
       indent = { enable = true },
       highlight = {

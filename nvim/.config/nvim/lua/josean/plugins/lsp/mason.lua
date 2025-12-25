@@ -19,7 +19,6 @@ return {
         'emmet_ls',
         'marksman', -- markdown
         'taplo', -- toml
-        'gopls',
       },
     })
 
@@ -34,9 +33,6 @@ return {
         'black', -- python formatter
         'eslint_d',
         'markdownlint',
-        'gofumpt',
-        'golines',
-        'goimports-reviser',
       },
     })
   end,
