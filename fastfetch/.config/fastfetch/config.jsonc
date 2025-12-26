@@ -12,7 +12,10 @@
     "uptime",
     "packages",
     "shell",
-    "memory",
+    {
+      "type": "memory",
+      "format": "{used} / {total} ",
+    },
     "break",
     "colors",
   ],
