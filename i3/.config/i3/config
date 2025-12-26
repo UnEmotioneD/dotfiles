@@ -24,7 +24,7 @@ exec_always --no-startup-id picom
 
 # feh to setup wallpaper
 exec_always --no-startup-id ~/.fehbg
-exec_always feh --bg-scale ~/Pictures/wallpaper/ubuntu.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/ubuntu.jpg
 
 # keyboard keyrepeat and delay
 exec_always --no-startup-id xset r rate 250 25
@@ -44,7 +44,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
