@@ -28,6 +28,8 @@ alias lg="lazygit"
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
 # --- FZF ---
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Set up fzf key bindings and fuzzy completion
 if command -v fzf >/dev/null; then
 	source <(fzf --zsh)
