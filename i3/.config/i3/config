@@ -27,7 +27,7 @@ exec_always --no-startup-id ~/.fehbg
 exec_always feh --bg-scale ~/Pictures/wallpaper/ubuntu.jpg
 
 # keyboard keyrepeat and delay
-exec --no-startup-id xset r rate 250 25
+exec_always --no-startup-id xset r rate 250 25
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
