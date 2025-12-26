@@ -142,6 +142,6 @@ bar {
 }
 
 # assign apps to workspace
-assign [class="google-chrome"] $ws2
-assign [class="Alacritty"] $ws3
-assign [class="Code"] $ws4
+for_window [class="Google-chrome"] move to workspace $ws2, focus
+for_window [class="Alacritty"]     move to workspace $ws3, focus
+for_window [class="Code"]          move to workspace $ws4, focus
