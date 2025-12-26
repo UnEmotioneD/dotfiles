@@ -21,6 +21,10 @@ source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    fastfetch
+fi
+
 alias bat="batcat"
 alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 alias lg="lazygit"
