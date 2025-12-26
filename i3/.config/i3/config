@@ -32,6 +32,10 @@ exec_always --no-startup-id xset r rate 250 25
 # monitor resolution and refersh rate
 exec_always --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 239.97
 
+# input source
+exec_always --no-startup-id ibus exit
+exec_always --no-startup-id fcitx5 -d
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
