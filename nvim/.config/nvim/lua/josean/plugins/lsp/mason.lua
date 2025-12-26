@@ -17,7 +17,7 @@ return {
         'cssls',
         'ts_ls',
         'emmet_ls',
-        'marksman', -- markdown
+        'marksman',
         'taplo', -- toml
       },
     })
@@ -27,11 +27,11 @@ return {
         'stylua',
         'cpplint',
         'clang-format',
-        'prettierd', -- faster prettier
         'pylint',
-        'isort', -- python import sorter
-        'black', -- python formatter
+        'isort',
+        'black',
         'eslint_d',
+        'prettierd',
         'markdownlint',
       },
     })
