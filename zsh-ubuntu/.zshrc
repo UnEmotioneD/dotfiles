@@ -1,3 +1,7 @@
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    fastfetch
+fi
+
 # For transiant prompt (must be at top)
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -20,10 +24,6 @@ source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-    fastfetch
-fi
 
 alias bat="batcat"
 alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
