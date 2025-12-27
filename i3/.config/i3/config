@@ -8,29 +8,19 @@ font pango:DejaVu Sans Mono 12
 # Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
+# lock with xss-lock, nm-applet and pactl
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
+# gui NetworkManager
 exec --no-startup-id nm-applet
 
-# picom (fix screen tearing)
 exec_always --no-startup-id picom
-
-# feh to setup wallpaper
 #exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/
 
 # keyboard keyrepeat and delay
 exec_always --no-startup-id xset r rate 250 25
-
 # monitor resolution and refersh rate
 exec_always --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 239.97
-
 # input source
 exec_always --no-startup-id ibus exit
 exec_always --no-startup-id fcitx5 -d
@@ -49,16 +39,12 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
-
-# start web browser
 bindsym $mod+b exec --no-startup-id google-chrome
 
-# kill focused window
 bindsym Mod1+w kill
 
-# start dmenu (.desktop app only)
+# dmenu (.desktop app only)
 bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop
 
 # change focus
@@ -90,7 +76,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
 
 # focus the parent/chile container
 #bindsym $mod+a focus parent
