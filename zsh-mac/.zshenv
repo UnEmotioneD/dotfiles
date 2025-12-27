@@ -19,8 +19,8 @@ case ":$PATH:" in
 esac
 
 # JAVA
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@21/include"  # for compiler to find jdk
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"  # for compiler to find jdk
 
 # Rust
 . "$HOME/.cargo/env"
