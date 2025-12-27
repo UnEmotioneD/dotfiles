@@ -23,7 +23,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id picom
 
 # feh to setup wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/ubuntu.jpg
+#exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/
 
 # keyboard keyrepeat and delay
 exec_always --no-startup-id xset r rate 250 25
