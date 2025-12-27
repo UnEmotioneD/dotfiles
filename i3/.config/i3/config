@@ -123,12 +123,22 @@ bindsym $mod+Shift+n move container to workspace $ws5
 bindsym $mod+Shift+m move container to workspace $ws6
 bindsym $mod+Shift+y move container to workspace $ws7
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i3 and related apps
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# power menu
+set $power_menu System (p)ower off | (r)eboot | (l)ock | sign (o)ut
+mode "$power_menu" {
+        bindsym p exec --no-startup-id systemctl poweroff, mode "default"
+        bindsym r exec --no-startup-id systemctl reboot,   mode "default"
+        bindsym l exec --no-startup-id i3lock,             mode "default"
+        bindsym o exec --no-startup-id i3-msg exit,        mode "default"
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+q mode "$power_menu"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
