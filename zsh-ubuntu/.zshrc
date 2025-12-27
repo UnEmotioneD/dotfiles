@@ -25,11 +25,20 @@ source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias bat="batcat"
+alias sysup="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+
+alias fetch="clear && fastfetch"
+alias src="source ~/.zshrc"
+alias c="clear"
+alias e="exit"
+
 alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 alias lg="lazygit"
-
+alias bat="batcat"
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+
+alias gcl="git clone"
+alias gca="git commit --amend"
 
 # --- FZF ---
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
