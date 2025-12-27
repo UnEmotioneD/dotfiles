@@ -91,18 +91,19 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent/chile container
-# bindsym $mod+a focus parent
-# bindsym $mod+d focus child
 
-# workspace variable declaration 
-set $ws1 "u"
-set $ws2 "i"
-set $ws3 "o"
-set $ws4 "p"
-set $ws5 "n"
-set $ws6 "m"
-set $ws7 "y"
+# focus the parent/chile container
+#bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+
+# workspace declaration
+set $ws1 "U: file"
+set $ws2 "I: web"
+set $ws3 "O: term"
+set $ws4 "P: code"
+set $ws5 "N: note"
+set $ws6 "M: message"
+set $ws7 "Y: extra"
 
 # switch to workspace
 bindsym $mod+u workspace $ws1
