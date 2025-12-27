@@ -42,7 +42,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+b exec --no-startup-id google-chrome
 
-bindsym Mod1+w kill
+bindsym Mod1+q kill
 
 # dmenu (.desktop app only)
 bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop
