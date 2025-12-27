@@ -9,14 +9,19 @@
     "os",
     "host",
     "kernel",
-    "uptime",
     "packages",
     "shell",
+    "uptime",
     {
       "type": "memory",
       "format": "{used} / {total} ",
     },
     "break",
-    "colors",
+    {
+      "type": "colors",
+      "block": {
+        "range": [0, 7],
+      },
+    },
   ],
 }
