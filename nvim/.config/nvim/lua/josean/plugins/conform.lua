@@ -9,6 +9,7 @@ return {
         lua = { 'stylua' },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
+        java = { 'google-java-format' },
         python = { 'isort', 'black' },
         html = { 'prettierd' },
         css = { 'prettierd' },

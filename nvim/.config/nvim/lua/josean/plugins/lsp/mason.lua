@@ -27,6 +27,7 @@ return {
         'stylua',
         'cpplint',
         'clang-format',
+        'google-java-format',
         'pylint',
         'isort',
         'black',
