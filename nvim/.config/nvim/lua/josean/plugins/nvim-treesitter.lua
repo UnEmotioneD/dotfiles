@@ -55,6 +55,14 @@ return {
     })
 
     vim.filetype.add({
+      filename = {
+        ['.zshrc'] = 'bash',
+        ['.zshenv'] = 'bash',
+        ['.zprofile'] = 'bash',
+      },
+    })
+
+    vim.filetype.add({
       pattern = {
         ['.*/hypr/.*%.conf'] = 'hyprlang',
       },
