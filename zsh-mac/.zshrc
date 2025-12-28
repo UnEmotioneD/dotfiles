@@ -17,20 +17,26 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-# Completion styling
+# Completion styling: case in-sensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
     nerdfetch
 fi
 
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+alias nf="clear && nerdfetch"
+alias c="clear"
+alias e="exit"
+alias src="source ~/.zshrc"
+
 alias lg="lazygit"
-
-alias brewup="brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup"
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
+alias sysup="brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup"
 
-alias cdsfl="cd $HOME/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
+alias gcl="git clone"
+alias gca="git commit --amend"
+
+alias cdsfl="cd ~/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
 alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km unemotioned_sofle"
 
 # --- FZF ---
@@ -81,11 +87,13 @@ _fzf_comprun() {
 }
 
 # --- Fzf-git ---
-# Used by nvim
 source ~/Repository/fzf-git.sh
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
+
+# --- Eza ---
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 
 # --- Bat ---
 export BAT_THEME=tokyonight_night
