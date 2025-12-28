@@ -1,9 +1,9 @@
-# avode collision with transiant prompt
+# to avode collision with transiant prompt
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     pfetch
 fi
 
-# For transiant prompt
+# transiant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi

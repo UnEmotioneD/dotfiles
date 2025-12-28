@@ -1,9 +1,9 @@
-# avode collision with transiant prompt (must be at top)
+# to avode collision with transiant prompt
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
 fi
 
-# For transiant prompt
+# transiant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -42,7 +42,7 @@ alias gcl="git clone"
 alias gca="git commit --amend"
 
 # --- FZF ---
-# git installed fzf package
+# git installed fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
