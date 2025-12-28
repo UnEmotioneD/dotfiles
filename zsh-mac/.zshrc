@@ -1,25 +1,28 @@
+# avode collision with transiant prompt
 if [[ "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
     nerdfetch
 fi
 
-# For transiant prompt (must be at top)
+# For transiant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH="$HOME/.oh-my-zsh"
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-export ZSH="$HOME/.oh-my-zsh"
+plugins=(git web-search)
+
 source $ZSH/oh-my-zsh.sh
 
-plugins=(git web-search)
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Completion styling: case in-sensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -83,9 +86,9 @@ _fzf_comprun() {
 
     case "$command" in
         cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-        export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
-        ssh)          fzf --preview 'dig {}'                   "$@" ;;
-        *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+        export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
+        ssh)          fzf --preview 'dig {}'                                   "$@" ;;
+        *)            fzf --preview "$show_file_or_dir_preview"                "$@" ;;
     esac
 }
 
@@ -93,7 +96,6 @@ _fzf_comprun() {
 source ~/Repository/fzf-git.sh
 
 # --- Bat ---
-# to use theme execute
 # $ bat cache --build
 export BAT_THEME=tokyonight_night
 

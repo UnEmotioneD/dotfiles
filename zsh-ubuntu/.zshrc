@@ -1,66 +1,51 @@
+# avode collision with transiant prompt (must be at top)
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
 fi
 
-# For transiant prompt (must be at top)
+# For transiant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_PLUGINS="$ZSH/custom/plugins"
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-export ZSH="$HOME/.oh-my-zsh"
+plugins=(git web-search)
+
 source $ZSH/oh-my-zsh.sh
 
-plugins=(git web-search)
-export ZSH_PLUGINS="$ZSH/custom/plugins"
 source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias sysup="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+alias aptup="sudo apt update && sudo apt upgrade && sudo apt autoremove"
 
-alias fetch="clear && fastfetch"
-alias src="source ~/.zshrc"
+alias ff="clear && fastfetch"
 alias c="clear"
 alias e="exit"
+alias src="source ~/.zshrc"
 
-alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 alias lg="lazygit"
-alias bat="batcat"
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
 
 alias gcl="git clone"
 alias gca="git commit --amend"
 
 # --- FZF ---
+# git installed fzf package
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Set up fzf key bindings and fuzzy completion
-if command -v fzf >/dev/null; then
-	source <(fzf --zsh)
-fi
-
-# Use fd instead of fzf
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-_fzf_compgen_path() {
-    fd --hidden --exclude .git . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-    fd --type=d --hidden --exclude .git . "$1"
-}
+source <(fzf --zsh)
 
 # Fzf theme
 fg="#a9b1d6"
@@ -71,6 +56,22 @@ blue="#7aa2f7"
 cyan="#7dcfff"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+
+# fd instead of fzf
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# Use fd for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+_fzf_compgen_path() {
+    fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+    fd --type=d --hidden --exclude .git . "$1"
+}
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
@@ -83,6 +84,7 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 _fzf_comprun() {
     local command=$1
     shift
+
     case "$command" in
         cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
         export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
@@ -92,13 +94,19 @@ _fzf_comprun() {
 }
 
 # --- Fzf-git ---
-# Used by nvim
-source ~/repo/fzf-git.sh
+source ~/Repository/fzf-git.sh
+
+# --- Bat ---
+# $ bat cache --build
+export BAT_THEME=tokyonight_night
+# to avoid collision
+alias bat="batcat"
+
+# --- Eza ---
+alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
-
-export BAT_THEME=tokyonight_night
 
 # --- Yazi ---
 # Move to dir on exit
