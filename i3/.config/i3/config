@@ -24,6 +24,8 @@ exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
 # input source
 exec_always --no-startup-id ibus exit
 exec_always --no-startup-id fcitx5 -d
+# force mouse pointer to normal
+exec_always --no-startup-id xsetroot -cursor_name left_ptr
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -112,7 +114,7 @@ bindsym $mod+Shift+y move container to workspace $ws7
 bindsym $mod+Shift+r restart
 
 # power menu
-set $power_menu System (p)ower off | (r)eboot | (l)ock | sign (o)ut
+set $power_menu System (p)ower off | (r)eboot | (l)ock | log (o)ut
 mode "$power_menu" {
         bindsym p exec --no-startup-id systemctl poweroff, mode "default"
         bindsym r exec --no-startup-id systemctl reboot,   mode "default"
