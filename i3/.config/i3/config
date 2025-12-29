@@ -19,8 +19,8 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/orangepill.jpg
 
 # keyboard keyrepeat and delay
 exec_always --no-startup-id xset r rate 250 25
-# monitor resolution and refersh rate
-exec_always --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 144
+# monitor script
+exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
 # input source
 exec_always --no-startup-id ibus exit
 exec_always --no-startup-id fcitx5 -d
