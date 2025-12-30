@@ -2,10 +2,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   branch = 'master',
   build = ':TSUpdate',
-  dependencies = {
-    'windwp/nvim-ts-autotag',
-    { 'fladson/vim-kitty', ft = 'kitty', tag = 'v1.6' },
-  },
+  dependencies = { 'windwp/nvim-ts-autotag' },
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = {
@@ -57,14 +54,6 @@ return {
     require('nvim-ts-autotag').setup({
       opts = {
         enable_close_on_slash = true,
-      },
-    })
-
-    vim.filetype.add({
-      filename = {
-        ['.zshrc'] = 'bash',
-        ['.zshenv'] = 'bash',
-        ['.zprofile'] = 'bash',
       },
     })
 
