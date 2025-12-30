@@ -26,7 +26,7 @@ source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias aptup="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+alias aptup="sudo apt update && sudo apt upgrade"
 
 alias ff="clear && fastfetch"
 alias c="clear"
