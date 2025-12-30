@@ -2,7 +2,7 @@
 
 # "https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html"
 
-# isolate to keep it from sharing data
+# separate domain from unwanted connection
 export ROS_DOMATIN_ID=99
 
 # set up your environment
