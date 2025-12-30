@@ -1,0 +1,10 @@
+# --- ROS2 development environment ---
+
+# "https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html"
+
+# isolate to keep it from sharing data
+export ROS_DOMATIN_ID=99
+
+# set up your environment
+#source /opt/ros/jazzy/setup.zsh
+alias jazzy="source /opt/ros/jazzy/setup.zsh"
