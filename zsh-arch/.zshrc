@@ -13,8 +13,6 @@ export ZSH_PLUGIN="/usr/share/zsh/plugins"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 plugins=(git web-search)
 
 source $ZSH/oh-my-zsh.sh
@@ -116,5 +114,3 @@ function y() {
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
-
-source ~/.profile
