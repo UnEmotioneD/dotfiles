@@ -10,5 +10,5 @@ alias voff="deactivate"
 export ROS_DOMATIN_ID=25
 
 # set up your environment
-#source /opt/ros/jazzy/setup.zsh
-alias jazzy="source /opt/ros/jazzy/setup.zsh"
+source /opt/ros/jazzy/setup.zsh
+#alias jazzy="source /opt/ros/jazzy/setup.zsh"
