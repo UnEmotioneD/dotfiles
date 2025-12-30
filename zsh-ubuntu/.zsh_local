@@ -1,3 +1,7 @@
+# --- Python venv ---
+alias von=". ~/venv/robot_venv/bin/activate"
+alias voff="deactivate"
+
 # --- ROS2 development environment ---
 
 # "https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html"
