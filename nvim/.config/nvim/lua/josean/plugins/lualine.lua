@@ -5,7 +5,6 @@ return {
       globalstatus = true,
     },
     sections = {
-      lualine_b = { 'branch', 'diff' }, -- Exclude diagnostics
       lualine_x = { 'filesize' },
     },
     extensions = {
