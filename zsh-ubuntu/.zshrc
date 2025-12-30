@@ -13,8 +13,6 @@ export ZSH_PLUGINS="$ZSH/custom/plugins"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 plugins=(git web-search)
 
 source $ZSH/oh-my-zsh.sh
