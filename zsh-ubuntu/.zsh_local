@@ -7,7 +7,7 @@ alias voff="deactivate"
 # "https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html"
 
 # separate domain from unwanted connection
-export ROS_DOMATIN_ID=99
+export ROS_DOMATIN_ID=25
 
 # set up your environment
 #source /opt/ros/jazzy/setup.zsh
