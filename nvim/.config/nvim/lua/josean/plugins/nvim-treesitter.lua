@@ -54,6 +54,12 @@ return {
       },
     })
 
+    require('nvim-ts-autotag').setup({
+      opts = {
+        enable_close_on_slash = true,
+      },
+    })
+
     vim.filetype.add({
       filename = {
         ['.zshrc'] = 'bash',
@@ -65,12 +71,6 @@ return {
     vim.filetype.add({
       pattern = {
         ['.*/hypr/.*%.conf'] = 'hyprlang',
-      },
-    })
-
-    require('nvim-ts-autotag').setup({
-      opts = {
-        enable_close_on_slash = true,
       },
     })
   end,
