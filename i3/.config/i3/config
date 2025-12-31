@@ -17,8 +17,8 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id picom
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/orangepill.jpg
 
-# keyboard keyrepeat and delay
-exec_always --no-startup-id xset r rate 250 25
+# keyboard keyrepeat(delay ms) / delay(frequency per sec)
+exec_always --no-startup-id xset r rate 250 40
 # monitor script
 exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
 # input source
