@@ -114,3 +114,6 @@ function y() {
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
+
+# start tmux server if not running (no attach)
+tmux has-session 2>/dev/null || tmux start-server
