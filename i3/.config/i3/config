@@ -27,6 +27,10 @@ exec_always --no-startup-id ibus exit
 exec_always --no-startup-id fcitx5 -d
 # force mouse pointer to normal
 exec_always --no-startup-id xsetroot -cursor_name left_ptr
+# touchpad turn on natural scrolling
+# $ xinput list
+# look for touchpad's id
+exec_always --no-startup-id xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
