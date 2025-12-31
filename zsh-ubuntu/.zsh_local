@@ -14,5 +14,5 @@ source /opt/ros/jazzy/setup.zsh
 #alias jazzy="source /opt/ros/jazzy/setup.zsh"
 
 # --- Pinky ---
-alias map="ros2 launch pinky_navigation map_view.launch.xml"
+alias riv="ros2 launch pinky_navigation map_view.launch.xml"
 alias teleop="ros2 run teleop_twist_keyboard teleop_twist_keyboard"
