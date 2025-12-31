@@ -125,12 +125,12 @@ bindsym $mod+Shift+y move container to workspace $ws7
 bindsym $mod+Shift+r restart
 
 # power menu
-set $power_menu System (p)ower off | (r)eboot | (l)ock | log (o)ut
+set $power_menu System (p)ower off | (r)eboot | (l)ock | (e)xit
 mode "$power_menu" {
         bindsym p exec --no-startup-id systemctl poweroff, mode "default"
         bindsym r exec --no-startup-id systemctl reboot,   mode "default"
         bindsym l exec --no-startup-id i3lock,             mode "default"
-        bindsym o exec --no-startup-id i3-msg exit,        mode "default"
+        bindsym e exec --no-startup-id i3-msg exit,        mode "default"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
