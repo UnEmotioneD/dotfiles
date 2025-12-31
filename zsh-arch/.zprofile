@@ -5,27 +5,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 
-# Input method (needed for GUI apps launched outside shell)
-export GLFW_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export SDL_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
-# editors
-export EDITOR=nvim
-export VISUAL=nvim
-
-# Input method (needed for GUI apps launched outside shell)
-export GLFW_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export SDL_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
-# qt app scaling
-export QT_SCALE_FACTOR=2
-export QT_SCREEN_SCALE_FACTORS=2
-export QT_AUTO_SCREEN_SCALE_FACTOR=0
-
 # ssh with kitty
 export TERM=xterm-256color
 
@@ -35,6 +14,17 @@ export VISUAL=nvim
 
 # man pager
 export MANPAGER='nvim +Man!'
+
+# input methods for gui apps
+export GLFW_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# qt app scaling
+export QT_SCALE_FACTOR=2
+export QT_SCREEN_SCALE_FACTORS=2
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
 # npm global packages
 export NPM_CONFIG_PREFIX="$HOME/.npm-global"
