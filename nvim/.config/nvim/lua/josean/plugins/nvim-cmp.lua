@@ -118,13 +118,5 @@ return {
         },
       }),
     })
-
-    -- For Cargo.toml enable crates.nvim completion
-    cmp.setup.filetype('toml', {
-      sources = cmp.config.sources({
-        { name = 'crates' },
-        { name = 'buffer' }, -- Optionally add buffer completion
-      }),
-    })
   end,
 }
