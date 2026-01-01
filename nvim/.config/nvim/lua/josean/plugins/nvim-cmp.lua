@@ -1,6 +1,7 @@
 return {
   'hrsh7th/nvim-cmp',
   dependencies = {
+    'hrsh7th/cmp-nvim-lsp', -- LSP source for cmp
     'hrsh7th/cmp-buffer', -- source for text in buffer
     'hrsh7th/cmp-cmdline', -- source for nvim cmds
     'hrsh7th/cmp-path', -- source for file system paths
