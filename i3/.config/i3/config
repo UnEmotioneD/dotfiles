@@ -95,13 +95,13 @@ bindsym $mod+space focus mode_toggle
 #bindsym $mod+d focus child
 
 # workspace declaration
-set $ws1 "U: file"
+set $ws1 "U: term"
 set $ws2 "I: web"
-set $ws3 "O: term"
-set $ws4 "P: code"
+set $ws3 "O: code"
+set $ws4 "P: file"
 set $ws5 "N: note"
 set $ws6 "M: message"
-set $ws7 "Y: extra"
+set $ws7 "Y: extend"
 
 # switch to workspace
 bindsym $mod+u workspace $ws1
@@ -159,9 +159,9 @@ bar {
 }
 
 # assign apps to workspace
-for_window [class="org.gnome.Nautilus"] move to workspace $ws1, focus
+for_window [class="Alacritty"]          move to workspace $ws1, focus
 for_window [class="Google-chrome"]      move to workspace $ws2, focus
-for_window [class="Alacritty"]          move to workspace $ws3, focus
-for_window [class="Code"]               move to workspace $ws4, focus
+for_window [class="Code"]               move to workspace $ws3, focus
+for_window [class="org.gnome.Nautilus"] move to workspace $ws4, focus
 for_window [class="dicsord"]            move to workspace $ws6, focus
 for_window [class="Slack"]              move to workspace $ws6, focus
