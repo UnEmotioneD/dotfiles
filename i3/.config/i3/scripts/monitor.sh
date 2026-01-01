@@ -15,7 +15,14 @@ fi
 
 # Extended monitor
 if echo "$CONNECTED" | grep -q "HDMI-1"; then
-    xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --right-of eDP-1
+    xrandr \
+        --output HDMI-1 \
+        --mode 1920x1080 \
+        --rate 60 \
+        --rotate left \
+        --right-of eDP-1
+
+    i3-msg 'workspace Y: extend; move workspace to output HDMI-1'
 fi
 
 # Turn off disconnected outputs (optional)
