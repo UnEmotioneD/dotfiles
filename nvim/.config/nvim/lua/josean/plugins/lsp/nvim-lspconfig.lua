@@ -57,10 +57,6 @@ return {
         },
       },
     })
-    -- Fix encoding issues: multiple different client offset_encodings detected for buffer (c, cpp file)
-    local capabilities_utf_16 = vim.tbl_deep_extend('force', {}, capabilities, {
-      offsetEncoding = { 'utf-16' },
-    })
 
     local lsp_config = vim.lsp.config
     lsp_config('typos_lsp', {
@@ -84,11 +80,6 @@ return {
           completion = { callSnippet = 'Replace' },
         },
       },
-    })
-    lsp_config('clangd', {
-      on_attach = on_attach,
-      capabilities = capabilities_utf_16,
-      filetypes = { 'c', 'cpp' },
     })
     lsp_config('emmet_ls', {
       on_attach = on_attach,
