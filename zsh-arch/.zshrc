@@ -26,8 +26,8 @@ source $ZSH_PLUGIN/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Completion styling: case in-sensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias pf="clear && pfetch"
-alias c="clear"
+alias ff="clear -x && pfetch"
+alias c="clear -x"
 alias e="exit"
 alias src="source ~/.zshrc"
 

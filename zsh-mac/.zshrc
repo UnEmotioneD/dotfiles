@@ -25,8 +25,8 @@ source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-h
 # Completion styling: case in-sensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias nf="clear && nerdfetch"
-alias c="clear"
+alias ff="clear -x && nerdfetch"
+alias c="clear -x"
 alias e="exit"
 alias src="source ~/.zshrc"
 
