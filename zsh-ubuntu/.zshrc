@@ -121,4 +121,4 @@ function y() {
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
-source ~/.zsh_local
+[ -f ~/.zsh_local ] && source ~/.zsh_local
