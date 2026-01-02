@@ -3,7 +3,7 @@
 set $mod Mod4
 
 # i3status font
-font pango:DejaVu Sans Mono 12
+font pango:DejaVu Sans Mono 11
 
 # Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
