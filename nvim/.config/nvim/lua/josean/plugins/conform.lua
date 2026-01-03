@@ -23,6 +23,16 @@ return {
         yaml = { 'prettierd' },
         toml = { 'taplo' },
       },
+      formatters = {
+        ['google-java-format'] = {
+          prepend_args = function()
+            if vim.uv.fs_stat('.4-space-indent') then
+              return { '--aosp' }
+            end
+            return {}
+          end,
+        },
+      },
       default_format_opts = {
         timeout_ms = 5000,
         async = false,
