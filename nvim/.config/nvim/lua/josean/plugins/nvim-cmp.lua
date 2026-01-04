@@ -70,13 +70,13 @@ return {
           -- Use Treesitter to detect if inside function args
           local node = vim.treesitter.get_node()
           if node and node:type() == 'arguments' and entry:get_kind() ~= kinds.Function then
-            vim_item.menu = '[…]'
+            vim_item.menu = '...'
           end
 
           -- Add icons + trim long entries
           return lspkind.cmp_format({
             maxwidth = 50,
-            ellipsis_char = '…',
+            ellipsis_char = '...',
           })(entry, vim_item)
         end,
       },
