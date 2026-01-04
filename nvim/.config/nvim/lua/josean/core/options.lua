@@ -16,7 +16,8 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
-opt.autoindent = true
+-- opt.autoindent = true -- same indent as previous line
+opt.smartindent = true -- syntax aware indent
 opt.startofline = true -- 'gg' to (0, 0)
 
 opt.ignorecase = true

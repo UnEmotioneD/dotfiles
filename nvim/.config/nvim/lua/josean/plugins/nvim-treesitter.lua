@@ -35,7 +35,7 @@ return {
         'yaml',
       },
       auto_install = true,
-      indent = { enable = true },
+      indent = { enable = false }, -- buggy
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
