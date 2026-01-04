@@ -97,6 +97,7 @@ return {
               return false
             end
           end,
+
           -- Built-in fallback comparisons
           cmp.config.compare.kind,
           cmp.config.compare.sort_text,
