@@ -55,6 +55,7 @@ return {
         { name = 'buffer' },
         { name = 'path' },
         { name = 'render-markdown' }, -- source from marksman
+        { name = 'html-css' }, -- css id and class inside html
       }),
 
       formatting = {
