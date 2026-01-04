@@ -19,7 +19,7 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/orangepill.jpg
 
 # keyboard keyrepeat(delay ms) / delay(frequency per sec)
 #  1000 / 40 == 25 ms delay per each input
-exec_always --no-startup-id xset r rate 250 40
+exec_always --no-startup-id xset r rate 250 100
 # monitor script
 exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
 # input source
