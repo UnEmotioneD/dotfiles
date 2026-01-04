@@ -50,22 +50,24 @@ return {
       }),
 
       sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
+        { name = 'nvim_lsp', dup = 0 },
         { name = 'luasnip' }, -- custom snippets
-        { name = 'buffer' },
-        { name = 'path' },
+        { name = 'path', dup = 0 },
+        { name = 'buffer', dup = 0 },
         { name = 'render-markdown' }, -- source from marksman
         { name = 'html-css' }, -- css id and class inside html
       }),
 
       formatting = {
+        -- order of suggestion item
+        fields = { 'abbr', 'kind', 'menu' },
         format = function(entry, vim_item)
           -- De-duplicate common sources
           if entry.source.name == 'nvim_lsp' or entry.source.name == 'buffer' then
             vim_item.dup = nil
           end
 
-          -- Use Treesitter to detect if inside function args, and adjust display accordingly
+          -- Use Treesitter to detect if inside function args
           local node = vim.treesitter.get_node()
           if node and node:type() == 'arguments' and entry:get_kind() ~= kinds.Function then
             vim_item.menu = '[…]'
