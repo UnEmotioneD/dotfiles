@@ -2,9 +2,14 @@ return {
   'nvim-java/nvim-java',
   config = function()
     require('java').setup({
-      -- competibility with jdk@17
+      -- Startup checks
+      checks = {
+        nvim_version = true,
+        nvim_jdtls_conflict = true,
+      },
       jdtls = {
-        version = '1.43.0',
+        version = '1.43.0', -- jdk@17
+        -- version = '1.54.0', -- jdk@21
       },
       lombok = {
         enable = false,
@@ -14,9 +19,15 @@ return {
         enable = false,
         version = '1.55.1',
       },
-      java_test = { enable = false },
-      java_debug_adapter = { enable = false },
-      jdk = { auto_install = false },
+      java_test = {
+        enable = false,
+      },
+      java_debug_adapter = {
+        enable = false,
+      },
+      jdk = {
+        auto_install = false,
+      },
     })
     vim.lsp.enable('jdtls')
   end,
