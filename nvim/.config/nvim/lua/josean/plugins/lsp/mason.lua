@@ -16,7 +16,8 @@ return {
         'html',
         'cssls',
         'ts_ls',
-        'emmet_ls',
+        'eslint', -- js, jsx
+        'emmet_ls', -- html, css
         'marksman',
         'taplo', -- toml
       },

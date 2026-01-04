@@ -22,9 +22,9 @@ return {
     end
 
     -- Centralized on_attach function for setting up buffer-local key mappings
-    local on_attach = function(ev)
+    local on_attach = function(client, bufnr)
       local telescope = require('telescope.builtin')
-      local opts = { buffer = ev.buf, silent = true }
+      local opts = { buffer = bufnr, silent = true }
       -- stylua: ignore start
       local mappings = {
         { mode = 'n', lhs = 'K', rhs = function() vim.lsp.buf.hover({ border = 'single' }) end, desc = 'Documentation for Cursor' },
@@ -81,10 +81,44 @@ return {
         },
       },
     })
+    lsp_config('ts_ls', {
+      on_attach = function(client, bufnr)
+        -- disable formatting (let ESLint / Prettier handle it)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        on_attach(client, bufnr)
+      end,
+      capabilities = capabilities,
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+      },
+    })
+    lsp_config('eslint', {
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        -- fix all on save
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          buffer = bufnr,
+          command = 'EslintFixAll',
+        })
+      end,
+      capabilities = capabilities,
+      filetypes = {
+        'html',
+        'javascript',
+        'javascriptreact',
+      },
+    })
     lsp_config('emmet_ls', {
       on_attach = on_attach,
       capabilities = capabilities,
-      filetypes = { 'html', 'css', 'javascriptreact' },
+      filetypes = {
+        'html',
+        'css',
+        'javascript',
+        'javascriptreact',
+      },
     })
   end,
 }
