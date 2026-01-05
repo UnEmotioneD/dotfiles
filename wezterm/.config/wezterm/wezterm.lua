@@ -9,9 +9,9 @@ return {
     family = 'JetBrainsMono Nerd Font',
     harfbuzz_features = {
       -- !=  ==  ===  =>  ->  <=  >=
-      'calt=1', -- contextual ligatures
-      'clig=1', -- contextual alternatives
       'liga=1', -- standard ligatures
+      'clig=1', -- contextual ligatures
+      'calt=1', -- contextual alternatives
     },
   }),
 
