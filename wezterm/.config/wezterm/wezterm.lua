@@ -1,6 +1,6 @@
 local wezterm = require('wezterm')
 
--- TODO: fixed window title value for i3
+-- TODO: fixed window title string for i3
 
 return {
   font_size = 14,
@@ -14,6 +14,8 @@ return {
       'calt=1', -- contextual alternatives
     },
   }),
+
+  window_decorations = 'RESIZE',
 
   enable_tab_bar = false,
 
