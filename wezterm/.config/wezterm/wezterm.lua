@@ -3,8 +3,17 @@ local wezterm = require('wezterm')
 -- TODO: fixed window title value for i3
 
 return {
-  font = wezterm.font('MesloLGS Nerd Font'),
   font_size = 14,
+
+  font = wezterm.font({
+    family = 'JetBrainsMono Nerd Font',
+    harfbuzz_features = {
+      -- !=  ==  ===  =>  ->  <=  >=
+      'calt=1', -- contextual ligatures
+      'clig=1', -- contextual alternatives
+      'liga=1', -- standard ligatures
+    },
+  }),
 
   enable_tab_bar = false,
 
