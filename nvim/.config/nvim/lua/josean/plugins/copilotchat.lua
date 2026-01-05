@@ -3,8 +3,13 @@ return {
   dependencies = { 'github/copilot.vim' },
   build = 'make tiktoken',
   opts = {},
-  keymaps = {
-    vim.keymap.set('n', '<leader>aco', '<cmd>CopilotChatOpen<CR>', { desc = 'Open chat window' }),
-    vim.keymap.set('n', '<leader>acc', '<cmd>CopilotChatClose<CR>', { desc = 'Close chat window' }),
-  },
+  config = function()
+    local map = vim.keymap.set
+
+    -- Chat window
+    map('n', '<leader>aco', '<cmd>CopilotChatOpen<CR>', { desc = 'Open chat window' })
+    map('n', '<leader>acc', '<cmd>CopilotChatClose<CR>', { desc = 'Close chat window' })
+    map('n', '<leader>acr', '<cmd>CopilotChatReset<CR>', { desc = 'Reset chat window' })
+  end,
+  enabled = false,
 }
