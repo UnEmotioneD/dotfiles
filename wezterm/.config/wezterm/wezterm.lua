@@ -1,21 +1,11 @@
 local wezterm = require('wezterm')
 
--- TODO: fixed window title string for i3
+wezterm.on('format-window-title', function()
+  return 'WezTerm'
+end)
 
 return {
-  font_size = 14,
-
-  font = wezterm.font({
-    family = 'JetBrainsMono Nerd Font',
-    harfbuzz_features = {
-      -- !=  ==  ===  =>  ->  <=  >=
-      'liga=1', -- standard ligatures
-      'clig=1', -- contextual ligatures
-      'calt=1', -- contextual alternatives
-    },
-  }),
-
-  window_decorations = 'RESIZE',
+  color_scheme = 'tokyonight-storm',
 
   enable_tab_bar = false,
 
@@ -26,7 +16,12 @@ return {
     bottom = 0,
   },
 
-  color_scheme = 'tokyonight-storm',
+  font_size = 14,
+
+  font = wezterm.font({
+    family = 'JetBrainsMono Nerd Font',
+    harfbuzz_features = { 'liga=1', 'clig=1', 'calt=1' },
+  }),
 
   max_fps = 144,
 }
