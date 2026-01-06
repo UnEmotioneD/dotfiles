@@ -2,7 +2,10 @@ return {
   'nvim-treesitter/nvim-treesitter',
   branch = 'master',
   build = ':TSUpdate',
-  dependencies = { 'windwp/nvim-ts-autotag' },
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-context',
+    'windwp/nvim-ts-autotag',
+  },
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = {
