@@ -18,6 +18,7 @@ return {
         'gitignore',
         'html',
         'hyprlang',
+        'ini',
         'java',
         'javascript',
         'json',
