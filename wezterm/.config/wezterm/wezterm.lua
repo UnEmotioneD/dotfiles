@@ -16,6 +16,8 @@ return {
     bottom = 0,
   },
 
+  window_background_opacity = 0.85,
+
   font_size = 14,
 
   font = wezterm.font({
