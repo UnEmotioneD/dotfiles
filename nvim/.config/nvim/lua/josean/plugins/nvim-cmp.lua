@@ -50,10 +50,10 @@ return {
       }),
 
       sources = cmp.config.sources({
-        { name = 'nvim_lsp', dup = 0 },
+        { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- custom snippets
-        { name = 'path', dup = 0 },
-        { name = 'buffer', dup = 0 },
+        { name = 'path' },
+        { name = 'buffer' },
         { name = 'render-markdown' }, -- source from marksman
         { name = 'html-css' }, -- css id and class inside html
       }),
@@ -63,7 +63,7 @@ return {
         fields = { 'abbr', 'kind', 'menu' },
         format = function(entry, vim_item)
           -- De-duplicate common sources
-          if entry.source.name == 'nvim_lsp' or entry.source.name == 'buffer' then
+          if entry.source.name == 'nvim_lsp' or entry.source.name == 'path' or entry.source.name == 'buffer' then
             vim_item.dup = nil
           end
 
