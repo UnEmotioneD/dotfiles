@@ -10,4 +10,5 @@ return {
     map('n', '<leader>acc', '<cmd>CopilotChatClose<CR>', { desc = 'Close chat window' })
     map('n', '<leader>acr', '<cmd>CopilotChatReset<CR>', { desc = 'Reset chat window' })
   end,
+  enabled = false,
 }
