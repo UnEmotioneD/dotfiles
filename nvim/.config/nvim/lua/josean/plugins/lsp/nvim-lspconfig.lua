@@ -80,15 +80,12 @@ return {
         },
       },
     })
-    lsp_config('ts_ls', {
-      on_attach = function(client, bufnr)
-        -- disable formatting (let ESLint / Prettier handle it)
-        client.server_capabilities.documentFormattingProvider = false
-        client.server_capabilities.documentRangeFormattingProvider = false
-        on_attach(client, bufnr)
-      end,
+    lsp_config('emmet_ls', {
+      on_attach = on_attach,
       capabilities = capabilities,
       filetypes = {
+        'html',
+        'css',
         'javascript',
         'javascriptreact',
       },
@@ -96,7 +93,6 @@ return {
     lsp_config('eslint', {
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
-        -- fix all on save
         vim.api.nvim_create_autocmd('BufWritePre', {
           buffer = bufnr,
           command = 'EslintFixAll',
@@ -109,12 +105,15 @@ return {
         'javascriptreact',
       },
     })
-    lsp_config('emmet_ls', {
-      on_attach = on_attach,
+    lsp_config('ts_ls', {
+      on_attach = function(client, bufnr)
+        -- disable formatting
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        on_attach(client, bufnr)
+      end,
       capabilities = capabilities,
       filetypes = {
-        'html',
-        'css',
         'javascript',
         'javascriptreact',
       },
