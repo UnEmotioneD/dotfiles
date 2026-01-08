@@ -1,22 +1,16 @@
 " --- UI ---
 set number
-set rnu
-set ruler           " Cursor position
-set cursorline
-set laststatus=2    " Always show status line
-set showmatch       " Highlight matching brackets
+set relativenumber
+set ruler
+set laststatus=2    " show status line
+set showmatch       " highlight matching brackets
 set scrolloff=6
 set sidescrolloff=6
 set nowrap
-set splitbelow      " Horizontal splits below
-set splitright      " Vertical splits right
+set splitbelow
+set splitright
 
-" --- Colors / Background ---
-set background=dark
-set termguicolors
-highlight Normal ctermbg=black guibg=black
-
-" --- Files (NO save artifacts) ---
+" --- Files ---
 set noswapfile
 set nobackup
 set nowritebackup
@@ -43,11 +37,8 @@ set hlsearch
 set clipboard=unnamedplus
 set mouse=a
 
-" --- Performance ---
-set lazyredraw
-set ttyfast
-syntax sync minlines=200
-
-" --- Misc ---
-set timeoutlen=500
-set updatetime=300
+" --- Keymap ---
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
