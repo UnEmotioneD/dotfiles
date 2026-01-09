@@ -3,7 +3,7 @@
 set $mod Mod4
 
 # i3status font
-font pango:DejaVu Sans Mono 11
+font pango:JetBrainsMono Nerd Font 12
 
 # Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
@@ -18,7 +18,6 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/kagura.png
 
 # keyboard keyrepeat(delay ms) / delay(frequency per sec)
-#  1000 / 40 == 25 ms delay per each input
 exec_always --no-startup-id xset r rate 250 75
 # monitor script
 exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
