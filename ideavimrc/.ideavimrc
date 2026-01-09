@@ -54,10 +54,11 @@ map <Leader><CR> <Plug>(easymotion-bd-f)
 " Harpoon
 nnoremap <BS><Leader> :action AddToHarpoon<CR>
 nnoremap <BS><BS> :action ShowHarpoon<CR>
-nnoremap <BS>j :action GotoHarpoon1<CR>
-nnoremap <BS>k :action GotoHarpoon2<CR>
-nnoremap <BS>l :action GotoHarpoon3<CR>
-nnoremap <BS>; :action GotoHarpoon4<CR>
+nnoremap <BS>h :action GotoHarpoon1<CR>
+nnoremap <BS>j :action GotoHarpoon2<CR>
+nnoremap <BS>k :action GotoHarpoon3<CR>
+nnoremap <BS>l :action GotoHarpoon4<CR>
+nnoremap <BS>; :action GotoHarpoon5<CR>
 
 " Telescope like actions
 map <Leader>ff :action GotoFile<CR>
