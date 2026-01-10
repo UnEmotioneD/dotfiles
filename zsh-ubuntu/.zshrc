@@ -1,11 +1,11 @@
 # to avode collision with transiant prompt
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-    fastfetch
+  fastfetch
 fi
 
 # transiant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -50,12 +50,12 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 # Use fd for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
 _fzf_compgen_path() {
-    fd --hidden --exclude .git . "$1"
+  fd --hidden --exclude .git . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-    fd --type=d --hidden --exclude .git . "$1"
+  fd --type=d --hidden --exclude .git . "$1"
 }
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
@@ -67,15 +67,15 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 # - The first argument to the function is the name of the command.
 # - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
-    local command=$1
-    shift
+  local command=$1
+  shift
 
-    case "$command" in
-        cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-        export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
-        ssh)          fzf --preview 'dig {}'                                   "$@" ;;
-        *)            fzf --preview "$show_file_or_dir_preview"                "$@" ;;
-    esac
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
+    ssh)          fzf --preview 'dig {}'                                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview"                "$@" ;;
+  esac
 }
 
 # --- Fzf-git ---
@@ -94,14 +94,21 @@ alias ls="eza --oneline --color=always --icons=always --group-directories-first 
 eval "$(zoxide init --cmd cd zsh)"
 
 # --- Yazi ---
-# Move to dir on exit
-function y() {
-    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-    yazi "$@" --cwd-file="$tmp"
-    if cwd="$(command batcat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-        builtin cd -- "$cwd"
+# q: move to dir on exit
+# Q: quite without changing directory
+yazi() {
+  local tmp
+  tmp="$(mktemp -t yazi-cwd.XXXXXX)"
+  command yazi "$@" --cwd-file="$tmp"
+  if [[ -f $tmp ]]; then
+    local cwd
+    cwd="$(<"$tmp")"
+    if [[ -n $cwd && $cwd != $PWD ]]; then
+      cd -- "$cwd"
+      zle reset-prompt 2>/dev/null
     fi
-    rm -f -- "$tmp"
+  fi
+  rm -f -- "$tmp"
 }
 
 # --- Sessionizer ---
