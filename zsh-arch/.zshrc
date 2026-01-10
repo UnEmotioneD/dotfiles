@@ -23,19 +23,8 @@ source $ZSH_PLUGIN/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Completion styling: case in-sensitive
+# Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-alias ff="clear -x && pfetch"
-alias c="clear -x"
-alias e="exit"
-alias src="source ~/.zshrc"
-
-alias lg="lazygit"
-alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
-
-alias gcl="git clone"
-alias gca="git commit --amend"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion

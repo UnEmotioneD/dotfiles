@@ -26,19 +26,6 @@ source $ZSH_PLUGINS/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias aptup="sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt clean"
-
-alias ff="clear -x && fastfetch"
-alias c="clear -x"
-alias e="exit"
-alias src="source ~/.zshrc"
-
-alias lg="lazygit"
-alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
-
-alias gcl="git clone"
-alias gca="git commit --amend"
-
 # --- FZF ---
 # git installed fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

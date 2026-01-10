@@ -25,21 +25,6 @@ source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-h
 # Completion styling: case in-sensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-alias ff="clear -x && nerdfetch"
-alias c="clear -x"
-alias e="exit"
-alias src="source ~/.zshrc"
-
-alias lg="lazygit"
-alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
-alias brewup="brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup"
-
-alias gcl="git clone"
-alias gca="git commit --amend"
-
-alias cdsfl="cd ~/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
-alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km unemotioned_sofle"
-
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -117,3 +102,7 @@ function y() {
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
+
+# --- QMK Aliases ---
+alias cdsfl="cd ~/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/unemotioned_sofle"
+alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km unemotioned_sofle"
