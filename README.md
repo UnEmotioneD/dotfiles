@@ -11,8 +11,7 @@
 
 ### Installation
 
-`git`: to clone from github
-`stow`: to create symlinks
+`git` to clone from github and `stow` to create symlinks
 
 - macOS
 
