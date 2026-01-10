@@ -21,7 +21,7 @@ return {
     end
 
     -- Centralized on_attach function for setting up buffer-local key mappings
-    local on_attach = function(client, bufnr)
+    local on_attach = function(_, bufnr)
       local telescope = require('telescope.builtin')
       local opts = { buffer = bufnr, silent = true }
       -- stylua: ignore start
