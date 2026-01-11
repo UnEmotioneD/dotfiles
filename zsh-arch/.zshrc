@@ -92,7 +92,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # --- Yazi ---
 # q: move to dir on exit
 # Q: quite without changing directory
-yazi() {
+yz() {
   local tmp
   tmp="$(mktemp -t yazi-cwd.XXXXXX)"
   command yazi "$@" --cwd-file="$tmp"
@@ -111,6 +111,17 @@ yazi() {
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
-# --- QMK Aliases ---
+# --- Alias ---
+alias c="clear -x"
+alias e="exit"
+alias sz="source ~/.zshrc"
+
+alias sys="clear -x && pfetch"
+
+alias tc="tmux clear-history && clear -x"
+alias lg="lazygit"
+alias vim="nvim ."
+alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
+
 alias cdsfl="cd ~/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/sofle"
 alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km sofle"

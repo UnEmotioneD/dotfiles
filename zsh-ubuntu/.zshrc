@@ -96,7 +96,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # --- Yazi ---
 # q: move to dir on exit
 # Q: quite without changing directory
-yazi() {
+yz() {
   local tmp
   tmp="$(mktemp -t yazi-cwd.XXXXXX)"
   command yazi "$@" --cwd-file="$tmp"
@@ -114,5 +114,18 @@ yazi() {
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
+
+# --- Alias ---
+alias c="clear -x"
+alias e="exit"
+alias sz="source ~/.zshrc"
+
+alias sys="clear -x && fastfetch"
+alias sysup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt clean"
+
+alias tc="tmux clear-history && clear -x"
+alias lg="lazygit"
+alias vim="nvim ."
+alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
 
 [ -f ~/.zsh_local ] && source ~/.zsh_local
