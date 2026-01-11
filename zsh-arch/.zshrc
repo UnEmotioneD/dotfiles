@@ -92,7 +92,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # --- Yazi ---
 # q: move to dir on exit
 # Q: quite without changing directory
-yz() {
+y() {
   local tmp
   tmp="$(mktemp -t yazi-cwd.XXXXXX)"
   command yazi "$@" --cwd-file="$tmp"
@@ -116,7 +116,7 @@ alias c="clear -x"
 alias e="exit"
 alias sz="source ~/.zshrc"
 
-alias sys="clear -x && pfetch"
+alias ff="clear -x && pfetch"
 
 alias tc="tmux clear-history && clear -x"
 alias lg="lazygit"
