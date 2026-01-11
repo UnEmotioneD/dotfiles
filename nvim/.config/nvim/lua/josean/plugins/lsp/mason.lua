@@ -19,7 +19,6 @@ return {
         'eslint', -- js, jsx
         'emmet_ls', -- html, css
         'marksman',
-        'taplo', -- toml
       },
     })
 
@@ -35,6 +34,7 @@ return {
         'eslint_d',
         'prettierd',
         'markdownlint',
+        'taplo', -- toml
       },
     })
   end,
