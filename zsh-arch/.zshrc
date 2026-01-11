@@ -77,7 +77,7 @@ _fzf_comprun() {
 }
 
 # --- Fzf-git ---
-source ~/Repository/fzf-git.sh
+source ~/Repository/fzf-git.sh/fzf-git.sh
 
 # --- Bat ---
 # $ bat cache --build
