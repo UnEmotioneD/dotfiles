@@ -1,3 +1,7 @@
+# --- Reload Config ---
+# linux: ctrl + shift + comma(,)
+# mac: cmd + shift + comma(,)
+
 font-family = Iosevka Nerd Font
 font-size = 14
 font-thicken = false
