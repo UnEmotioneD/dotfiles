@@ -1,10 +1,11 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
 # user local bin
 export PATH="$HOME/.local/bin:$PATH"
-
-# ~/.bash_profile
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
 
 # hyprland
 export XDG_CURRENT_DESKTOP=Hyprland
