@@ -110,3 +110,7 @@ yazi() {
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
+
+# --- QMK Aliases ---
+alias cdsfl="/home/unemotioned/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/sofle"
+alias cmpsfl="qmk compile -kb splitkb/aurora/sofle_v2/rev1 -km sofle"
