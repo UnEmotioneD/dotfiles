@@ -60,6 +60,7 @@ bindsym Mod1+q kill
 bindsym Mod1+space exec --no-startup-id i3-dmenu-desktop
 
 focus_wrapping no
+focus_follows_mouse no
 
 # change focus
 bindsym $mod+h focus left
