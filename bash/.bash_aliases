@@ -4,7 +4,7 @@
 
 alias ls='eza --oneline --color=always --icons=always --group-directories-first --git'
 alias ll='eza --oneline --long --color=always --icons=always --group-directories-first --git'
-alias la='eza --oneline --color=always --icons=always --all --group-directories-first --git'
+alias la='eza --oneline --color=always --icons=always --all --group-directories-first'
 
 alias grep='grep --color=auto'
 
