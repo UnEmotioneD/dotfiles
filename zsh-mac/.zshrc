@@ -22,8 +22,8 @@ source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-h
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Completion styling: case in-sensitive
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# Completion styling
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
@@ -68,9 +68,9 @@ _fzf_comprun() {
   shift
 
   case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    cd)           fzf --preview "eza --tree --color=always {} | head -200" "$@" ;;
     export|unset) fzf --preview "eval 'echo ${}'"                          "$@" ;;
-    ssh)          fzf --preview 'dig {}'                                   "$@" ;;
+    ssh)          fzf --preview "dig {}"                                   "$@" ;;
     *)            fzf --preview "$show_file_or_dir_preview"                "$@" ;;
   esac
 }
@@ -84,6 +84,8 @@ export BAT_THEME=tokyonight_night
 
 # --- Eza ---
 alias ls="eza --oneline --color=always --icons=always --group-directories-first --git"
+alias ll="eza --oneline --long --color=always --icons=always --group-directories-first --git"
+alias la="eza --oneline --color=always --icons=always --all --group-directories-first"
 
 # --- Zoxide ---
 eval "$(zoxide init --cmd cd zsh)"
