@@ -128,4 +128,13 @@ alias lg="lazygit"
 alias vim="nvim ."
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
 
-[ -f ~/.zsh_local ] && source ~/.zsh_local
+# --- ROS ---
+export ROS_DOMAIN_ID=24
+
+if [[ -f /opt/ros/jazzy/setup.zsh ]]; then
+  . /opt/ros/jazzy/setup.zsh
+fi
+
+if [[ -f ~/Developer/ros2-workspace/install/local_setup.zsh ]]; then
+  . ~/Developer/ros2-workspace/install/local_setup.zsh
+fi

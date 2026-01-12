@@ -1,7 +1,3 @@
-#
-# ~/.bash_tools.sh
-#
-
 # --- FZF ---
 # FZF for bash
 if [ -f ~/.fzf.bash ]; then

@@ -1,7 +1,3 @@
-#
-# ~/.bash_aliases
-#
-
 alias bat="batcat"
 
 alias ls='eza --oneline --color=always --icons=always --group-directories-first --git'
