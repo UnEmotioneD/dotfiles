@@ -109,7 +109,6 @@ alias sz="source ~/.zshrc"
 
 alias ff="clear -x && pfetch"
 
-alias tc="tmux clear-history && clear -x"
 alias lg="lazygit"
 alias vim="nvim ."
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
