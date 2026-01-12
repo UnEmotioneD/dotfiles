@@ -1,0 +1,18 @@
+#
+# ~/.inputrc
+#
+
+# ignore case when completing
+set completion-ignore-case on
+
+# do not list matches on first Tab
+set show-all-if-ambiguous off
+
+# do not list everything on empty Tab
+set show-all-if-unmodified off
+
+# show only the differing part when cycling
+set menu-complete-display-prefix on
+
+# use Tab to cycle through matches
+TAB: menu-complete
