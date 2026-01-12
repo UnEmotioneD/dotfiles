@@ -1,0 +1,6 @@
+#
+# ~/.inputrc
+#
+
+# ignore case when completing
+set completion-ignore-case on
