@@ -6,7 +6,7 @@
 set completion-ignore-case on
 
 # do not list matches on first Tab
-set show-all-if-ambiguous off
+set show-all-if-ambiguous on
 
 # do not list everything on empty Tab
 set show-all-if-unmodified off
