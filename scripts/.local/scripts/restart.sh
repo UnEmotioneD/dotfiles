@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env bash
 
 if pgrep -x "hyprpaper" > /dev/null; then
     killall hyprpaper
