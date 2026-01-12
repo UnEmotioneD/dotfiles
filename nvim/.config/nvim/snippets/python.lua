@@ -8,7 +8,7 @@ return {
     'main',
     fmt(
       [[
-      def main() -> None:
+      def main({}) -> None:
           {}
 
 
@@ -16,7 +16,8 @@ return {
           main()
       ]],
       {
-        i(1, "print('Hello, world')"),
+        i(1),
+        i(0, "print('Hello, world')"),
       }
     )
   ),
