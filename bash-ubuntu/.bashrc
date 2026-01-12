@@ -101,3 +101,13 @@ fi
 
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_tools.sh ] && source ~/.bash_tools.sh
+[ -f ~/.bash_local.sh ] && source ~/.bash_local.sh
+
+# system info fetch
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  fastfetch
+fi
+
+# history-substring-search with arrow keys
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'

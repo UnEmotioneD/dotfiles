@@ -14,6 +14,7 @@ alias e='exit'
 alias sb='source ~/.bashrc'
 
 alias ff='clear -x && fastfetch'
+alias aptup='sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt clean'
 
 alias tc='tmux clear-history && clear -x'
 alias lg='lazygit'
