@@ -94,21 +94,12 @@ alias ls="eza --oneline --color=always --icons=always --group-directories-first 
 eval "$(zoxide init --cmd cd zsh)"
 
 # --- Yazi ---
-# q: move to dir on exit
-# Q: quite without changing directory
-y() {
-  local tmp
-  tmp="$(mktemp -t yazi-cwd.XXXXXX)"
-  command yazi "$@" --cwd-file="$tmp"
-  if [[ -f $tmp ]]; then
-    local cwd
-    cwd="$(<"$tmp")"
-    if [[ -n $cwd && $cwd != $PWD ]]; then
-      cd -- "$cwd"
-      zle reset-prompt 2>/dev/null
-    fi
-  fi
-  rm -f -- "$tmp"
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
 
 # --- Sessionizer ---
