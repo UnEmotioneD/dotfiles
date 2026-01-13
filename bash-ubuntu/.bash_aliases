@@ -15,3 +15,12 @@ alias aptup='sudo apt update && sudo apt upgrade -y && sudo apt autoremove && su
 alias lg='lazygit'
 alias vim='nvim .'
 alias rmvim='rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim'
+
+# --- Pinky ---
+alias sp='ssh pinky@192.168.4.1'
+alias teleop='ros2 run teleop_twist_keyboard teleop_twist_keyboard'
+alias rviz='ros2 launch pinky_navigation map_view.launch.xml'
+alias readmap='ros2 launch pinky_navigation nav2_view.launch.xml'
+
+# --- Jetcobot ---
+alias sj='ssh jetcobot@192.168.5.1'

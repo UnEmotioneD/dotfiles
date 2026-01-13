@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+  # We have color support; assume it's compliant with Ecma-48
+  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
+  color_prompt=yes
     else
-	color_prompt=
+  color_prompt=
     fi
 fi
 
@@ -116,11 +116,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+[ -f ~/.bash_tools.sh ] && . ~/.bash_tools.sh
+
 # history-substring-search with arrow keys
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-[ -f ~/.bash_tools.sh ] && . ~/.bash_tools.sh
+# system info fetch
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  fastfetch
+fi
 
 # --- ROS ---
 export ROS_DOMAIN_ID=24
@@ -129,11 +134,10 @@ if [ -f /opt/ros/jazzy/setup.bash ]; then
   . /opt/ros/jazzy/setup.bash
 fi
 
-if [ -f ~/Developer/ros2-workspace/install/local_setup.bash ]; then
-  . ~/Developer/ros2-workspace/install/local_setup.bash
+if [ -f ~/pinky_pro/install/local_setup.bash ]; then
+  . ~/pinky_pro/install/local_setup.bash
 fi
 
-# system info fetch
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-  fastfetch
+if [ -f ~/Developer/ros2-workspace/install/local_setup.bash ]; then
+  . ~/Developer/ros2-workspace/install/local_setup.bash
 fi
