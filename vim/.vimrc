@@ -2,8 +2,8 @@
 set number
 set relativenumber
 set ruler
-set laststatus=2    " show status line
-set showmatch       " highlight matching brackets
+set laststatus=2        " show status line
+set showmatch           " highlight matching brackets
 set scrolloff=6
 set sidescrolloff=6
 set nowrap
@@ -15,8 +15,8 @@ set noswapfile
 set nobackup
 set nowritebackup
 set noundofile
-set autoread     " Reload changed files
-set confirm      " Confirm before losing changes
+set autoread            " Reload changed files
+set confirm             " Confirm before losing changes
 
 " --- Indentation ---
 set tabstop=4
@@ -42,3 +42,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" --- Syntax / Filetypes ---
+syntax on
+filetype plugin indent on
