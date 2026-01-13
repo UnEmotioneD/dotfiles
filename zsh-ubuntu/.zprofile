@@ -1,4 +1,7 @@
-# fcitx to switch input
+# user local bin
+export PATH="$HOME/.loca/bin:$PATH"
+
+# Fcitx
 export XMODIFIERS=@im=fcitx
 export INPUT_METHOD=fcitx
 export GTK_IM_MODULE=fcitx

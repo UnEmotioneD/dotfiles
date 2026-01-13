@@ -130,3 +130,14 @@ fi
 if [[ -f ~/Developer/ros2-workspace/install/local_setup.zsh ]]; then
   . ~/Developer/ros2-workspace/install/local_setup.zsh
 fi
+
+# --- Pinky ---
+alias sp="ssh pinky@192.168.4.1"
+alias rmap="ros2 launch pinky_navigation map_view.launch.xml"
+alias rnav="ros2 launch pinky_navigation nav2_view.launch.xml"
+alias teleop="ros2 run teleop_twist_keyboard teleop_twist_keyboard"
+# needed before launching rviz
+alias premap=". ~/pinky_pro/install/local_setup.zsh"
+
+# --- Jetcobot ---
+alias sj="ssh jetcobot@192.168.5.1"
