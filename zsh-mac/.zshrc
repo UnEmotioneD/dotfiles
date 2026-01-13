@@ -92,18 +92,18 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # --- Yazi ---
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	command yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 # --- Sessionizer ---
 PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
-# --- Alias ---
+# --- Aliases ---
 alias c="clear -x"
 alias e="exit"
 alias sz="source ~/.zshrc"
@@ -112,5 +112,4 @@ alias ff="clear -x && nerdfetch"
 alias brewup="brew update && brew upgrade && brew upgrade --cask && brew autoremove && brew cleanup"
 
 alias lg="lazygit"
-alias vim="nvim ."
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"

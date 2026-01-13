@@ -93,11 +93,11 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # --- Yazi ---
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	command yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 # --- Sessionizer ---
@@ -112,7 +112,6 @@ alias sz="source ~/.zshrc"
 alias ff="clear -x && pfetch"
 
 alias lg="lazygit"
-alias vim="nvim ."
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
 
 alias cdsfl="cd ~/qmk_firmware/keyboards/splitkb/aurora/sofle_v2/keymaps/sofle"

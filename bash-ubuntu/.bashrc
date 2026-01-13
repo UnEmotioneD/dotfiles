@@ -116,11 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.bash_tools.sh ] && . ~/.bash_tools.sh
-
 # history-substring-search with arrow keys
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+
+[ -f ~/.bash_tools.sh ] && . ~/.bash_tools.sh
 
 # system info fetch
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then

@@ -8,7 +8,7 @@ export XDG_SESSION_TYPE=wayland
 # ssh with kitty
 export TERM=xterm-256color
 
-# editors
+# system editor
 export EDITOR=nvim
 export VISUAL=nvim
 
