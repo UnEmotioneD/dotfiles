@@ -71,8 +71,5 @@ return {
     -- Git pickers
     map('n', '<leader>gC', ':Telescope git_commits<CR>', { desc = 'Repository commits' })
     map('n', '<leader>gc', ':Telescope git_bcommits<CR>', { desc = 'Buffer commits' })
-    map('n', '<leader>gl', ':Telescope git_bcommits_range<CR>', { desc = 'Line commits' })
-    map('n', '<leader>gb', ':Telescope git_branches<CR>', { desc = 'Branches' })
-    map('n', '<leader>gs', ':Telescope git_status<CR>', { desc = 'Status' })
   end,
 }
