@@ -46,7 +46,7 @@ return {
       { '<leader>l', group = 'Live-server' },
       { '<leader>m', group = 'Markdown' },
       { '<leader>q', group = 'Quicker' },
-      { '<leader>s', group = 'Split', mode = 'n' },
+      { '<leader>s', group = 'Split' },
       { '<leader>t', group = 'Toggle', mode = { 'n', 'v' } },
       { '<leader>w', group = 'Session' },
       { '<leader>x', group = 'Trouble' },
