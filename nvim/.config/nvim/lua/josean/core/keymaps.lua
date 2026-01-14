@@ -38,10 +38,3 @@ map('n', '<leader>sx', '<C-w>x', { desc = 'Swap side' })
 
 map('n', '<leader>qn', ':cnext<CR>', { desc = 'Next qf item' })
 map('n', '<leader>qp', ':cprev<CR>', { desc = 'Previous qf item' })
-
--- Disable Ex mode (old command interface)
-map({ 'n', 'x' }, 'Q', '<Nop>')
-
--- Completely delete keymaps to hide it from telescoe.keymaps and which-key
-vim.keymap.del('n', 'Q')
-vim.keymap.del('x', 'Q')
