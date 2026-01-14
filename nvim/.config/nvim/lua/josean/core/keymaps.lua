@@ -2,12 +2,8 @@ vim.g.mapleader = ' '
 
 local map = vim.keymap.set
 
-map('v', 'p', '"_dP', { desc = 'Paste without overwriting register' })
-
-map('n', 'C', 'c$', { desc = 'Change to EOL' })
-map('n', 'Y', 'y$', { desc = 'Yank to EOL' })
-
 map('n', 'x', '"_x', { desc = 'Delete char without yanking' })
+map('v', 'p', '"_dP', { desc = 'Paste without overwriting register' })
 
 map('n', 'H', ':bp<CR>', { desc = 'Previous buffer' })
 map('n', 'L', ':bn<CR>', { desc = 'Next buffer' })
