@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# To get output and monitor infos:
+# $ xrandr
+
 # Get connected displays
 CONNECTED=$(xrandr --query | grep " connected" | cut -d" " -f1)
 
@@ -23,5 +26,5 @@ if echo "$CONNECTED" | grep -q "HDMI-0"; then
         --right-of eDP-1-1
 
     i3-msg 'workspace Y: extend; move workspace to output HDMI-0'
-    i3-msg 'workspace U: term;'
+    i3-msg 'workspace U: term; move workspace to output eDP-1-1'
 fi
