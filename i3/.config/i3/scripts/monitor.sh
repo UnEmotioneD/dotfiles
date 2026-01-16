@@ -23,4 +23,5 @@ if echo "$CONNECTED" | grep -q "HDMI-0"; then
         --right-of eDP-1-1
 
     i3-msg 'workspace Y: extend; move workspace to output HDMI-0'
+    i3-msg 'workspace U: term;'
 fi
