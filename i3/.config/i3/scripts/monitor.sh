@@ -9,24 +9,18 @@ if echo "$CONNECTED" | grep -q "DP-4"; then
 fi
 
 # Laptop display
-if echo "$CONNECTED" | grep -q "eDP-1"; then
-    xrandr --output eDP-1 --mode 1920x1080 --rate 144
+if echo "$CONNECTED" | grep -q "eDP-1-1"; then
+    xrandr --output eDP-1-1 --primary --mode 1920x1080 --rate 144
 fi
 
 # Extended monitor
-if echo "$CONNECTED" | grep -q "HDMI-1"; then
+if echo "$CONNECTED" | grep -q "HDMI-0"; then
     xrandr \
-        --output HDMI-1 \
+        --output HDMI-0 \
         --mode 1920x1080 \
         --rate 60 \
         --rotate left \
-        --right-of eDP-1
+        --right-of eDP-1-1
 
-    i3-msg 'workspace Y: extend; move workspace to output HDMI-1'
+    i3-msg 'workspace Y: extend; move workspace to output HDMI-0'
 fi
-
-# Turn off disconnected outputs (optional)
-for output in $(xrandr --query | grep " disconnected" | cut -d" " -f1); do
-    xrandr --output "$output" --off
-done
-
