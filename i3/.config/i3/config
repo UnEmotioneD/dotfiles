@@ -53,7 +53,7 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty --title "Kitty"
 bindsym $mod+b      exec --no-startup-id google-chrome
 
 bindsym Mod1+q kill
