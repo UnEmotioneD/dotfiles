@@ -128,6 +128,12 @@ bindsym $mod+Shift+n move container to workspace $ws5
 bindsym $mod+Shift+m move container to workspace $ws6
 bindsym $mod+Shift+y move container to workspace $ws7
 
+# move workspace to another monitor
+bindsym $mod+Shift+Left  move workspace to output left
+bindsym $mod+Shift+Right move workspace to output right
+bindsym $mod+Shift+Up    move workspace to output up
+bindsym $mod+Shift+Down  move workspace to output down
+
 # restart i3 and related apps
 bindsym $mod+Shift+r restart
 
