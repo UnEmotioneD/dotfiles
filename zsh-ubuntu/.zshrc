@@ -1,9 +1,9 @@
-# to avode collision with transiant prompt
+# Placed at top to avode collision with transiant prompt
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
   fastfetch
 fi
 
-# transiant prompt
+# Transiant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -33,4 +33,6 @@ zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 [[ -f ~/.zsh_tools.sh ]] && . ~/.zsh_tools.sh
 [[ -f ~/.zsh_local.sh ]] && . ~/.zsh_local.sh
-[[ -f ~/.p10k.zsh ]] && . ~/.p10k.zsh
+
+# Powerlevel10k (recommended at bottom)
+[[ ! -f ~/.p10k.zsh ]] || . ~/.p10k.zsh
