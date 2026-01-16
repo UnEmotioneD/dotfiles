@@ -119,28 +119,4 @@ alias aptup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove && su
 alias lg="lazygit"
 alias rmvim="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim && rm -rf ~/.cache/nvim"
 
-# --- ROS ---
-export ROS_DOMAIN_ID=24
-
-if [[ -f /opt/ros/jazzy/setup.zsh ]]; then
-  . /opt/ros/jazzy/setup.zsh
-fi
-
-# for launching rviz
-if [[ -f ~/pinky_pro/install/local_setup.zsh ]]; then
-  . ~/pinky_pro/install/local_setup.zsh
-fi
-
-# for running ros node
-if [[ -f ~/Developer/ros2-workspace/install/local_setup.zsh ]]; then
-  . ~/Developer/ros2-workspace/install/local_setup.zsh
-fi
-
-# --- Pinky ---
-alias sp="ssh pinky@192.168.4.1"
-alias rmap="ros2 launch pinky_navigation map_view.launch.xml"
-alias rnav="ros2 launch pinky_navigation nav2_view.launch.xml"
-alias teleop="ros2 run teleop_twist_keyboard teleop_twist_keyboard"
-
-# --- Jetcobot ---
-alias sj="ssh jetcobot@192.168.5.1"
+[[ -f ~/.zsh_local.sh ]] && . ~/.zsh_local.sh
