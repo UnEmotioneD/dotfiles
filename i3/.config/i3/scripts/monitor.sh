@@ -18,7 +18,7 @@ if echo "$CONNECTED" | grep -q "HDMI-0"; then
     xrandr \
         --output HDMI-0 \
         --mode 1920x1080 \
-        --rate 60 \
+        --rate 59.94 \
         --rotate left \
         --right-of eDP-1-1
 
