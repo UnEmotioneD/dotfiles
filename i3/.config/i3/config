@@ -14,20 +14,22 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # gui NetworkManager
 exec --no-startup-id nm-applet
 
+# compositor (fix tearing)
 exec_always --no-startup-id picom
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/kagura.png ~/Pictures/wallpaper/shade_orange_rotate.jpg
-# monitor script
-exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
+
 # input source: stop ibus and use fcitx5
 exec_always --no-startup-id ibus exit
 exec_always --no-startup-id fcitx5 -d
+
 # force mouse pointer to normal
 exec_always --no-startup-id xsetroot -cursor_name left_ptr
+
 # touchpad turn on natural scrolling
 #  $ xinput list
 #  look for touchpad's id
 exec_always --no-startup-id xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
-# keyboard keyrepeat(delay ms) / delay(frequency per sec)
+
+# keyrepeat delay in ms / repeat in frequency
 exec_always --no-startup-id xset r rate 250 75
 
 # Use pactl to adjust volume in PulseAudio.
@@ -180,3 +182,10 @@ for_window [class="Code"]                   move to workspace $ws3, focus
 for_window [class="org.gnome.Nautilus"]     move to workspace $ws4, focus
 for_window [class="discord"]                move to workspace $ws6, focus
 for_window [class="Slack"]                  move to workspace $ws6, focus
+
+# TODO: testing monitor.sh at the bottom
+
+# monitor script
+exec_always --no-startup-id ~/.config/i3/scripts/monitor.sh
+# wallpapers for primary and external monitor (exec after monitor.sh)
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/kagura.png ~/Pictures/wallpaper/shade_orange_rotate.jpg
