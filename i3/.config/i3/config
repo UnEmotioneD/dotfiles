@@ -77,9 +77,10 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# split in horizontal/vertical orientation
-#bindsym $mod+h split h
-#bindsym $mod+v split v
+# v: top/bottom
+# h: side by side
+#bindsym $mod+h split v
+bindsym $mod+v split h
 
 hide_edge_borders both
 
