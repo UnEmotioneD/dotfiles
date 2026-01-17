@@ -39,14 +39,19 @@ return {
       },
 
       completion = {
+        menu = { border = 'single' },
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 1000,
+          window = { border = 'single' },
         },
       },
 
       -- show function args
-      signature = { enabled = true },
+      signature = {
+        enabled = true,
+        window = { border = 'single' },
+      },
 
       -- snippets source to use L3MON4D3/LuaSnip
       snippets = { preset = 'luasnip' },
