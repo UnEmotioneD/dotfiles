@@ -5,7 +5,6 @@ return {
     { 'antosha417/nvim-lsp-file-operations', config = true },
   },
   config = function()
-    local cmp_nvim_lsp = require('cmp_nvim_lsp')
     local isText = true
 
     vim.diagnostic.config({
@@ -48,14 +47,7 @@ return {
       end
     end
 
-    -- Enhance LSP capabilities for autocompletion
-    local capabilities = vim.tbl_deep_extend('force', cmp_nvim_lsp.default_capabilities(), {
-      textDocument = {
-        completion = {
-          editsNearCursor = true,
-        },
-      },
-    })
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
 
     local lsp_config = vim.lsp.config
     lsp_config('typos_lsp', {
