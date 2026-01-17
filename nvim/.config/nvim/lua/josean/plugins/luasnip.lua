@@ -3,7 +3,6 @@ return {
   build = 'make install_jsregexp',
   config = function()
     local luasnip = require('luasnip')
-    local cmp = require('cmp')
 
     luasnip.config.setup({
       history = true,
@@ -13,25 +12,9 @@ return {
       updateevents = 'TextChanged,TextChangedI',
     })
 
-    cmp.setup({
-      mapping = {
-        ['<Tab>'] = cmp.mapping(function(fallback)
-          if luasnip.locally_jumpable(1) then
-            luasnip.jump(1)
-          else
-            fallback()
-          end
-        end, { 'i', 's' }),
-
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
-          if luasnip.locally_jumpable(-1) then
-            luasnip.jump(-1)
-          else
-            fallback()
-          end
-        end, { 'i', 's' }),
-      },
-    })
+    vim.keymap.set({ 'i', 's' }, '<Tab>', function()
+      luasnip.jump(1)
+    end, { silent = true })
 
     require('luasnip.loaders.from_lua').lazy_load({
       paths = { '~/.config/nvim/snippets' },
