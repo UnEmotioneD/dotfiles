@@ -47,6 +47,9 @@ return {
       -- show function args
       signature = { enabled = true },
 
+      -- snippets source to use L3MON4D3/LuaSnip
+      snippets = { preset = 'luasnip' },
+
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
