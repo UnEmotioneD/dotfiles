@@ -47,7 +47,8 @@ return {
       end
     end
 
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    local default_capabilities = vim.lsp.protocol.make_client_capabilities()
+    local capabilities = require('blink.cmp').get_lsp_capabilities(default_capabilities)
 
     local lsp_config = vim.lsp.config
     lsp_config('typos_lsp', {
