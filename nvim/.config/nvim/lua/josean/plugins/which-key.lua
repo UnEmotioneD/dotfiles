@@ -37,7 +37,6 @@ return {
       },
     },
     spec = {
-      { '<leader>a', group = 'AI' },
       { '<leader>c', group = 'Conform' },
       { '<leader>e', group = 'Explorer' },
       { '<leader>f', group = 'Find' },
