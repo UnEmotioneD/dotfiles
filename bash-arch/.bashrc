@@ -12,5 +12,5 @@ PS1="\[\e[32m\]\u@\h${NC} \[\e[34m\]\w${NC}\$ " # prompt
 bind "'\e[A': history-search-backward"
 bind "'\e[B': history-search-forward"
 
-[[ -f ~/.bash_aliases ]] . ~/.bash_aliases
-[[ -f ~/.bash_tools.sh ]] . ~/.bash_tools.sh
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bash_tools.sh ]] && . ~/.bash_tools.sh
