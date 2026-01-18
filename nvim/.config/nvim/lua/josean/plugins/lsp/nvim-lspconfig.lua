@@ -5,20 +5,6 @@ return {
     { 'antosha417/nvim-lsp-file-operations', config = true },
   },
   config = function()
-    local isText = true
-
-    vim.diagnostic.config({
-      virtual_text = isText,
-      float = { border = 'single' },
-    })
-
-    local function toggle_inline_diagnostics()
-      isText = not isText
-      vim.diagnostic.config({
-        virtual_text = isText,
-      })
-    end
-
     -- Centralized on_attach function for setting up buffer-local key mappings
     local on_attach = function(_, bufnr)
       local telescope = require('telescope.builtin')
@@ -38,8 +24,6 @@ return {
 
         { mode = 'n', lhs = '[d', rhs = function() vim.diagnostic.jump({ count = -1 }) end, desc = 'Prev diagnostic' },
         { mode = 'n', lhs = ']d', rhs = function() vim.diagnostic.jump({ count = 1 }) end, desc = 'Next diagnostic' },
-        { mode = 'n', lhs = '<leader>tl', rhs = vim.diagnostic.open_float, desc = 'current line diagnostics' },
-        { mode = 'n', lhs = '<leader>ti', rhs = toggle_inline_diagnostics, desc = 'inline-diagnostics' },
       }
       -- stylua: ignore end
       for _, map in ipairs(mappings) do
@@ -47,10 +31,10 @@ return {
       end
     end
 
+    local lsp_config = vim.lsp.config
     local default_capabilities = vim.lsp.protocol.make_client_capabilities()
     local capabilities = require('blink.cmp').get_lsp_capabilities(default_capabilities)
 
-    local lsp_config = vim.lsp.config
     lsp_config('typos_lsp', {
       on_attach = on_attach,
       capabilities = capabilities,
