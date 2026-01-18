@@ -34,6 +34,6 @@ return {
     end,
   },
   keys = {
-    { '<leader>zz', ':ZenMode<CR>', desc = 'Zen-mode', silent = true },
+    { '<leader>zz', ':ZenMode<CR>', desc = 'ZenMode', silent = true },
   },
 }
