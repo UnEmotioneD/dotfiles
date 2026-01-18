@@ -19,9 +19,9 @@ return {
     },
     icons = {
       keys = {
+        Space = '<SPACE>',
         Esc = '<ESC>',
         BS = '<BS>',
-        Space = '<SPACE>',
         F1 = '<F1>',
         F2 = '<F2>',
         F3 = '<F3>',
@@ -46,8 +46,10 @@ return {
       { '<leader>m', group = 'Markdown' },
       { '<leader>q', group = 'Quicker' },
       { '<leader>s', group = 'Split' },
+      { '<leader>u', group = 'Undotree' },
       { '<leader>w', group = 'Session' },
       { '<leader>x', group = 'Trouble' },
+      { '<leader>z', group = 'ZenMode' },
     },
     win = {
       border = 'single',
