@@ -5,6 +5,11 @@ return {
     { 'antosha417/nvim-lsp-file-operations', config = true },
   },
   config = function()
+    vim.diagnostic.config({
+      virtual_text = true,
+      float = { border = 'single' },
+    })
+
     -- Centralized on_attach function for setting up buffer-local key mappings
     local on_attach = function(_, bufnr)
       local telescope = require('telescope.builtin')
